@@ -15,61 +15,131 @@ const GoalBasedPlanningResults = () => {
   const [isAnalyzing, setIsAnalyzing] = useState(true);
   const [formData, setFormData] = useState(null);
 
-  // Goal priority visualization data
+  const formatINR = useCallback((val) => {
+    try {
+      return new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 }).format(val || 0);
+    } catch {
+      return `₹${Math.round(val || 0).toLocaleString('en-IN')}`;
+    }
+  }, []);
+
   const goalPriorityData = useMemo(() => {
-    if (!formData) return { labels: [], datasets: [] };
-
-    const goals = [
-      { name: 'Emergency Fund', priority: 1 },
-      { name: 'Short-term Goals', priority: 2 },
-      { name: 'Medium-term Goals', priority: 3 },
-      { name: 'Long-term Goals', priority: 4 },
-      { name: 'Retirement', priority: 5 }
-    ];
-
+    if (!analysis || !analysis.priorities) return { labels: [], datasets: [] };
+    const entries = Object.entries(analysis.priorities)
+      .map(([k, v]) => ({ label: k.replace(/([A-Z])/g, ' $1').replace(/^./, s => s.toUpperCase()), value: v.normalizedScore || 0 }))
+      .sort((a, b) => b.value - a.value);
+    const palette = ['#ef4444','#f97316','#eab308','#22c55e','#3b82f6','#8b5cf6','#14b8a6','#f59e0b'];
     return {
-      labels: goals.map(g => g.name),
+      labels: entries.map(e => e.label),
       datasets: [
         {
-          label: 'Priority Level',
-          data: goals.map(g => 6 - g.priority), // Invert so higher priority = higher bar
-          backgroundColor: [
-            '#ef4444', '#f97316', '#eab308', '#22c55e', '#3b82f6'
-          ],
+          label: 'Priority (0-100)',
+          data: entries.map(e => Math.round(e.value)),
+          backgroundColor: entries.map((_, i) => palette[i % palette.length]),
           borderWidth: 2,
           borderColor: '#ffffff'
         }
       ]
     };
-  }, [formData]);
+  }, [analysis]);
 
-  // Goal timeline visualization data
   const goalTimelineData = useMemo(() => {
-    if (!formData) return { labels: [], datasets: [] };
-
-    const timelines = [
-      { period: '0-1 Year', goals: ['Emergency Fund'] },
-      { period: '1-3 Years', goals: ['Short-term Goals'] },
-      { period: '3-7 Years', goals: ['Medium-term Goals'] },
-      { period: '7-15 Years', goals: ['Long-term Goals'] },
-      { period: '15+ Years', goals: ['Retirement'] }
+    if (!analysis || !analysis.timelineAnalysis) return { labels: [], datasets: [] };
+    const t = analysis.timelineAnalysis;
+    const labels = ['Immediate','Short Term','Medium Term','Long Term'];
+    const values = [
+      (t.immediate || []).length,
+      (t.shortTerm || []).length,
+      (t.mediumTerm || []).length,
+      (t.longTerm || []).length
     ];
-
     return {
-      labels: timelines.map(t => t.period),
+      labels,
       datasets: [
         {
-          label: 'Goals in Timeline',
-          data: timelines.map(t => t.goals.length),
-          backgroundColor: [
-            '#10b981', '#3b82f6', '#8b5cf6', '#f59e0b', '#ef4444'
-          ],
+          label: 'Goals per Timeline',
+          data: values,
+          backgroundColor: ['#10b981','#3b82f6','#8b5cf6','#f59e0b'],
           borderWidth: 2,
           borderColor: '#ffffff'
         }
       ]
     };
+  }, [analysis]);
+
+  const mlFormData = useMemo(() => {
+    if (!formData) return null;
+    const yi = parseFloat(formData.yearlyIncome) || 0;
+    const mi = yi / 12;
+    const me = parseFloat(formData.monthlyExpenses) || 0;
+    const ms = parseFloat(formData.monthlySavings) || 0;
+    const da = parseFloat(formData.debtAmount) || 0;
+    const emi = parseFloat(formData.monthlyEmi) || 0;
+    const efc = parseFloat(formData.emergencyFundCurrent) || 0;
+    const months = me > 0 ? efc / me : 0;
+    const bucket = months < 3 ? 'Less than 3 months' : months <= 6 ? '3-6 months' : '6+ months';
+    return {
+      monthlyIncome: mi,
+      monthlyExpenses: me,
+      monthlySavings: ms,
+      debtAmount: da,
+      debtPayments: emi,
+      emergencyFundMonths: bucket,
+      saveMonthly: ms > 0 ? 'Yes' : 'No'
+    };
   }, [formData]);
+
+  const monthlyIncomeForAlloc = useMemo(() => {
+    if (mlFormData?.monthlyIncome) return mlFormData.monthlyIncome;
+    if (analysis?.financialMetrics?.monthlyIncome) return analysis.financialMetrics.monthlyIncome;
+    return 0;
+  }, [mlFormData, analysis]);
+
+  const allocationAmounts = useMemo(() => {
+    if (!mlPrediction || !mlPrediction.allocations) return null;
+    const amounts = {};
+    Object.entries(mlPrediction.allocations).forEach(([k, v]) => {
+      const pct = typeof v === 'number' ? v : 0;
+      amounts[k] = Math.max(0, Math.round(monthlyIncomeForAlloc * pct));
+    });
+    return amounts;
+  }, [mlPrediction, monthlyIncomeForAlloc]);
+
+  const allocationPieData = useMemo(() => {
+    if (!allocationAmounts) return { labels: [], datasets: [] };
+    const labels = Object.keys(allocationAmounts);
+    const values = labels.map(k => allocationAmounts[k]);
+    return {
+      labels,
+      datasets: [
+        {
+          label: 'Monthly Amount (₹)',
+          data: values,
+          backgroundColor: ['#22c55e','#60a5fa','#f59e0b','#ef4444','#94a3b8','#8b5cf6'],
+          borderWidth: 1,
+          borderColor: '#ffffff'
+        }
+      ]
+    };
+  }, [allocationAmounts]);
+
+  const allocationBarData = useMemo(() => {
+    if (!allocationAmounts) return { labels: [], datasets: [] };
+    const labels = Object.keys(allocationAmounts);
+    const values = labels.map(k => allocationAmounts[k]);
+    return {
+      labels,
+      datasets: [
+        {
+          label: 'Monthly Amount (₹)',
+          data: values,
+          backgroundColor: '#3b82f6',
+          borderWidth: 1,
+          borderColor: '#1d4ed8'
+        }
+      ]
+    };
+  }, [allocationAmounts]);
 
   useEffect(() => {
     const data = location.state?.formData || JSON.parse(sessionStorage.getItem('goalBasedPlanningFormData') || 'null');
@@ -113,25 +183,52 @@ const GoalBasedPlanningResults = () => {
     };
 
     // Calculate goal priorities based on content analysis
-    const priorities = calculateGoalPriorities(goals);
+    const yi = parseFloat(data.yearlyIncome) || 0;
+    const monthlyIncome = yi / 12;
+    const monthlyExpenses = parseFloat(data.monthlyExpenses) || 0;
+    const monthlySavings = parseFloat(data.monthlySavings) || 0;
+    const emergencyFundTargetMonths = Number(data.emergencyFundTargetMonths) || 6;
+    const emergencyFundCurrent = parseFloat(data.emergencyFundCurrent) || 0;
+    const hasLoans = data.hasLoans === 'Yes';
+    const debtAmount = parseFloat(data.debtAmount) || 0;
+    const monthlyEmi = parseFloat(data.monthlyEmi) || 0;
+    const age = parseFloat(data.age) || 0;
+    const riskAppetite = data.riskAppetite || 'Moderate';
+
+    const metrics = {
+      monthlyIncome,
+      monthlyExpenses,
+      monthlySavings,
+      savingsRate: monthlyIncome > 0 ? monthlySavings / monthlyIncome : 0,
+      debtToIncome: monthlyIncome > 0 ? debtAmount / monthlyIncome : 0,
+      emiToIncome: monthlyIncome > 0 ? monthlyEmi / monthlyIncome : 0,
+      emergencyMonthsCurrent: monthlyExpenses > 0 ? emergencyFundCurrent / monthlyExpenses : 0,
+      emergencyMonthsTarget: emergencyFundTargetMonths,
+      hasLoans,
+      age,
+      riskAppetite
+    };
+
+    const priorities = calculateGoalPriorities(goals, metrics);
 
     // Generate timeline analysis
     const timelineAnalysis = generateTimelineAnalysis(goals);
 
     // Calculate feasibility scores
-    const feasibilityScores = calculateFeasibilityScores(goals);
+    const feasibilityScores = calculateFeasibilityScores(goals, metrics);
 
     return {
       goals,
       priorities,
       timelineAnalysis,
       feasibilityScores,
-      recommendations: generateRecommendations(goals, priorities, feasibilityScores),
-      investmentAllocation: generateInvestmentAllocation(priorities, timelineAnalysis)
+      recommendations: generateRecommendations(goals, priorities, feasibilityScores, metrics),
+      investmentAllocation: generateInvestmentAllocation(priorities, timelineAnalysis, metrics),
+      financialMetrics: metrics
     };
   };
 
-  const calculateGoalPriorities = (goals) => {
+  const calculateGoalPriorities = (goals, metrics) => {
     const priorities = {};
 
     // Analyze which goals are mentioned most frequently and with more detail
@@ -149,6 +246,22 @@ const GoalBasedPlanningResults = () => {
     Object.keys(priorities).forEach(key => {
       priorities[key].normalizedScore = maxScore > 0 ? (priorities[key].score / maxScore) * 100 : 0;
     });
+
+    // Adjust with financial metrics
+    if (metrics.emergencyMonthsTarget > 0 && metrics.emergencyMonthsCurrent < metrics.emergencyMonthsTarget) {
+      if (priorities.shortTerm) priorities.shortTerm.normalizedScore = Math.min(100, priorities.shortTerm.normalizedScore + 15);
+    }
+    if (metrics.debtToIncome > 0.4 || metrics.emiToIncome > 0.3) {
+      if (priorities.houseCar) priorities.houseCar.normalizedScore = Math.max(0, priorities.houseCar.normalizedScore - 15);
+      if (priorities.travelLifestyle) priorities.travelLifestyle.normalizedScore = Math.max(0, priorities.travelLifestyle.normalizedScore - 10);
+    }
+    if (metrics.savingsRate > 0.2) {
+      if (priorities.retirement) priorities.retirement.normalizedScore = Math.min(100, priorities.retirement.normalizedScore + 10);
+      if (priorities.longTerm) priorities.longTerm.normalizedScore = Math.min(100, priorities.longTerm.normalizedScore + 8);
+    }
+    if (metrics.riskAppetite === 'Aggressive') {
+      if (priorities.longTerm) priorities.longTerm.normalizedScore = Math.min(100, priorities.longTerm.normalizedScore + 5);
+    }
 
     return priorities;
   };
@@ -179,7 +292,7 @@ const GoalBasedPlanningResults = () => {
     return timelines;
   };
 
-  const calculateFeasibilityScores = (goals) => {
+  const calculateFeasibilityScores = (goals, metrics) => {
     const scores = {};
 
     Object.entries(goals).forEach(([category, goalList]) => {
@@ -204,6 +317,13 @@ const GoalBasedPlanningResults = () => {
         if (avgLength > 100) baseScore += 20;
         else if (avgLength > 50) baseScore += 10;
 
+        // Adjust with financial metrics
+        if (category === 'houseCar' && (metrics.debtToIncome > 0.4 || metrics.emiToIncome > 0.3)) baseScore -= 15;
+        if (category === 'business' && metrics.debtToIncome > 0.4) baseScore -= 10;
+        if (['retirement','longTerm'].includes(category) && metrics.savingsRate > 0.15) baseScore += 10;
+        if (['travelLifestyle','shortTerm'].includes(category) && metrics.emergencyMonthsTarget > 0 && metrics.emergencyMonthsCurrent < metrics.emergencyMonthsTarget) baseScore -= 10;
+        if (category === 'retirement' && metrics.age >= 50 && metrics.savingsRate < 0.1) baseScore -= 10;
+
         scores[category] = Math.max(0, Math.min(100, baseScore));
       }
     });
@@ -211,7 +331,7 @@ const GoalBasedPlanningResults = () => {
     return scores;
   };
 
-  const generateRecommendations = (goals, priorities, feasibilityScores) => {
+  const generateRecommendations = (goals, priorities, feasibilityScores, metrics) => {
     const recommendations = [];
 
     // Analyze each goal category and provide specific recommendations
@@ -274,18 +394,18 @@ const GoalBasedPlanningResults = () => {
       });
     }
 
-    // Emergency fund recommendation if not present
-    if (!goals.emergencyFund || goals.emergencyFund.length === 0) {
+    // Emergency fund recommendation based on current vs target months
+    if ((metrics?.emergencyMonthsTarget || 0) > 0 && (metrics?.emergencyMonthsCurrent || 0) < metrics.emergencyMonthsTarget) {
       recommendations.push({
         type: 'high_priority',
-        message: 'Building an emergency fund should be your top financial priority before pursuing other goals.',
+        message: 'Your emergency fund is below your target. Prioritize building it before pursuing other goals.',
         action: 'Aim for 3-6 months of essential expenses. Set up automatic transfers of 10-15% of your income to a high-yield savings account.'
       });
     }
 
     // Debt consideration if mentioned
     const hasDebtGoals = goals.houseCar && goals.houseCar.some(goal => goal.toLowerCase().includes('loan') || goal.toLowerCase().includes('debt'));
-    if (hasDebtGoals) {
+    if (hasDebtGoals || (metrics?.hasLoans && ((metrics?.emiToIncome || 0) > 0.3 || (metrics?.debtToIncome || 0) > 0.4))) {
       recommendations.push({
         type: 'review_priority',
         message: 'Major purchases involving loans require careful debt management planning.',
@@ -356,17 +476,34 @@ const GoalBasedPlanningResults = () => {
     }
   };
 
-  const generateInvestmentAllocation = (priorities, timelineAnalysis) => {
+  const generateInvestmentAllocation = (priorities, timelineAnalysis, metrics) => {
     const totalGoals = Object.values(timelineAnalysis).reduce((sum, goals) => sum + goals.length, 0);
-
     if (totalGoals === 0) return {};
-
-    return {
-      emergencyFund: Math.round((timelineAnalysis.immediate.length / totalGoals) * 40),
+    let alloc = {
+      emergencyFund: Math.round((timelineAnalysis.immediate.length / totalGoals) * 30),
       shortTerm: Math.round((timelineAnalysis.shortTerm.length / totalGoals) * 25),
-      mediumTerm: Math.round((timelineAnalysis.mediumTerm.length / totalGoals) * 20),
-      longTerm: Math.round((timelineAnalysis.longTerm.length / totalGoals) * 15)
+      mediumTerm: Math.round((timelineAnalysis.mediumTerm.length / totalGoals) * 25),
+      longTerm: Math.round((timelineAnalysis.longTerm.length / totalGoals) * 20)
     };
+    if (metrics.emergencyMonthsTarget > 0 && metrics.emergencyMonthsCurrent < metrics.emergencyMonthsTarget) {
+      alloc.emergencyFund = Math.max(alloc.emergencyFund, 30);
+      const reduce = 10;
+      alloc.longTerm = Math.max(0, alloc.longTerm - reduce);
+    }
+    if (metrics.debtToIncome > 0.4 || metrics.emiToIncome > 0.3) {
+      alloc.shortTerm = Math.min(40, alloc.shortTerm + 10);
+      alloc.longTerm = Math.max(0, alloc.longTerm - 5);
+    }
+    if (metrics.riskAppetite === 'Aggressive') {
+      alloc.longTerm = Math.min(50, alloc.longTerm + 5);
+      alloc.shortTerm = Math.max(0, alloc.shortTerm - 5);
+    }
+    const sum = Object.values(alloc).reduce((a,b) => a+b, 0);
+    if (sum !== 100) {
+      const diff = 100 - sum;
+      alloc.longTerm = Math.max(0, alloc.longTerm + diff);
+    }
+    return alloc;
   };
 
   const chartOptions = {
@@ -454,7 +591,27 @@ const GoalBasedPlanningResults = () => {
               <Bar data={goalTimelineData} options={chartOptions} />
             </div>
           </div>
+          {allocationAmounts && (
+            <div className="chart-container">
+              <h3>Budget Allocation Recommendations</h3>
+              <div className="chart-wrapper">
+                <Pie data={allocationPieData} options={amountChartOptionsPie} />
+              </div>
+            </div>
+          )}
+          {allocationAmounts && allocationBarData && allocationBarData.labels.length > 0 && (
+            <div className="chart-container">
+              <h3>Monthly Allocation (₹)</h3>
+              <div className="chart-wrapper">
+                <Bar data={allocationBarData} options={amountChartOptionsBar} />
+              </div>
+            </div>
+          )}
         </div>
+
+        {mlFormData && (
+          <MLIntegration formData={mlFormData} onPrediction={(pred) => setMlPrediction(pred)} />
+        )}
 
         {/* Recommendations */}
         <div className="recommendations-section">
@@ -477,9 +634,17 @@ const GoalBasedPlanningResults = () => {
 
         {/* Investment Allocation */}
         <div className="investment-section">
-          <h2>Recommended Investment Allocation</h2>
+          <h2>Recommended Monthly Allocation (Model)</h2>
           <div className="allocation-summary">
-            {Object.entries(analysis.investmentAllocation).map(([category, percentage]) => (
+            {allocationAmounts && Object.entries(allocationAmounts).map(([category, amount]) => (
+              <div key={category} className="allocation-item">
+                <span className="allocation-label">
+                  {category}:
+                </span>
+                <span className="allocation-value">{formatINR(amount)}</span>
+              </div>
+            ))}
+            {!allocationAmounts && Object.entries(analysis.investmentAllocation).map(([category, percentage]) => (
               <div key={category} className="allocation-item">
                 <span className="allocation-label">
                   {category.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}:

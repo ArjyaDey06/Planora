@@ -13,6 +13,7 @@ from sklearn.cluster import KMeans
 from sklearn.preprocessing import StandardScaler, LabelEncoder
 from sklearn.metrics import classification_report, mean_squared_error, r2_score, silhouette_score
 from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.decomposition import TruncatedSVD
 import xgboost as xgb
 import joblib
 import os
@@ -35,7 +36,8 @@ class GoalBasedPlanningMLTrainer:
         self.scaler = StandardScaler()
         self.label_encoders = {}
         self.tfidf_vectorizers = {}
-        self.model_dir = os.path.join(os.path.dirname(__file__), "models")
+        self.svd_transformers = {}
+        self.model_dir = os.path.join(os.path.dirname(__file__), "backend", "models")
 
         # Create models directory if it doesn't exist
         os.makedirs(self.model_dir, exist_ok=True)
@@ -83,7 +85,7 @@ class GoalBasedPlanningMLTrainer:
         for col in goal_columns:
             if col in self.dataset.columns:
                 # Create TF-IDF features for goals
-                tfidf = TfidfVectorizer(max_features=50, stop_words='english')
+                tfidf = TfidfVectorizer(max_features=500, ngram_range=(1, 2), stop_words='english')
                 goal_tfidf = tfidf.fit_transform(self.dataset[col].astype(str))
 
                 # Convert to DataFrame and add to dataset
@@ -95,7 +97,18 @@ class GoalBasedPlanningMLTrainer:
                 self.dataset = pd.concat([self.dataset, tfidf_df], axis=1)
                 self.tfidf_vectorizers[col] = tfidf
 
-                logger.info(f"Created {goal_tfidf.shape[1]} TF-IDF features for {col}")
+                # Reduce dimensionality with SVD (LSA) to fixed-size components
+                svd = TruncatedSVD(n_components=min(10, goal_tfidf.shape[1] - 1) if goal_tfidf.shape[1] > 1 else 1, random_state=42)
+                goal_svd = svd.fit_transform(goal_tfidf)
+
+                svd_df = pd.DataFrame(
+                    goal_svd,
+                    columns=[f'{col}_svd_{i}' for i in range(goal_svd.shape[1])]
+                )
+                self.dataset = pd.concat([self.dataset, svd_df], axis=1)
+                self.svd_transformers[col] = svd
+
+                logger.info(f"Created {goal_tfidf.shape[1]} TF-IDF features and {goal_svd.shape[1]} SVD components for {col}")
 
     def prepare_features_and_targets(self) -> Tuple[Dict[str, np.ndarray], Dict[str, np.ndarray]]:
         """Prepare feature matrices and targets for different goal-based models"""
@@ -110,10 +123,15 @@ class GoalBasedPlanningMLTrainer:
         # Add encoded categorical features
         encoded_features = [col for col in self.dataset.columns if col.endswith('_encoded')]
 
-        # Add TF-IDF features
-        tfidf_features = [col for col in self.dataset.columns if col.endswith('_tfidf_0')]
+        # Add SVD-reduced text features in deterministic order
+        svd_feature_names = []
+        for base_col in ['short_term_goals', 'long_term_goals']:
+            for i in range(20):  # support up to 20 if available (e.g., 10 each)
+                name = f'{base_col}_svd_{i}'
+                if name in self.dataset.columns:
+                    svd_feature_names.append(name)
 
-        all_features = financial_features + encoded_features + tfidf_features[:10]  # Limit TF-IDF features
+        all_features = financial_features + encoded_features + svd_feature_names
 
         # Remove features that don't exist
         available_features = [f for f in all_features if f in self.dataset.columns]
@@ -383,6 +401,7 @@ class GoalBasedPlanningMLTrainer:
         joblib.dump(self.scaler, os.path.join(self.model_dir, 'goal_scaler.joblib'))
         joblib.dump(self.label_encoders, os.path.join(self.model_dir, 'goal_label_encoders.joblib'))
         joblib.dump(self.tfidf_vectorizers, os.path.join(self.model_dir, 'goal_tfidf_vectorizers.joblib'))
+        joblib.dump(self.svd_transformers, os.path.join(self.model_dir, 'goal_svd_transformers.joblib'))
 
         logger.info(f"All models saved to {self.model_dir}")
 

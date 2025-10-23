@@ -39,10 +39,11 @@ goal_models = {}
 goal_scaler = None
 goal_label_encoders = {}
 goal_tfidf_vectorizers = {}
+goal_svd_transformers = {}
 
 def load_goal_models():
     """Load goal-based planning ML models"""
-    global goal_models, goal_scaler, goal_label_encoders, goal_tfidf_vectorizers
+    global goal_models, goal_scaler, goal_label_encoders, goal_tfidf_vectorizers, goal_svd_transformers
 
     models_dir = os.path.join(os.path.dirname(__file__), "models")
 
@@ -61,6 +62,10 @@ def load_goal_models():
         goal_scaler = joblib.load(os.path.join(models_dir, 'goal_scaler.joblib'))
         goal_label_encoders = joblib.load(os.path.join(models_dir, 'goal_label_encoders.joblib'))
         goal_tfidf_vectorizers = joblib.load(os.path.join(models_dir, 'goal_tfidf_vectorizers.joblib'))
+        # Load SVD transformers for text features
+        svd_path = os.path.join(models_dir, 'goal_svd_transformers.joblib')
+        if os.path.exists(svd_path):
+            goal_svd_transformers = joblib.load(svd_path)
 
         logger.info("Goal-based planning models loaded successfully")
         return True
@@ -602,17 +607,44 @@ def prepare_ml_features(user_profile: dict) -> np.ndarray:
         except:
             features.extend([1.0, 0.0, 1.0])  # Default encoded values
 
-    # Process text features with TF-IDF
+    # Process text features with TF-IDF + SVD (to mirror training)
     if goal_tfidf_vectorizers:
         try:
             short_tfidf = goal_tfidf_vectorizers.get('short_term_goals', {}).transform([user_profile['short_term_goals_text']])
             long_tfidf = goal_tfidf_vectorizers.get('long_term_goals', {}).transform([user_profile['long_term_goals_text']])
 
-            # Add first 5 TF-IDF features from each (limit to avoid too many features)
-            features.extend(short_tfidf.toarray()[0][:5])
-            features.extend(long_tfidf.toarray()[0][:5])
-        except:
-            features.extend([0.0] * 10)  # Default TF-IDF values
+            # Apply SVD transformers if available, otherwise fallback to zeros
+            short_svd = None
+            long_svd = None
+            if goal_svd_transformers:
+                try:
+                    svd_short = goal_svd_transformers.get('short_term_goals', None)
+                    if svd_short is not None:
+                        short_svd = svd_short.transform(short_tfidf)[0].tolist()
+                except Exception:
+                    short_svd = None
+                try:
+                    svd_long = goal_svd_transformers.get('long_term_goals', None)
+                    if svd_long is not None:
+                        long_svd = svd_long.transform(long_tfidf)[0].tolist()
+                except Exception:
+                    long_svd = None
+
+            # Determine component sizes (default to 10 each)
+            if short_svd is not None:
+                features.extend(short_svd)
+            else:
+                default_len = getattr(goal_svd_transformers.get('short_term_goals', None), 'n_components', 10) if goal_svd_transformers else 10
+                features.extend([0.0] * int(default_len))
+
+            if long_svd is not None:
+                features.extend(long_svd)
+            else:
+                default_len = getattr(goal_svd_transformers.get('long_term_goals', None), 'n_components', 10) if goal_svd_transformers else 10
+                features.extend([0.0] * int(default_len))
+        except Exception:
+            # Fallback if vectorizers or svd fail
+            features.extend([0.0] * 20)
 
     # Scale features
     if goal_scaler:

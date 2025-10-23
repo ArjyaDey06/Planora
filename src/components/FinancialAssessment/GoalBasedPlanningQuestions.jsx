@@ -6,88 +6,90 @@ const GoalBasedPlanningQuestions = () => {
   const navigate = useNavigate();
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [formData, setFormData] = useState({
+    yearlyIncome: '',
+    monthlyExpenses: '',
+    monthlySavings: '',
+    emergencyFundCurrent: '',
+    hasLoans: '',
+    monthlyEmi: '',
+    age: '',
+    riskAppetite: '',
     shortTermGoals: '',
-    mediumTermGoals: '',
-    longTermGoals: '',
-    retirementPlan: '',
-    houseCarPurchase: '',
-    childrenEducationWedding: '',
-    startBusiness: '',
-    travelLifestyleGoals: '',
-    goalPriorities: '',
-    goalTimelines: ''
+    longTermGoals: ''
   });
   const [errors, setErrors] = useState({});
 
   const questions = [
     {
+      id: 'yearlyIncome',
+      title: 'Your Yearly Income',
+      question: 'What is your total yearly income?',
+      placeholder: 'e.g., 600000',
+      type: 'number'
+    },
+    {
+      id: 'monthlyExpenses',
+      title: 'Monthly Expenses',
+      question: 'What are your average monthly expenses?',
+      placeholder: 'e.g., 30000',
+      type: 'number'
+    },
+    {
+      id: 'monthlySavings',
+      title: 'Monthly Savings',
+      question: 'How much do you save each month on average?',
+      placeholder: 'e.g., 10000',
+      type: 'number'
+    },
+    {
+      id: 'emergencyFundCurrent',
+      title: 'Current Emergency Fund',
+      question: 'How much do you currently have in your emergency fund?',
+      placeholder: 'e.g., 50000',
+      type: 'number'
+    },
+    {
+      id: 'hasLoans',
+      title: 'Existing Loans',
+      question: 'Do you currently have any loans?',
+      placeholder: '',
+      type: 'select',
+      options: ['Yes', 'No']
+    },
+    {
+      id: 'monthlyEmi',
+      title: 'Monthly EMI Payments',
+      question: 'What is your total monthly EMI payment across loans?',
+      placeholder: 'e.g., 12000',
+      type: 'number'
+    },
+    {
+      id: 'age',
+      title: 'Age',
+      question: 'What is your age?',
+      placeholder: 'e.g., 30',
+      type: 'number'
+    },
+    {
+      id: 'riskAppetite',
+      title: 'Risk Appetite',
+      question: 'How would you describe your risk appetite?',
+      placeholder: '',
+      type: 'select',
+      options: ['Conservative', 'Moderate', 'Aggressive']
+    },
+    {
       id: 'shortTermGoals',
       title: 'Short-term Goals (1–3 years)',
       question: 'What are your short-term goals?',
-      placeholder: 'e.g., Emergency fund, vacation, gadgets, courses, etc.',
-      type: 'textarea'
-    },
-    {
-      id: 'mediumTermGoals',
-      title: 'Medium-term Goals (3–7 years)',
-      question: 'What are your medium-term goals?',
-      placeholder: 'e.g., Car purchase, home down payment, career advancement, etc.',
+      placeholder: 'e.g., build emergency fund, buy a bike, short trip, upskilling',
       type: 'textarea'
     },
     {
       id: 'longTermGoals',
-      title: 'Long-term Goals (7+ years)',
+      title: 'Long-term Goals (3+ years)',
       question: 'What are your long-term goals?',
-      placeholder: 'e.g., Retirement, children\'s education, wealth creation, etc.',
-      type: 'textarea'
-    },
-    {
-      id: 'retirementPlan',
-      title: 'Retirement Planning',
-      question: 'Do you have a retirement plan in mind?',
-      placeholder: 'Describe your retirement goals, expected age, lifestyle, etc.',
-      type: 'textarea'
-    },
-    {
-      id: 'houseCarPurchase',
-      title: 'Major Purchases',
-      question: 'Do you want to buy a house/car in the future?',
-      placeholder: 'Specify type, timeline, budget, location preferences, etc.',
-      type: 'textarea'
-    },
-    {
-      id: 'childrenEducationWedding',
-      title: 'Family Goals',
-      question: 'Do you want to save for children\'s education/wedding?',
-      placeholder: 'Number of children, education level, wedding plans, etc.',
-      type: 'textarea'
-    },
-    {
-      id: 'startBusiness',
-      title: 'Business/Entrepreneurship',
-      question: 'Do you plan to start a business?',
-      placeholder: 'Business type, investment needed, timeline, etc.',
-      type: 'textarea'
-    },
-    {
-      id: 'travelLifestyleGoals',
-      title: 'Travel & Lifestyle',
-      question: 'Do you want to travel or pursue lifestyle goals?',
-      placeholder: 'Travel destinations, frequency, lifestyle upgrades, etc.',
-      type: 'textarea'
-    },
-    {
-      id: 'goalPriorities',
-      title: 'Goal Priorities',
-      question: 'How do you prioritize these goals?',
-      placeholder: 'Rank your goals by importance (1 being highest priority)',
-      type: 'textarea'
-    },
-    {
-      id: 'goalTimelines',
-      title: 'Goal Timelines',
-      question: 'What timeline do you have in mind for each?',
-      placeholder: 'Specify timeframes for each goal mentioned above',
+      placeholder: 'e.g., home down payment, children’s education, retirement corpus',
       type: 'textarea'
     }
   ];
@@ -108,12 +110,37 @@ const GoalBasedPlanningQuestions = () => {
 
   const validateCurrentQuestion = () => {
     const question = questions[currentQuestion];
-    if (!formData[question.id]?.trim()) {
-      setErrors(prev => ({
-        ...prev,
-        [question.id]: 'This field is required'
-      }));
-      return false;
+    const value = formData[question.id];
+    // Skip debt fields if no loans
+    if ((question.id === 'debtAmount' || question.id === 'monthlyEmi') && formData['hasLoans'] === 'No') {
+      if (errors[question.id]) {
+        setErrors(prev => ({ ...prev, [question.id]: '' }));
+      }
+      return true;
+    }
+    if (question.type === 'number') {
+      const num = parseFloat(value);
+      if (value === '' || isNaN(num) || num < 0) {
+        setErrors(prev => ({ ...prev, [question.id]: 'This field is required and must be a valid number' }));
+        return false;
+      }
+      if (question.id === 'yearlyIncome' && num <= 0) {
+        setErrors(prev => ({ ...prev, [question.id]: 'Please enter a positive yearly income' }));
+        return false;
+      }
+      if ((question.id === 'monthlyEmi') && formData['hasLoans'] === 'No') {
+        return true;
+      }
+    } else if (question.type === 'select') {
+      if (!value) {
+        setErrors(prev => ({ ...prev, [question.id]: 'This field is required' }));
+        return false;
+      }
+    } else {
+      if (!formData[question.id]?.trim()) {
+        setErrors(prev => ({ ...prev, [question.id]: 'This field is required' }));
+        return false;
+      }
     }
     return true;
   };
@@ -135,8 +162,42 @@ const GoalBasedPlanningQuestions = () => {
   };
 
   const handleSubmit = () => {
-    // Validate all questions before submitting
-    const allValid = questions.every(q => formData[q.id]?.trim());
+    let allValid = true;
+    for (let i = 0; i < questions.length; i++) {
+      const q = questions[i];
+      const value = formData[q.id];
+      // Skip debt fields if no loans
+      if ((q.id === 'debtAmount' || q.id === 'monthlyEmi') && formData['hasLoans'] === 'No') {
+        if (errors[q.id]) {
+          setErrors(prev => ({ ...prev, [q.id]: '' }));
+        }
+        continue;
+      }
+      if (q.type === 'number') {
+        const num = parseFloat(value);
+        if (value === '' || isNaN(num) || num < 0) {
+          setErrors(prev => ({ ...prev, [q.id]: 'This field is required and must be a valid number' }));
+          allValid = false;
+        }
+        if (q.id === 'yearlyIncome' && (isNaN(num) || num <= 0)) {
+          setErrors(prev => ({ ...prev, [q.id]: 'Please enter a positive yearly income' }));
+          allValid = false;
+        }
+        if ((q.id === 'monthlyEmi') && formData['hasLoans'] === 'No') {
+          // Skip validation when no loans
+        }
+      } else if (q.type === 'select') {
+        if (!value) {
+          setErrors(prev => ({ ...prev, [q.id]: 'This field is required' }));
+          allValid = false;
+        }
+      } else {
+        if (!value?.trim()) {
+          setErrors(prev => ({ ...prev, [q.id]: 'This field is required' }));
+          allValid = false;
+        }
+      }
+    }
     if (!allValid) {
       alert('Please answer all questions before submitting.');
       return;
@@ -168,13 +229,34 @@ const GoalBasedPlanningQuestions = () => {
           <p className="question-text">{questions[currentQuestion].question}</p>
 
           <div className="input-container">
-            <textarea
-              className={`form-textarea ${errors[questions[currentQuestion].id] ? 'error' : ''}`}
-              placeholder={questions[currentQuestion].placeholder}
-              value={formData[questions[currentQuestion].id] || ''}
-              onChange={(e) => handleInputChange(questions[currentQuestion].id, e.target.value)}
-              rows={4}
-            />
+            {questions[currentQuestion].type === 'number' ? (
+              <input
+                type="number"
+                className={`form-textarea ${errors[questions[currentQuestion].id] ? 'error' : ''}`}
+                placeholder={questions[currentQuestion].placeholder}
+                value={formData[questions[currentQuestion].id] || ''}
+                onChange={(e) => handleInputChange(questions[currentQuestion].id, e.target.value)}
+              />
+            ) : questions[currentQuestion].type === 'select' ? (
+              <select
+                className={`form-textarea ${errors[questions[currentQuestion].id] ? 'error' : ''}`}
+                value={formData[questions[currentQuestion].id] || ''}
+                onChange={(e) => handleInputChange(questions[currentQuestion].id, e.target.value)}
+              >
+                <option value="">Select an option</option>
+                {questions[currentQuestion].options?.map((opt) => (
+                  <option key={opt} value={opt}>{opt}</option>
+                ))}
+              </select>
+            ) : (
+              <textarea
+                className={`form-textarea ${errors[questions[currentQuestion].id] ? 'error' : ''}`}
+                placeholder={questions[currentQuestion].placeholder}
+                value={formData[questions[currentQuestion].id] || ''}
+                onChange={(e) => handleInputChange(questions[currentQuestion].id, e.target.value)}
+                rows={4}
+              />
+            )}
             {errors[questions[currentQuestion].id] && (
               <p className="error-message">{errors[questions[currentQuestion].id]}</p>
             )}
