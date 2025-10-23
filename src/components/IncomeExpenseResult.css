@@ -432,6 +432,25 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   font-size: 0.875rem;
   backdrop-filter: blur(8px);
+  animation: tooltipFadeIn 0.1s ease-out forwards;
+  transition: all 0.1s ease-out;
+}
+
+@keyframes tooltipFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Global Chart.js tooltip override for all charts */
+div[class*="tooltip"] {
+  animation: tooltipFadeIn 0.1s ease-out forwards !important;
+  transition: all 0.1s ease-out !important;
 }
 
 .chart-tooltip .font-medium {

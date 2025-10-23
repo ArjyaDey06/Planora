@@ -1,7 +1,8 @@
 import React, { useEffect, useState, useCallback, useMemo } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { Bar, Pie, Line } from 'react-chartjs-2';
+import { Pie, Line } from 'react-chartjs-2';
 import { Chart, registerables } from 'chart.js';
+import { SignedIn } from '@clerk/clerk-react'
 import MLIntegration from './MLIntegration';
 
 // Register Chart.js components
@@ -22,50 +23,6 @@ const GoalBasedPlanningResults = () => {
       return `₹${Math.round(val || 0).toLocaleString('en-IN')}`;
     }
   }, []);
-
-  const goalPriorityData = useMemo(() => {
-    if (!analysis || !analysis.priorities) return { labels: [], datasets: [] };
-    const entries = Object.entries(analysis.priorities)
-      .map(([k, v]) => ({ label: k.replace(/([A-Z])/g, ' $1').replace(/^./, s => s.toUpperCase()), value: v.normalizedScore || 0 }))
-      .sort((a, b) => b.value - a.value);
-    const palette = ['#ef4444','#f97316','#eab308','#22c55e','#3b82f6','#8b5cf6','#14b8a6','#f59e0b'];
-    return {
-      labels: entries.map(e => e.label),
-      datasets: [
-        {
-          label: 'Priority (0-100)',
-          data: entries.map(e => Math.round(e.value)),
-          backgroundColor: entries.map((_, i) => palette[i % palette.length]),
-          borderWidth: 2,
-          borderColor: '#ffffff'
-        }
-      ]
-    };
-  }, [analysis]);
-
-  const goalTimelineData = useMemo(() => {
-    if (!analysis || !analysis.timelineAnalysis) return { labels: [], datasets: [] };
-    const t = analysis.timelineAnalysis;
-    const labels = ['Immediate','Short Term','Medium Term','Long Term'];
-    const values = [
-      (t.immediate || []).length,
-      (t.shortTerm || []).length,
-      (t.mediumTerm || []).length,
-      (t.longTerm || []).length
-    ];
-    return {
-      labels,
-      datasets: [
-        {
-          label: 'Goals per Timeline',
-          data: values,
-          backgroundColor: ['#10b981','#3b82f6','#8b5cf6','#f59e0b'],
-          borderWidth: 2,
-          borderColor: '#ffffff'
-        }
-      ]
-    };
-  }, [analysis]);
 
   const mlFormData = useMemo(() => {
     if (!formData) return null;
@@ -108,13 +65,24 @@ const GoalBasedPlanningResults = () => {
   const allocationPieData = useMemo(() => {
     if (!allocationAmounts) return { labels: [], datasets: [] };
     const labels = Object.keys(allocationAmounts);
-    const values = labels.map(k => allocationAmounts[k]);
+    const data = labels.map(k => allocationAmounts[k]);
+
+    // If we have an initial analysis but no ML prediction yet, show a placeholder.
+    if (!mlPrediction && analysis?.investmentAllocation) {
+      const initialLabels = Object.keys(analysis.investmentAllocation);
+      const initialValues = initialLabels.map(k => analysis.investmentAllocation[k] * monthlyIncomeForAlloc / 100);
+      return {
+        labels: initialLabels,
+        datasets: [{ ...allocationPieData.datasets[0], data: initialValues }]
+      };
+    }
+
     return {
       labels,
       datasets: [
         {
-          label: 'Monthly Amount (₹)',
-          data: values,
+          label: 'Monthly Allocation (₹)',
+          data,
           backgroundColor: ['#22c55e','#60a5fa','#f59e0b','#ef4444','#94a3b8','#8b5cf6'],
           borderWidth: 1,
           borderColor: '#ffffff'
@@ -122,24 +90,7 @@ const GoalBasedPlanningResults = () => {
       ]
     };
   }, [allocationAmounts]);
-
-  const allocationBarData = useMemo(() => {
-    if (!allocationAmounts) return { labels: [], datasets: [] };
-    const labels = Object.keys(allocationAmounts);
-    const values = labels.map(k => allocationAmounts[k]);
-    return {
-      labels,
-      datasets: [
-        {
-          label: 'Monthly Amount (₹)',
-          data: values,
-          backgroundColor: '#3b82f6',
-          borderWidth: 1,
-          borderColor: '#1d4ed8'
-        }
-      ]
-    };
-  }, [allocationAmounts]);
+  
 
   useEffect(() => {
     const data = location.state?.formData || JSON.parse(sessionStorage.getItem('goalBasedPlanningFormData') || 'null');
@@ -155,12 +106,9 @@ const GoalBasedPlanningResults = () => {
   // Process analysis when form data is available
   useEffect(() => {
     if (!formData) return;
-
-    console.log('Processing goal-based planning analysis with formData:', formData);
-
+    
     try {
       const processedAnalysis = analyzeGoalData(formData);
-      console.log('Goal analysis completed:', processedAnalysis);
       setAnalysis(processedAnalysis);
       setIsAnalyzing(false);
     } catch (error) {
@@ -523,6 +471,65 @@ const GoalBasedPlanningResults = () => {
     }
   };
 
+  const amountChartOptionsPie = {
+    ...chartOptions,
+    animation: {
+      duration: 400,
+      easing: 'easeOutQuart',
+      delay: 0
+    },
+    hover: {
+      animationDuration: 0,
+      mode: 'nearest',
+      intersect: true,
+      onHover: function(event, elements) {
+        if (elements.length) {
+          this.render();
+        }
+      }
+    },
+    plugins: {
+      ...chartOptions.plugins,
+      title: {
+        ...chartOptions.plugins.title,
+        text: 'Monthly Allocation',
+      },
+      tooltip: {
+        animation: {
+          duration: 150, // A slightly longer but still fast duration for smoothness
+          easing: 'easeOutCubic' // A smooth easing function
+        },
+        usePointStyle: true,
+        callbacks: {
+          label: function(context) {
+            let label = context.label || '';
+            if (label) {
+              label += ': ';
+            }
+            if (context.parsed !== null) {
+              label += new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 }).format(context.parsed);
+            }
+            return label;
+          }
+        }
+      }
+    }
+  };
+
+  const amountChartOptionsBar = {
+    ...chartOptions,
+    plugins: {
+      ...chartOptions.plugins.title,
+      title: {
+        ...chartOptions.plugins.title,
+        text: 'Monthly Allocation (₹)',
+      },
+      legend: {
+        display: false
+      }
+    }
+  };
+
   if (isAnalyzing) {
     return (
       <div className="loading-container">
@@ -544,11 +551,12 @@ const GoalBasedPlanningResults = () => {
   }
 
   return (
-    <div className="results-container">
-      <div className="results-header">
-        <h1>Your Goal-Based Financial Plan</h1>
-        <p>Based on your responses, here's a comprehensive analysis of your financial goals</p>
-      </div>
+    <SignedIn>
+      <div className="results-container">
+        <div className="results-header">
+          <h1>Your Goal-Based Financial Plan</h1>
+          <p>Based on your responses, here's a comprehensive analysis of your financial goals</p>
+        </div>
 
       <div className="results-content">
         {/* Goal Summary */}
@@ -578,32 +586,11 @@ const GoalBasedPlanningResults = () => {
 
         {/* Charts Section */}
         <div className="charts-section">
-          <div className="chart-container">
-            <h3>Goal Priority Analysis</h3>
-            <div className="chart-wrapper">
-              <Bar data={goalPriorityData} options={chartOptions} />
-            </div>
-          </div>
-
-          <div className="chart-container">
-            <h3>Goal Timeline Distribution</h3>
-            <div className="chart-wrapper">
-              <Bar data={goalTimelineData} options={chartOptions} />
-            </div>
-          </div>
-          {allocationAmounts && (
+          {(analysis || mlPrediction) && (
             <div className="chart-container">
               <h3>Budget Allocation Recommendations</h3>
               <div className="chart-wrapper">
                 <Pie data={allocationPieData} options={amountChartOptionsPie} />
-              </div>
-            </div>
-          )}
-          {allocationAmounts && allocationBarData && allocationBarData.labels.length > 0 && (
-            <div className="chart-container">
-              <h3>Monthly Allocation (₹)</h3>
-              <div className="chart-wrapper">
-                <Bar data={allocationBarData} options={amountChartOptionsBar} />
               </div>
             </div>
           )}
@@ -666,6 +653,7 @@ const GoalBasedPlanningResults = () => {
         </div>
       </div>
     </div>
+    </SignedIn>
   );
 };
 
