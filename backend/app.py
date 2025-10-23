@@ -74,7 +74,7 @@ def load_goal_models():
         return False
 
 # Investment Analysis Models
-from simple_investment_analysis import analyze_investment_profile
+# from simple_investment_analysis import analyze_investment_profile  # Moved to lazy import below
 
 class InvestmentProfileRequest(BaseModel):
     risk_appetite: str
@@ -89,6 +89,8 @@ class InvestmentProfileRequest(BaseModel):
 @app.post("/analyze-investment-profile")
 async def get_investment_analysis(data: InvestmentProfileRequest):
     try:
+        # Lazy import to avoid breaking app startup if module has issues
+        from simple_investment_analysis import analyze_investment_profile
         analysis = analyze_investment_profile(data.dict())
         return analysis
     except Exception as e:
@@ -99,7 +101,7 @@ async def get_investment_analysis(data: InvestmentProfileRequest):
 async def prepare_models():
     try:
         # Lazy import to avoid breaking app startup if module has issues
-        from investment_analysis import prepare_investment_data
+        from investment_ml_training import prepare_investment_data
         prepare_investment_data()
         return {"message": "Investment models prepared successfully"}
     except Exception as e:
@@ -148,18 +150,17 @@ class UserProfileRequest(BaseModel):
 
 @app.on_event("startup")
 async def startup_event():
-    """Load models and dataset on startup"""
-    global models, scaler, dataset
-    
+    """Load all ML models on application startup"""
     try:
         # Load dataset
         dataset_path = os.path.join(os.path.dirname(__file__), "..", "synthetic_planora_dataset.csv")
         if os.path.exists(dataset_path):
+            global dataset
             dataset = pd.read_csv(dataset_path)
             logger.info(f"Dataset loaded with {len(dataset)} records")
         else:
             logger.error(f"Dataset not found at {dataset_path}")
-            
+
         # Load pre-trained models if they exist
         model_dir = os.path.join(os.path.dirname(__file__), "models")
         if os.path.exists(model_dir):
@@ -169,15 +170,21 @@ async def startup_event():
                     model_path = os.path.join(model_dir, model_file)
                     models[model_name] = joblib.load(model_path)
                     logger.info(f"Loaded model: {model_name}")
-                    
+
             # Load scaler if exists
             scaler_path = os.path.join(model_dir, "scaler.joblib")
             if os.path.exists(scaler_path):
+                global scaler
                 scaler = joblib.load(scaler_path)
                 logger.info("Scaler loaded")
         else:
             logger.warning("Models directory not found. Models need to be trained first.")
-            
+
+        # Load goal-based planning models
+        load_goal_models()
+
+        logger.info("All ML models loaded successfully")
+
     except Exception as e:
         logger.error(f"Error during startup: {e}")
 
@@ -303,7 +310,13 @@ async def train_models():
             
         # Import and run training
         from ml_training import train_all_models
-        result = await train_all_models(dataset)
+        # Use the correct dataset path
+        dataset_path = os.path.join(os.path.dirname(__file__), "..", "synthetic_planora_dataset.csv")
+        if os.path.exists(dataset_path):
+            dataset_df = pd.read_csv(dataset_path)
+            result = await train_all_models(dataset_df)
+        else:
+            raise HTTPException(status_code=404, detail="Dataset not found")
         
         # Reload models after training
         await startup_event()
@@ -1106,60 +1119,6 @@ def calculate_goal_confidence_score(goals: dict, feasibility_scores: dict) -> fl
             confidence *= 1.1
 
     return min(1.0, confidence)
-
-# Load models on startup
-@app.on_event("startup")
-async def startup_event():
-    """Load all ML models on application startup"""
-    try:
-        # Load existing models
-        from ml_training import DebtManagementMLTrainer
-        trainer = DebtManagementMLTrainer("synthetic_planora_dataset.csv")
-        trainer.load_and_preprocess_data()
-
-        # Load debt/investment models
-        models_dir = os.path.join(os.path.dirname(__file__), "models")
-
-        # Load existing models
-        model_files = {
-            'risk_model': 'risk_model.joblib',
-            'debt_capacity_model': 'debt_capacity_model.joblib',
-            'financial_health_model': 'financial_health_model.joblib',
-            'clustering_model': 'clustering_model.joblib',
-            'scaler': 'scaler.joblib'
-        }
-
-        for model_name, file_name in model_files.items():
-            file_path = os.path.join(models_dir, file_name)
-            if os.path.exists(file_path):
-                models[model_name] = joblib.load(file_path)
-
-        # Load label encoders and scalers
-        if os.path.exists(os.path.join(models_dir, 'label_encoders.joblib')):
-            models['label_encoders'] = joblib.load(os.path.join(models_dir, 'label_encoders.joblib'))
-        if os.path.exists(os.path.join(models_dir, 'scaler.joblib')):
-            scaler = joblib.load(os.path.join(models_dir, 'scaler.joblib'))
-
-        # Load investment models
-        investment_files = [
-            'investment_rf_model.joblib', 'investment_xgb_model.joblib',
-            'investment_knn_model.joblib', 'investment_kmeans_model.joblib',
-            'investment_scaler.joblib', 'investment_label_encoders.joblib'
-        ]
-
-        for file_name in investment_files:
-            file_path = os.path.join(models_dir, file_name)
-            if os.path.exists(file_path):
-                model_name = file_name.replace('.joblib', '')
-                models[model_name] = joblib.load(file_path)
-
-        # Load goal-based planning models
-        load_goal_models()
-
-        logger.info("All ML models loaded successfully")
-
-    except Exception as e:
-        logger.error(f"Error loading models: {e}")
 
 if __name__ == "__main__":
     import uvicorn
