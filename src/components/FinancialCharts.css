@@ -1,0 +1,190 @@
+/* Chart Containers */
+.chart-container {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  height: 100%;
+}
+
+.chart-container h5 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 1.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.chart-container h5 svg {
+  color: #4f46e5;
+}
+
+.chart-wrapper {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  margin: 1rem 0;
+}
+
+/* Metric Cards */
+.metric-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  height: 100%;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid #e5e7eb;
+}
+
+.metric-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.metric-card.compact {
+  padding: 1.25rem;
+}
+
+.metric-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #eef2ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #4f46e5;
+  flex-shrink: 0;
+}
+
+.metric-label {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-bottom: 0.5rem;
+}
+
+.metric-value {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.25rem;
+  line-height: 1.2;
+}
+
+.metric-value-small {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #374151;
+  line-height: 1.4;
+}
+
+.metric-sublabel {
+  font-size: 0.8125rem;
+  color: #6b7280;
+  margin-top: 0.25rem;
+}
+
+/* Chart Legend */
+.chart-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  font-size: 0.8125rem;
+  color: #4b5563;
+}
+
+.legend-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  margin-right: 0.5rem;
+}
+
+/* Tooltip Styling */
+.chartjs-tooltip {
+  background: rgba(17, 24, 39, 0.9);
+  border-radius: 6px;
+  color: white;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  pointer-events: none;
+  z-index: 100;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.chartjs-tooltip table {
+  margin: 0;
+  border-spacing: 0;
+}
+
+.chartjs-tooltip td {
+  padding: 0.25rem 0;
+  vertical-align: middle;
+}
+
+.chartjs-tooltip .tooltip-label {
+  display: flex;
+  align-items: center;
+  margin-right: 0.75rem;
+}
+
+.chartjs-tooltip .tooltip-label-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  margin-right: 0.5rem;
+  display: inline-block;
+}
+
+.chartjs-tooltip .tooltip-value {
+  font-weight: 600;
+  margin-left: 0.5rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .chart-container {
+    padding: 1.25rem 1rem;
+  }
+  
+  .chart-wrapper {
+    height: 250px;
+  }
+  
+  .metric-card {
+    padding: 1.25rem;
+  }
+  
+  .metric-value {
+    font-size: 1.25rem;
+  }
+  
+  .metric-value-small {
+    font-size: 1rem;
+  }
+}
+
+/* Animation for chart loading */
+@keyframes chartFadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.chart-fade-in {
+  animation: chartFadeIn 0.5s ease-out forwards;
+}

@@ -1,0 +1,1001 @@
+age,occupation,monthly_income,expenses,fixed_expenses,variable_expenses,has_loans,debt_amount,monthly_emi,savings,emergency_fund,invests,investment_type,risk_appetite,short_term_goals,long_term_goals,financial_health
+49,Salaried,164631,112817,30171,82646,True,335128,24891,26923,158773,True,Mutual Funds,High,Vacation,Kids Education,Average
+47,Business,61089,34188,11668,22520,False,0,0,26901,11763,True,FD,High,Buy Car,Start Business,Average
+25,Self-employed,55691,31473,7664,23809,True,1928721,27431,0,368862,True,Mutual Funds,High,Emergency Fund,Wealth Creation,Poor
+48,Salaried,61184,32196,12060,20136,False,0,0,28988,105790,True,None,High,Buy Car,Buy House,Good
+60,Retired,154172,81446,36746,44700,False,0,0,72726,164223,True,Gold,Low,Buy Car,Retirement,Average
+28,Self-employed,137370,100972,47733,53239,False,0,0,36398,208388,True,Gold,Low,Vacation,Start Business,Average
+32,Retired,22202,13438,3975,9463,True,291235,29292,0,194828,True,Real Estate,Moderate,Vacation,Buy House,Poor
+26,Salaried,69500,30026,14359,15667,False,0,0,39474,459942,True,Stocks,Moderate,Upgrade Lifestyle,Retirement,Good
+50,Retired,180158,132823,70184,62639,True,117596,47557,0,35815,False,None,Low,Upgrade Lifestyle,Wealth Creation,Poor
+34,Salaried,176792,91021,48600,42421,True,671860,22211,63560,409561,False,None,High,Upgrade Lifestyle,Wealth Creation,Good
+43,Business,26165,12718,4762,7956,True,1059706,27294,0,137248,False,None,Moderate,Pay Debt,Start Business,Poor
+38,Salaried,172611,152967,42798,110169,False,0,0,19644,387373,False,None,High,Vacation,Start Business,Average
+34,Business,26074,17078,9031,8047,True,271270,36252,0,149086,False,None,Low,Vacation,Retirement,Poor
+26,Self-employed,135424,99240,45468,53772,True,1568872,34572,1612,387872,False,None,Moderate,Buy Car,Buy House,Poor
+49,Retired,168405,71698,30326,41372,False,0,0,96707,393805,True,Crypto,High,Vacation,Start Business,Good
+47,Business,55270,37494,14899,22595,True,1968858,35124,0,408286,True,FD,Moderate,Vacation,Start Business,Poor
+51,Salaried,21270,11806,3110,8696,False,0,0,9464,172650,False,None,Low,Upgrade Lifestyle,Kids Education,Good
+37,Salaried,22674,14725,5783,8942,True,1327742,33200,0,379547,False,None,Moderate,Upgrade Lifestyle,Kids Education,Poor
+48,Business,134959,55854,20655,35199,False,0,0,79105,20229,False,None,Moderate,Buy Car,Retirement,Average
+30,Self-employed,18688,16699,8318,8381,False,0,0,1989,239279,True,Stocks,Moderate,Vacation,Wealth Creation,Average
+46,Salaried,55485,47743,22661,25082,True,1384018,25014,0,300913,False,None,Moderate,Emergency Fund,Wealth Creation,Poor
+26,Business,186341,149691,68240,81451,True,702108,26528,10122,425530,False,None,Low,Upgrade Lifestyle,Start Business,Poor
+30,Student,123725,58789,15040,43749,True,1406808,39071,25865,198098,False,None,Moderate,Pay Debt,Retirement,Good
+58,Retired,132714,118085,52683,65402,True,149877,23697,0,88675,True,FD,Moderate,Upgrade Lifestyle,Kids Education,Poor
+27,Salaried,192943,134424,49773,84651,False,0,0,58519,33184,False,None,Moderate,Emergency Fund,Start Business,Average
+29,Retired,66263,30581,16254,14327,False,0,0,35682,433209,True,Gold,Low,Emergency Fund,Wealth Creation,Good
+35,Student,64287,40347,13931,26416,True,296202,18601,5339,145229,True,Mutual Funds,Low,Pay Debt,Wealth Creation,Poor
+55,Business,103191,53138,30049,23089,True,1861885,43462,6591,122276,True,Real Estate,High,Buy Car,Wealth Creation,Poor
+31,Salaried,35687,20008,6308,13700,False,0,0,15679,10163,False,None,High,Buy Car,Wealth Creation,Average
+52,Student,148623,106783,54825,51958,False,0,0,41840,337942,False,None,Moderate,Buy Car,Buy House,Good
+31,Retired,153571,106727,31418,75309,False,0,0,46844,75076,True,Mutual Funds,Low,Buy Car,Start Business,Average
+52,Student,84168,49215,15156,34059,False,0,0,34953,242907,False,None,Low,Emergency Fund,Start Business,Good
+60,Salaried,33250,18993,5930,13063,False,0,0,14257,52969,True,Mutual Funds,High,Emergency Fund,Retirement,Average
+26,Self-employed,16377,7455,3809,3646,False,0,0,8922,120266,False,None,Low,Buy Car,Kids Education,Good
+51,Self-employed,190411,106674,47622,59052,False,0,0,83737,322808,True,Real Estate,High,Emergency Fund,Start Business,Good
+35,Student,38485,25512,12309,13203,False,0,0,12973,269666,True,FD,Moderate,Buy Car,Retirement,Good
+36,Retired,129330,80385,45162,35223,False,0,0,48945,417447,False,None,High,Vacation,Buy House,Good
+54,Business,160833,143601,70056,73545,False,0,0,17232,493065,False,None,High,Pay Debt,Buy House,Average
+59,Salaried,98014,56030,23560,32470,True,1991257,49016,0,24488,True,Real Estate,Low,Pay Debt,Buy House,Poor
+42,Student,127197,104803,54841,49962,True,1100692,33307,0,279014,False,None,Low,Upgrade Lifestyle,Kids Education,Poor
+51,Salaried,169593,88946,32747,56199,True,1287442,49910,30737,425202,True,None,High,Emergency Fund,Start Business,Average
+26,Business,124033,89803,39655,50148,True,634070,14377,19853,16357,False,None,Low,Emergency Fund,Retirement,Average
+36,Retired,162401,70798,14999,55799,False,0,0,91603,90575,False,None,Moderate,Buy Car,Retirement,Average
+23,Student,151853,104496,55330,49166,False,0,0,47357,159981,True,Mutual Funds,Moderate,Upgrade Lifestyle,Buy House,Average
+37,Retired,89585,64423,27297,37126,False,0,0,25162,72773,True,Stocks,Low,Upgrade Lifestyle,Kids Education,Average
+58,Salaried,166530,100328,43264,57064,False,0,0,66202,129861,False,None,High,Buy Car,Buy House,Average
+23,Student,133695,68002,38890,29112,True,842373,7143,58550,212597,False,None,High,Emergency Fund,Start Business,Good
+22,Self-employed,15492,10064,3382,6682,False,0,0,5428,393075,True,Crypto,Low,Buy Car,Buy House,Good
+60,Business,36579,16536,8733,7803,False,0,0,20043,418903,True,Stocks,Moderate,Upgrade Lifestyle,Wealth Creation,Good
+39,Salaried,155520,95183,40276,54907,False,0,0,60337,250750,True,Stocks,Low,Vacation,Wealth Creation,Average
+54,Business,181524,75950,26608,49342,True,473614,9035,96539,305514,False,None,Moderate,Vacation,Wealth Creation,Good
+55,Business,173390,125100,66158,58942,True,748159,35433,12857,309829,True,Real Estate,Low,Pay Debt,Buy House,Poor
+38,Self-employed,155021,63088,27028,36060,False,0,0,91933,382113,False,None,High,Emergency Fund,Start Business,Good
+23,Student,150169,101427,36794,64633,False,0,0,48742,284071,False,None,Moderate,Upgrade Lifestyle,Start Business,Average
+22,Retired,55357,43996,25231,18765,False,0,0,11361,83347,False,None,Low,Emergency Fund,Buy House,Average
+38,Salaried,83300,55968,11538,44430,False,0,0,27332,386352,True,FD,Moderate,Vacation,Start Business,Good
+24,Business,139892,118474,58629,59845,False,0,0,21418,494849,True,Crypto,Moderate,Emergency Fund,Retirement,Average
+35,Retired,134732,60309,34034,26275,True,1132665,49913,24510,446852,False,None,Moderate,Vacation,Wealth Creation,Average
+46,Self-employed,12098,10842,2937,7905,False,0,0,1256,373007,True,Stocks,Low,Vacation,Start Business,Average
+39,Business,96538,85459,23443,62016,True,321816,2257,8822,373074,True,Mutual Funds,Moderate,Emergency Fund,Buy House,Poor
+57,Salaried,149205,66212,33754,32458,False,0,0,82993,129447,True,Real Estate,Low,Vacation,Retirement,Average
+46,Business,112237,96357,29193,67164,False,0,0,15880,327500,False,None,Moderate,Upgrade Lifestyle,Retirement,Average
+20,Retired,27247,22062,7731,14331,True,1977618,4249,936,163650,False,None,Low,Buy Car,Retirement,Poor
+24,Salaried,93137,80391,32323,48068,False,0,0,12746,248839,True,Stocks,Moderate,Pay Debt,Kids Education,Average
+26,Self-employed,178905,134327,59738,74589,True,95604,46899,0,285591,False,None,Moderate,Vacation,Buy House,Poor
+23,Self-employed,102178,65838,23950,41888,False,0,0,36340,97031,True,None,Moderate,Pay Debt,Kids Education,Average
+35,Student,186083,154522,79762,74760,False,0,0,31561,171421,True,Stocks,High,Buy Car,Kids Education,Average
+23,Business,16890,10052,4715,5337,True,242115,10755,0,483698,False,None,Moderate,Emergency Fund,Buy House,Poor
+46,Student,149244,99314,41514,57800,False,0,0,49930,104762,True,Stocks,Moderate,Vacation,Retirement,Average
+25,Student,121327,54069,18848,35221,False,0,0,67258,454805,True,Crypto,Moderate,Upgrade Lifestyle,Retirement,Good
+51,Salaried,104295,56742,22185,34557,False,0,0,47553,422264,False,None,Low,Emergency Fund,Kids Education,Good
+34,Self-employed,193535,163362,61671,101691,False,0,0,30173,289489,True,Stocks,Low,Buy Car,Kids Education,Average
+33,Student,199669,170130,65603,104527,False,0,0,29539,118165,False,None,Low,Pay Debt,Retirement,Average
+56,Salaried,175427,143311,58110,85201,True,1970536,14303,17813,24892,False,None,Low,Upgrade Lifestyle,Wealth Creation,Average
+46,Salaried,140018,59698,13216,46482,False,0,0,80320,224269,False,None,Moderate,Vacation,Kids Education,Good
+41,Business,12155,9684,5794,3890,False,0,0,2471,381982,True,Gold,Moderate,Pay Debt,Buy House,Good
+30,Retired,139309,78070,22724,55346,False,0,0,61239,60689,False,None,Low,Upgrade Lifestyle,Buy House,Average
+28,Retired,157547,76258,37547,38711,False,0,0,81289,67830,True,FD,Low,Pay Debt,Retirement,Average
+37,Self-employed,182891,85507,47418,38089,True,74669,7069,90315,182281,True,Gold,Low,Buy Car,Buy House,Average
+55,Business,132430,54213,26701,27512,True,1957763,9764,68453,451568,False,None,High,Upgrade Lifestyle,Kids Education,Good
+33,Salaried,26106,16670,3645,13025,False,0,0,9436,433734,True,Gold,High,Upgrade Lifestyle,Buy House,Good
+59,Retired,111178,93809,52015,41794,False,0,0,17369,107922,True,Stocks,High,Emergency Fund,Kids Education,Average
+26,Self-employed,122838,77716,28226,49490,False,0,0,45122,430873,True,FD,Low,Pay Debt,Wealth Creation,Good
+23,Business,149579,116838,62822,54016,True,127773,27292,5449,43301,True,Gold,High,Vacation,Start Business,Poor
+21,Retired,115120,97044,40896,56148,True,154001,48683,0,151539,False,None,High,Emergency Fund,Start Business,Poor
+37,Salaried,139240,103140,47250,55890,False,0,0,36100,54461,True,Stocks,Low,Buy Car,Wealth Creation,Average
+23,Student,167558,73066,27881,45185,True,1331137,11740,82752,343238,True,Mutual Funds,Low,Buy Car,Wealth Creation,Good
+47,Self-employed,171022,91196,19064,72132,False,0,0,79826,455193,False,None,High,Upgrade Lifestyle,Wealth Creation,Good
+52,Business,125165,56072,11417,44655,True,1390691,36059,33034,25182,False,None,High,Emergency Fund,Wealth Creation,Average
+30,Retired,88572,40154,21996,18158,False,0,0,48418,327722,True,Crypto,High,Buy Car,Wealth Creation,Good
+21,Business,48004,38480,22201,16279,True,1710982,30279,0,229470,True,Stocks,High,Upgrade Lifestyle,Kids Education,Poor
+59,Salaried,29448,17033,4606,12427,True,285337,40580,0,344136,False,None,Moderate,Upgrade Lifestyle,Retirement,Poor
+27,Student,61419,29789,13288,16501,True,1460997,19602,12028,51549,False,None,High,Pay Debt,Kids Education,Average
+43,Business,191064,118273,58529,59744,False,0,0,72791,497278,False,None,High,Upgrade Lifestyle,Wealth Creation,Good
+37,Student,90143,50377,25016,25361,True,175472,8896,30870,426187,True,Stocks,Low,Upgrade Lifestyle,Start Business,Good
+30,Salaried,44278,31461,13349,18112,True,1057331,10596,2221,300501,False,None,Low,Emergency Fund,Buy House,Poor
+45,Salaried,191875,87889,51928,35961,True,1551932,14011,89975,325316,True,None,Moderate,Upgrade Lifestyle,Buy House,Good
+30,Student,54318,28934,12789,16145,True,659194,42645,0,48555,True,Crypto,Moderate,Pay Debt,Retirement,Poor
+58,Retired,42906,36517,18745,17772,False,0,0,6389,106327,False,None,Moderate,Buy Car,Wealth Creation,Average
+40,Student,144157,127351,32993,94358,False,0,0,16806,220440,True,FD,High,Buy Car,Wealth Creation,Average
+53,Business,194787,98213,48294,49919,True,1998977,31987,64587,196187,False,None,Moderate,Vacation,Wealth Creation,Average
+43,Self-employed,69948,61208,29070,32138,True,645507,25450,0,77768,False,None,High,Buy Car,Retirement,Poor
+52,Retired,41411,31976,18204,13772,True,249373,16574,0,429832,True,Crypto,Low,Emergency Fund,Retirement,Poor
+23,Self-employed,63027,40194,8596,31598,True,1963746,29804,0,125910,False,None,Moderate,Vacation,Start Business,Poor
+52,Student,80480,34040,14400,19640,False,0,0,46440,242999,True,Stocks,High,Vacation,Start Business,Good
+33,Salaried,190576,99456,58980,40476,True,55492,10620,80500,204070,True,None,Low,Buy Car,Wealth Creation,Average
+21,Self-employed,183558,144038,36286,107752,False,0,0,39520,86369,False,None,Moderate,Buy Car,Kids Education,Average
+40,Retired,150885,106694,34934,71760,True,235217,14699,29492,207183,True,Crypto,High,Pay Debt,Wealth Creation,Average
+33,Business,45711,41088,23650,17438,True,1806067,35836,0,485292,True,Stocks,High,Buy Car,Start Business,Poor
+20,Business,29534,24746,8353,16393,True,1814429,42767,0,218501,False,None,High,Upgrade Lifestyle,Retirement,Poor
+28,Business,74170,29712,6020,23692,True,726967,40544,3914,152218,False,None,Moderate,Emergency Fund,Retirement,Poor
+39,Retired,19285,8313,3916,4397,False,0,0,10972,155297,True,Gold,Low,Pay Debt,Retirement,Good
+37,Salaried,124297,50543,18181,32362,False,0,0,73754,44946,True,Real Estate,Low,Buy Car,Retirement,Average
+21,Self-employed,92044,56025,21949,34076,True,565858,5338,30681,58407,True,Crypto,Low,Vacation,Kids Education,Average
+22,Retired,75311,59985,26374,33611,False,0,0,15326,253955,False,None,Low,Buy Car,Buy House,Good
+21,Business,18719,16742,8809,7933,True,917668,43646,0,294318,False,None,Low,Emergency Fund,Kids Education,Poor
+55,Business,89621,41374,21430,19944,False,0,0,48247,138844,False,None,Low,Vacation,Start Business,Good
+25,Salaried,60117,33735,11269,22466,False,0,0,26382,100044,True,Gold,Moderate,Buy Car,Start Business,Average
+42,Student,61367,53867,11261,42606,False,0,0,7500,207815,True,Real Estate,High,Emergency Fund,Buy House,Average
+30,Self-employed,116363,67204,18770,48434,True,1941760,38483,10676,468606,True,Gold,Low,Vacation,Wealth Creation,Poor
+50,Self-employed,170414,129462,61207,68255,False,0,0,40952,111854,True,FD,Moderate,Vacation,Buy House,Average
+42,Student,144776,77603,26585,51018,False,0,0,67173,385934,True,Real Estate,High,Vacation,Kids Education,Good
+55,Student,160439,110462,38984,71478,False,0,0,49977,101822,True,Stocks,Low,Buy Car,Wealth Creation,Average
+25,Self-employed,137806,120243,29283,90960,False,0,0,17563,339233,True,Real Estate,High,Upgrade Lifestyle,Start Business,Average
+28,Retired,135900,108206,57704,50502,False,0,0,27694,363018,True,FD,Low,Vacation,Start Business,Good
+27,Self-employed,85555,62271,27530,34741,True,393992,12275,11009,309414,True,Real Estate,Low,Vacation,Wealth Creation,Average
+23,Student,146781,74056,21443,52613,False,0,0,72725,317333,False,None,High,Buy Car,Kids Education,Good
+56,Self-employed,123113,73669,19036,54633,True,1257738,8983,40461,429643,False,None,Moderate,Vacation,Buy House,Good
+26,Salaried,45306,19788,9380,10408,True,1216703,10633,14885,134714,False,None,High,Pay Debt,Buy House,Good
+29,Student,32670,14356,8032,6324,True,819856,9991,8323,441885,True,Real Estate,Low,Upgrade Lifestyle,Retirement,Good
+44,Retired,54027,29185,12904,16281,True,149009,20001,4841,258451,True,Mutual Funds,Moderate,Emergency Fund,Retirement,Poor
+29,Student,130951,89473,34806,54667,False,0,0,41478,429412,False,None,Low,Vacation,Wealth Creation,Good
+39,Retired,159518,105604,48180,57424,False,0,0,53914,243682,True,Crypto,High,Upgrade Lifestyle,Buy House,Average
+40,Student,171123,150828,38378,112450,True,242792,11112,9183,115038,True,Crypto,Low,Pay Debt,Retirement,Poor
+46,Self-employed,134090,80527,47911,32616,True,960287,4239,49324,138734,False,None,Low,Emergency Fund,Retirement,Average
+42,Self-employed,103165,86514,34359,52155,True,908836,35059,0,33247,False,None,High,Buy Car,Wealth Creation,Poor
+37,Retired,100788,50243,29520,20723,False,0,0,50545,15120,False,None,Moderate,Pay Debt,Retirement,Average
+60,Business,121056,103651,43133,60518,False,0,0,17405,405793,False,None,High,Vacation,Wealth Creation,Average
+38,Self-employed,77525,41154,21013,20141,True,1513200,38046,0,466864,True,FD,Moderate,Vacation,Buy House,Poor
+26,Self-employed,27181,22215,9927,12288,False,0,0,4966,225316,True,Gold,Moderate,Upgrade Lifestyle,Kids Education,Average
+48,Business,80884,35761,9422,26339,False,0,0,45123,125817,False,None,High,Vacation,Kids Education,Good
+34,Business,30640,17946,5450,12496,True,645505,27046,0,338511,False,None,Moderate,Upgrade Lifestyle,Kids Education,Poor
+50,Retired,30517,18012,7389,10623,False,0,0,12505,130800,False,None,High,Buy Car,Wealth Creation,Good
+24,Salaried,32260,27308,16059,11249,False,0,0,4952,170646,False,None,Low,Upgrade Lifestyle,Kids Education,Average
+59,Salaried,81012,49175,27193,21982,True,283689,49275,0,490665,False,None,Moderate,Emergency Fund,Start Business,Poor
+49,Self-employed,85800,76403,30246,46157,True,1454863,43625,0,37686,False,None,Moderate,Vacation,Start Business,Poor
+27,Retired,14869,6430,1326,5104,True,770880,17483,0,9548,False,None,Low,Vacation,Retirement,Poor
+40,Salaried,23595,14688,8470,6218,False,0,0,8907,280000,True,Stocks,Moderate,Pay Debt,Wealth Creation,Good
+32,Salaried,152647,78818,45163,33655,True,1818230,14145,59684,108622,True,Real Estate,Low,Upgrade Lifestyle,Kids Education,Average
+35,Self-employed,26862,13291,5054,8237,False,0,0,13571,365548,True,Crypto,Moderate,Buy Car,Start Business,Good
+54,Retired,54346,48561,26504,22057,True,936411,35926,0,305825,True,Crypto,High,Upgrade Lifestyle,Retirement,Poor
+60,Retired,95761,74003,37708,36295,False,0,0,21758,162755,False,None,Low,Vacation,Start Business,Average
+52,Student,90055,39001,11003,27998,True,1740282,32712,18342,46855,True,Gold,Moderate,Vacation,Wealth Creation,Average
+55,Student,18963,11366,2488,8878,False,0,0,7597,248261,False,None,High,Emergency Fund,Start Business,Good
+34,Student,180785,155626,41495,114131,False,0,0,25159,477426,False,None,Moderate,Emergency Fund,Kids Education,Average
+23,Student,91090,56802,29639,27163,True,779751,24978,9310,383430,True,Gold,Low,Vacation,Buy House,Average
+40,Business,182214,84331,45664,38667,True,1695335,10910,86973,410502,True,Gold,Moderate,Emergency Fund,Start Business,Good
+60,Business,81320,65036,16320,48716,False,0,0,16284,155678,False,None,Low,Vacation,Wealth Creation,Average
+53,Salaried,32662,27264,5717,21547,False,0,0,5398,240011,True,Crypto,Moderate,Emergency Fund,Kids Education,Average
+53,Student,14095,6922,2077,4845,True,191722,30579,0,106284,True,Mutual Funds,Moderate,Buy Car,Retirement,Poor
+51,Retired,149313,69477,24289,45188,True,362285,11900,67936,275288,False,None,High,Pay Debt,Kids Education,Good
+27,Self-employed,15581,9092,5322,3770,False,0,0,6489,252142,False,None,Low,Emergency Fund,Wealth Creation,Good
+31,Salaried,135236,98501,49140,49361,False,0,0,36735,48225,True,Crypto,Low,Upgrade Lifestyle,Start Business,Average
+49,Business,156765,117681,40017,77664,True,1872480,46166,0,305413,False,None,High,Vacation,Start Business,Poor
+39,Self-employed,158380,141046,41494,99552,True,303666,18583,0,421687,False,None,Low,Pay Debt,Retirement,Poor
+37,Salaried,198771,145669,77043,68626,False,0,0,53102,203371,False,None,High,Pay Debt,Start Business,Average
+36,Salaried,152733,92870,19569,73301,False,0,0,59863,449602,True,None,High,Pay Debt,Kids Education,Good
+49,Self-employed,18075,14787,4583,10204,True,425944,27368,0,283815,True,Gold,High,Vacation,Start Business,Poor
+28,Retired,199856,102090,21428,80662,False,0,0,97766,322000,True,Real Estate,High,Buy Car,Buy House,Good
+37,Self-employed,129902,84806,36632,48174,False,0,0,45096,383034,True,Real Estate,High,Buy Car,Buy House,Good
+56,Student,96142,56799,16074,40725,False,0,0,39343,14966,True,Gold,High,Emergency Fund,Kids Education,Average
+48,Self-employed,108802,69960,40915,29045,False,0,0,38842,209764,False,None,High,Upgrade Lifestyle,Kids Education,Average
+54,Retired,106410,60608,20647,39961,True,71579,43333,2469,472652,True,Gold,High,Emergency Fund,Wealth Creation,Poor
+31,Salaried,198080,100926,30401,70525,False,0,0,97154,324312,False,None,Low,Buy Car,Retirement,Good
+28,Business,23266,15532,4107,11425,False,0,0,7734,296726,False,None,Low,Buy Car,Wealth Creation,Good
+27,Self-employed,11635,5852,1711,4141,False,0,0,5783,117410,True,Stocks,High,Pay Debt,Start Business,Good
+39,Business,27975,16189,4419,11770,False,0,0,11786,497775,True,None,High,Buy Car,Kids Education,Good
+39,Business,193507,108090,38297,69793,True,1703768,31561,53856,249219,True,Gold,Low,Upgrade Lifestyle,Retirement,Average
+45,Retired,197460,139193,66980,72213,False,0,0,58267,143906,False,None,High,Buy Car,Start Business,Average
+60,Retired,49165,43984,20712,23272,False,0,0,5181,394628,False,None,Low,Vacation,Wealth Creation,Average
+59,Salaried,33990,26308,12820,13488,False,0,0,7682,172560,True,Crypto,Moderate,Upgrade Lifestyle,Retirement,Good
+40,Student,130667,82946,31423,51523,False,0,0,47721,140772,True,None,High,Upgrade Lifestyle,Start Business,Average
+25,Student,197797,136442,45230,91212,True,1678485,23059,38296,203935,False,None,Low,Vacation,Kids Education,Average
+49,Retired,34582,27173,15677,11496,True,1305289,39774,0,51848,True,Mutual Funds,Low,Buy Car,Retirement,Poor
+37,Salaried,166000,124079,63029,61050,False,0,0,41921,337674,True,Real Estate,Moderate,Pay Debt,Retirement,Average
+36,Business,39649,28759,13620,15139,False,0,0,10890,22125,False,None,Moderate,Upgrade Lifestyle,Wealth Creation,Average
+44,Business,51975,41330,17851,23479,False,0,0,10645,379737,True,Mutual Funds,High,Pay Debt,Retirement,Good
+54,Retired,124993,103030,31240,71790,True,226417,11076,10887,185111,False,None,Moderate,Buy Car,Retirement,Poor
+29,Salaried,77704,43723,10092,33631,True,405994,46476,0,168318,False,None,Low,Upgrade Lifestyle,Buy House,Poor
+24,Retired,184962,150298,72824,77474,True,1223574,36821,0,333538,False,None,Moderate,Upgrade Lifestyle,Start Business,Poor
+37,Student,133270,110626,57402,53224,True,171396,39895,0,116734,True,None,Low,Emergency Fund,Wealth Creation,Poor
+44,Retired,161628,111636,29493,82143,True,1912629,17081,32911,118058,True,Crypto,High,Pay Debt,Wealth Creation,Average
+55,Retired,16743,14302,3672,10630,True,747601,20705,0,294582,False,None,Low,Vacation,Buy House,Poor
+22,Salaried,180653,131336,28282,103054,True,68327,31691,17626,117589,True,Real Estate,Low,Buy Car,Kids Education,Poor
+20,Business,59562,26412,11764,14648,True,356018,34069,0,192148,True,Stocks,Moderate,Emergency Fund,Start Business,Poor
+59,Retired,167405,139203,30362,108841,False,0,0,28202,359494,False,None,High,Buy Car,Start Business,Average
+53,Retired,130217,60578,17595,42983,False,0,0,69639,378505,True,Crypto,High,Pay Debt,Buy House,Good
+53,Salaried,127813,100377,57554,42823,False,0,0,27436,244195,False,None,Low,Pay Debt,Wealth Creation,Average
+57,Student,180471,145800,65336,80464,False,0,0,34671,258404,True,FD,High,Upgrade Lifestyle,Kids Education,Average
+55,Salaried,53401,30343,7830,22513,True,162426,7708,15350,306031,False,None,Low,Vacation,Kids Education,Good
+32,Retired,130086,105187,27663,77524,False,0,0,24899,23430,False,None,High,Upgrade Lifestyle,Retirement,Average
+23,Salaried,23811,12544,4427,8117,True,693236,40302,0,86398,False,None,Low,Pay Debt,Retirement,Poor
+38,Retired,18929,15629,4326,11303,True,1117333,18961,0,234300,False,None,Low,Pay Debt,Retirement,Poor
+56,Self-employed,122661,82130,47335,34795,True,1996279,38049,2482,386735,True,None,Moderate,Upgrade Lifestyle,Start Business,Poor
+38,Retired,66893,57683,30967,26716,False,0,0,9210,373577,True,Crypto,Low,Vacation,Start Business,Average
+58,Self-employed,126287,94141,34874,59267,False,0,0,32146,227426,False,None,High,Vacation,Retirement,Average
+36,Student,197606,136623,56512,80111,True,651497,28342,32641,58219,False,None,High,Emergency Fund,Wealth Creation,Average
+54,Retired,68104,30745,6996,23749,False,0,0,37359,131270,True,Gold,Low,Upgrade Lifestyle,Kids Education,Good
+52,Self-employed,95633,75963,43640,32323,True,498317,37904,0,397325,True,Real Estate,High,Buy Car,Buy House,Poor
+50,Business,64097,53813,13295,40518,True,1943284,48246,0,27292,False,None,High,Emergency Fund,Wealth Creation,Poor
+39,Salaried,22466,13659,5501,8158,False,0,0,8807,197298,False,None,High,Vacation,Wealth Creation,Good
+25,Salaried,45175,24370,6193,18177,True,1707190,26506,0,270632,True,Real Estate,Moderate,Vacation,Kids Education,Poor
+55,Self-employed,128051,104338,37562,66776,False,0,0,23713,332882,False,None,High,Upgrade Lifestyle,Wealth Creation,Average
+44,Business,102047,86728,35088,51640,False,0,0,15319,260304,False,None,Low,Vacation,Buy House,Average
+28,Salaried,189890,152563,39656,112907,False,0,0,37327,180789,False,None,High,Buy Car,Retirement,Average
+51,Salaried,100961,56642,19513,37129,True,947442,45973,0,170397,False,None,High,Buy Car,Buy House,Poor
+23,Student,36544,26002,10911,15091,True,99678,9657,885,284803,False,None,Low,Upgrade Lifestyle,Start Business,Poor
+49,Retired,54036,42500,13999,28501,True,483100,40787,0,324623,True,Gold,Moderate,Upgrade Lifestyle,Kids Education,Poor
+24,Self-employed,165668,74950,43184,31766,True,402183,7519,83199,490472,False,None,Moderate,Pay Debt,Buy House,Good
+29,Retired,144539,98660,21268,77392,True,1423766,39144,6735,67145,False,None,Low,Pay Debt,Start Business,Poor
+60,Student,184759,113566,61113,52453,True,409270,26191,45002,229278,False,None,Moderate,Vacation,Retirement,Average
+35,Salaried,142053,110338,25542,84796,False,0,0,31715,270433,True,None,Moderate,Vacation,Start Business,Average
+48,Salaried,26893,11071,3094,7977,True,1441306,31797,0,20514,True,None,High,Pay Debt,Retirement,Poor
+51,Salaried,50590,24590,12171,12419,True,1577358,15491,10509,488551,False,None,High,Vacation,Wealth Creation,Good
+38,Self-employed,110621,45548,18812,26736,False,0,0,65073,315407,True,Gold,Moderate,Upgrade Lifestyle,Start Business,Good
+24,Salaried,137344,87608,39326,48282,True,1432592,47121,2615,448008,False,None,High,Buy Car,Buy House,Poor
+36,Self-employed,101282,89855,50954,38901,False,0,0,11427,1514,True,Real Estate,High,Upgrade Lifestyle,Retirement,Average
+47,Business,68755,60302,28617,31685,False,0,0,8453,59399,False,None,High,Pay Debt,Wealth Creation,Average
+49,Student,73737,65169,14035,51134,True,1283569,44586,0,469482,False,None,Moderate,Vacation,Wealth Creation,Poor
+47,Student,69356,33309,9886,23423,False,0,0,36047,199077,False,None,High,Upgrade Lifestyle,Buy House,Good
+28,Business,102811,46036,9999,36037,True,1203105,18095,38680,146564,False,None,Moderate,Pay Debt,Buy House,Good
+54,Salaried,151536,118539,68353,50186,False,0,0,32997,262656,False,None,High,Buy Car,Start Business,Average
+47,Retired,133697,116068,33236,82832,True,1485928,31124,0,156229,True,Mutual Funds,Low,Vacation,Buy House,Poor
+49,Student,65276,44972,16609,28363,False,0,0,20304,183053,False,None,High,Emergency Fund,Buy House,Good
+45,Retired,45723,28918,8110,20808,False,0,0,16805,28634,False,None,Low,Upgrade Lifestyle,Kids Education,Average
+46,Retired,18479,11513,4915,6598,False,0,0,6966,472880,False,None,Moderate,Emergency Fund,Start Business,Good
+26,Salaried,46627,25979,7034,18945,True,930067,21861,0,48704,False,None,Moderate,Upgrade Lifestyle,Start Business,Poor
+28,Salaried,162511,137084,32026,105058,False,0,0,25427,177488,True,Gold,Low,Pay Debt,Kids Education,Average
+21,Self-employed,189917,96245,46079,50166,False,0,0,93672,397305,True,Gold,Moderate,Vacation,Kids Education,Good
+57,Self-employed,40804,33653,6821,26832,True,1151078,37878,0,320268,False,None,Moderate,Upgrade Lifestyle,Kids Education,Poor
+42,Self-employed,194093,161839,47616,114223,True,1356629,15778,16476,290370,True,Stocks,Moderate,Upgrade Lifestyle,Buy House,Poor
+21,Self-employed,77085,69337,30838,38499,False,0,0,7748,303361,True,FD,High,Vacation,Retirement,Average
+22,Retired,83932,40075,19058,21017,False,0,0,43857,301103,False,None,High,Upgrade Lifestyle,Retirement,Good
+45,Student,107434,72589,37035,35554,True,1121256,44338,0,312570,True,Crypto,High,Vacation,Kids Education,Poor
+47,Student,55579,45774,11523,34251,False,0,0,9805,179898,True,None,Low,Upgrade Lifestyle,Retirement,Average
+55,Salaried,59106,31222,11417,19805,True,920956,32877,0,330946,True,Mutual Funds,High,Buy Car,Start Business,Poor
+48,Retired,46027,33194,16643,16551,False,0,0,12833,112256,True,FD,Moderate,Buy Car,Retirement,Good
+22,Retired,135491,87801,34222,53579,False,0,0,47690,18133,True,None,High,Pay Debt,Wealth Creation,Average
+36,Student,34078,22345,9545,12800,True,1796833,49472,0,36475,True,Real Estate,Moderate,Pay Debt,Buy House,Poor
+39,Retired,193676,165631,71376,94255,False,0,0,28045,345243,True,FD,Low,Emergency Fund,Wealth Creation,Average
+50,Student,103031,47102,28162,18940,False,0,0,55929,118352,True,FD,Low,Upgrade Lifestyle,Kids Education,Average
+59,Salaried,24110,18144,4095,14049,False,0,0,5966,34961,True,Crypto,Low,Emergency Fund,Start Business,Average
+35,Retired,71227,47063,14328,32735,False,0,0,24164,104765,False,None,Low,Vacation,Retirement,Average
+43,Student,24909,13688,2828,10860,True,1759524,43973,0,154317,False,None,High,Emergency Fund,Buy House,Poor
+35,Salaried,119133,78483,30818,47665,False,0,0,40650,9609,True,Real Estate,Low,Vacation,Start Business,Average
+30,Self-employed,74155,48392,23415,24977,False,0,0,25763,386812,False,None,Moderate,Upgrade Lifestyle,Kids Education,Good
+38,Retired,177868,140536,61304,79232,False,0,0,37332,345051,True,FD,Moderate,Pay Debt,Kids Education,Average
+26,Salaried,151477,80319,26444,53875,False,0,0,71158,18489,False,None,Moderate,Emergency Fund,Buy House,Average
+48,Retired,50230,35166,15248,19918,False,0,0,15064,4520,False,None,Moderate,Emergency Fund,Retirement,Average
+40,Student,75955,42030,15859,26171,False,0,0,33925,375398,False,None,Low,Emergency Fund,Kids Education,Good
+59,Business,166717,144064,73187,70877,False,0,0,22653,206080,False,None,High,Vacation,Buy House,Average
+25,Student,77419,53989,31600,22389,True,1638182,12175,11255,262239,True,Crypto,Low,Upgrade Lifestyle,Retirement,Average
+48,Salaried,112390,100884,45785,55099,False,0,0,11506,139275,True,FD,High,Upgrade Lifestyle,Wealth Creation,Average
+27,Retired,42152,23120,10702,12418,True,1810867,15307,3725,199702,False,None,High,Emergency Fund,Kids Education,Poor
+47,Self-employed,123485,99084,55790,43294,True,261537,42483,0,419552,True,Mutual Funds,Moderate,Buy Car,Wealth Creation,Poor
+58,Self-employed,28711,12934,7676,5258,False,0,0,15777,27490,True,Mutual Funds,High,Emergency Fund,Kids Education,Average
+39,Student,160520,79243,41672,37571,False,0,0,81277,77596,False,None,High,Upgrade Lifestyle,Start Business,Average
+38,Student,125003,70230,24034,46196,True,419370,37365,17408,169951,False,None,High,Buy Car,Wealth Creation,Average
+56,Salaried,114838,47579,12679,34900,True,751500,40977,26282,210276,False,None,High,Vacation,Kids Education,Good
+25,Self-employed,117695,99876,35546,64330,True,1073303,9721,8098,98532,True,Gold,Moderate,Buy Car,Kids Education,Poor
+60,Business,117777,92268,49779,42489,True,644343,16110,9399,294417,False,None,High,Vacation,Wealth Creation,Poor
+52,Student,26993,23475,13946,9529,True,1220509,12868,0,195750,False,None,High,Vacation,Kids Education,Poor
+51,Student,26052,12405,6690,5715,True,1725903,33478,0,289215,False,None,Moderate,Emergency Fund,Retirement,Poor
+23,Business,179884,126359,57873,68486,False,0,0,53525,357934,False,None,Low,Emergency Fund,Buy House,Average
+22,Student,82812,55160,16015,39145,False,0,0,27652,163581,False,None,Low,Upgrade Lifestyle,Start Business,Average
+20,Business,69296,58036,20816,37220,True,165941,31962,0,39594,False,None,Low,Vacation,Start Business,Poor
+29,Self-employed,115909,101823,48670,53153,False,0,0,14086,295489,True,Mutual Funds,Low,Pay Debt,Wealth Creation,Average
+28,Salaried,123818,56554,15770,40784,False,0,0,67264,460373,True,Gold,Low,Emergency Fund,Wealth Creation,Good
+46,Retired,148650,66304,31845,34459,False,0,0,82346,483599,True,FD,High,Vacation,Buy House,Good
+26,Business,48651,20582,5133,15449,False,0,0,28069,463433,False,None,High,Emergency Fund,Kids Education,Good
+35,Salaried,162546,70003,16327,53676,True,1625009,39058,53485,377125,True,Stocks,Low,Buy Car,Kids Education,Good
+31,Student,87648,43035,15764,27271,False,0,0,44613,369659,False,None,High,Pay Debt,Buy House,Good
+22,Salaried,137647,103594,37528,66066,False,0,0,34053,197644,False,None,Low,Upgrade Lifestyle,Wealth Creation,Average
+34,Business,162334,80737,38442,42295,False,0,0,81597,337300,True,Stocks,Moderate,Vacation,Retirement,Good
+56,Salaried,66314,52211,20948,31263,True,1199299,7919,6184,416585,True,Real Estate,Low,Pay Debt,Wealth Creation,Poor
+58,Self-employed,183564,119480,39605,79875,False,0,0,64084,281263,True,Crypto,Moderate,Upgrade Lifestyle,Retirement,Average
+25,Self-employed,188064,116176,62397,53779,True,1634803,44850,27038,44385,True,Mutual Funds,Moderate,Upgrade Lifestyle,Start Business,Average
+38,Business,139759,78145,27169,50976,False,0,0,61614,102818,False,None,High,Emergency Fund,Kids Education,Average
+32,Business,28332,12213,3706,8507,True,1119911,38078,0,397718,False,None,Moderate,Vacation,Buy House,Poor
+60,Salaried,25238,11672,2961,8711,True,1864924,10597,2969,443588,True,None,Low,Buy Car,Kids Education,Average
+56,Retired,159997,91800,50538,41262,False,0,0,68197,50531,True,None,Moderate,Buy Car,Wealth Creation,Average
+21,Business,138878,62529,19232,43297,True,1108538,49496,26853,222184,True,None,High,Vacation,Start Business,Average
+37,Business,64856,37772,19317,18455,False,0,0,27084,2926,True,Mutual Funds,Low,Emergency Fund,Retirement,Average
+50,Business,186656,157351,47493,109858,True,1045888,38993,0,73335,False,None,Low,Vacation,Buy House,Poor
+27,Student,151386,135226,51762,83464,True,628460,26173,0,131813,False,None,High,Upgrade Lifestyle,Buy House,Poor
+45,Business,149512,113309,53088,60221,True,1731474,19149,17054,458489,True,Stocks,Moderate,Emergency Fund,Buy House,Average
+36,Retired,114102,59946,29623,30323,True,249865,13033,41123,147301,False,None,Low,Upgrade Lifestyle,Retirement,Average
+42,Retired,175170,92436,50732,41704,False,0,0,82734,218660,True,FD,Moderate,Emergency Fund,Start Business,Average
+23,Salaried,41584,26726,8049,18677,True,1761989,11611,3247,465494,False,None,Moderate,Upgrade Lifestyle,Wealth Creation,Poor
+42,Student,111725,94421,19029,75392,False,0,0,17304,424597,False,None,Low,Emergency Fund,Buy House,Average
+56,Salaried,50424,24218,5079,19139,True,757732,3953,22253,420370,False,None,High,Vacation,Kids Education,Good
+20,Retired,175288,81823,19140,62683,True,697993,36766,56699,405335,False,None,Low,Pay Debt,Wealth Creation,Good
+46,Retired,38094,22437,8599,13838,False,0,0,15657,465667,True,Real Estate,Moderate,Buy Car,Kids Education,Good
+47,Salaried,81015,39959,15991,23968,False,0,0,41056,36640,True,None,High,Upgrade Lifestyle,Retirement,Average
+46,Self-employed,130485,65236,29652,35584,True,1557653,10268,54981,458446,False,None,Low,Pay Debt,Wealth Creation,Good
+60,Retired,179349,84073,29593,54480,True,1077424,17136,78140,256304,False,None,Low,Upgrade Lifestyle,Start Business,Good
+38,Salaried,103257,71603,19257,52346,True,314433,22773,8881,186512,False,None,Low,Upgrade Lifestyle,Kids Education,Poor
+36,Business,181858,145780,35115,110665,False,0,0,36078,60412,False,None,Low,Emergency Fund,Retirement,Average
+27,Student,88723,57005,13419,43586,False,0,0,31718,2771,True,Real Estate,Low,Emergency Fund,Buy House,Average
+28,Salaried,198156,159941,63422,96519,False,0,0,38215,66229,True,Crypto,High,Emergency Fund,Wealth Creation,Average
+37,Student,51145,23130,6112,17018,True,1262135,48050,0,455291,True,None,High,Vacation,Kids Education,Poor
+35,Self-employed,127785,82900,47082,35818,True,1458152,27529,17356,55057,False,None,Moderate,Emergency Fund,Retirement,Average
+29,Self-employed,148965,119077,68019,51058,False,0,0,29888,105993,True,None,Low,Upgrade Lifestyle,Kids Education,Average
+56,Self-employed,162342,78523,40708,37815,False,0,0,83819,252283,True,Real Estate,Moderate,Pay Debt,Kids Education,Good
+32,Self-employed,92031,41004,18247,22757,False,0,0,51027,343507,False,None,High,Emergency Fund,Wealth Creation,Good
+40,Salaried,160090,99343,25290,74053,True,1322499,38450,22297,76815,True,Mutual Funds,Moderate,Emergency Fund,Wealth Creation,Average
+38,Business,100318,62697,28892,33805,True,1357299,38238,0,456275,False,None,Low,Pay Debt,Wealth Creation,Poor
+59,Self-employed,164817,102325,50621,51704,True,1358395,38320,24172,313710,False,None,Low,Vacation,Retirement,Average
+37,Retired,31458,26797,9930,16867,True,1403213,37204,0,384593,False,None,Low,Pay Debt,Kids Education,Poor
+58,Self-employed,129412,86439,21500,64939,True,645252,29761,13212,14123,True,None,High,Vacation,Buy House,Average
+34,Retired,191827,120298,31364,88934,True,1360994,34657,36872,317743,True,Crypto,High,Pay Debt,Retirement,Average
+55,Business,46092,27494,10330,17164,True,678263,38104,0,201756,False,None,High,Pay Debt,Buy House,Poor
+59,Business,28573,12707,3746,8961,True,1076701,49152,0,215462,True,FD,Moderate,Pay Debt,Kids Education,Poor
+24,Business,163326,125789,44155,81634,True,1648659,37135,402,484156,False,None,Moderate,Upgrade Lifestyle,Wealth Creation,Poor
+49,Retired,192688,81930,42233,39697,True,772717,38563,72195,386771,False,None,High,Vacation,Buy House,Good
+49,Business,118344,104035,44764,59271,True,1270883,4738,9571,107289,True,None,Low,Vacation,Wealth Creation,Poor
+52,Student,64973,37940,7763,30177,False,0,0,27033,434207,True,Stocks,High,Buy Car,Buy House,Good
+34,Salaried,138553,78041,19077,58964,True,1722567,20544,39968,320633,False,None,Moderate,Emergency Fund,Buy House,Good
+31,Student,123860,65813,23639,42174,False,0,0,58047,497708,True,None,High,Vacation,Buy House,Good
+25,Self-employed,159081,81154,28890,52264,True,1004555,24766,53161,380660,False,None,Low,Upgrade Lifestyle,Retirement,Good
+44,Self-employed,12110,6567,1798,4769,True,216579,30098,0,260310,True,Real Estate,Low,Emergency Fund,Kids Education,Poor
+22,Salaried,146282,122322,45953,76369,False,0,0,23960,253187,False,None,High,Buy Car,Buy House,Average
+20,Student,47785,19333,11264,8069,True,186824,36048,0,350724,False,None,High,Vacation,Wealth Creation,Poor
+29,Student,93287,67929,29329,38600,True,582664,32493,0,218410,True,Mutual Funds,Low,Buy Car,Retirement,Poor
+37,Retired,40596,16710,6856,9854,True,1439853,46174,0,322625,False,None,Moderate,Pay Debt,Start Business,Poor
+48,Salaried,98008,57142,13470,43672,True,169806,6432,34434,340009,True,Real Estate,High,Buy Car,Start Business,Good
+20,Business,109811,89855,42738,47117,False,0,0,19956,23814,True,Mutual Funds,Moderate,Pay Debt,Retirement,Average
+31,Retired,54495,22686,9423,13263,True,1310126,47620,0,189555,True,Stocks,Moderate,Vacation,Wealth Creation,Poor
+53,Salaried,90364,58501,18406,40095,False,0,0,31863,264809,False,None,High,Buy Car,Start Business,Good
+52,Business,16995,11716,6049,5667,False,0,0,5279,497200,True,Gold,Moderate,Emergency Fund,Buy House,Good
+35,Self-employed,144701,96177,39964,56213,True,1539632,46197,2327,83188,True,Gold,Moderate,Pay Debt,Retirement,Poor
+54,Self-employed,150703,132483,27976,104507,False,0,0,18220,375619,False,None,Low,Pay Debt,Start Business,Average
+45,Retired,156910,129898,51072,78826,False,0,0,27012,183427,False,None,Low,Pay Debt,Retirement,Average
+29,Self-employed,101975,59980,20880,39100,True,1659456,2330,39665,124922,True,None,High,Vacation,Buy House,Average
+39,Salaried,124881,110366,32718,77648,True,1282692,8902,5613,67450,True,Crypto,Low,Upgrade Lifestyle,Kids Education,Poor
+46,Student,62736,37704,12931,24773,False,0,0,25032,309928,True,Crypto,High,Buy Car,Wealth Creation,Good
+40,Self-employed,90823,67950,20842,47108,False,0,0,22873,355414,True,Crypto,Low,Vacation,Retirement,Good
+24,Self-employed,72997,39929,13739,26190,True,360399,15905,17163,312672,False,None,Moderate,Vacation,Start Business,Good
+30,Business,93006,81672,33439,48233,True,283498,3066,8268,79159,False,None,Moderate,Buy Car,Kids Education,Poor
+42,Self-employed,97090,67938,38542,29396,True,245997,32898,0,72959,True,None,Low,Upgrade Lifestyle,Retirement,Poor
+56,Retired,158941,108681,59252,49429,False,0,0,50260,44244,True,Stocks,Low,Buy Car,Wealth Creation,Average
+22,Salaried,80256,68367,16878,51489,False,0,0,11889,390056,True,Crypto,High,Buy Car,Start Business,Average
+28,Retired,17399,7570,3773,3797,False,0,0,9829,253709,True,Mutual Funds,Moderate,Pay Debt,Buy House,Good
+55,Student,73572,63538,18989,44549,False,0,0,10034,33722,False,None,High,Vacation,Start Business,Average
+22,Salaried,132683,108543,62521,46022,True,1561130,4316,19824,1249,True,Mutual Funds,High,Upgrade Lifestyle,Buy House,Average
+44,Business,78214,63148,25001,38147,False,0,0,15066,452844,False,None,Moderate,Upgrade Lifestyle,Retirement,Average
+20,Salaried,89564,63443,18578,44865,True,794129,38490,0,240828,False,None,Moderate,Buy Car,Wealth Creation,Poor
+56,Retired,17320,10722,6061,4661,False,0,0,6598,68682,False,None,Low,Pay Debt,Kids Education,Good
+52,Salaried,158424,107193,56852,50341,False,0,0,51231,325306,True,Mutual Funds,Low,Upgrade Lifestyle,Retirement,Good
+59,Self-employed,47068,26698,5588,21110,False,0,0,20370,200570,False,None,Moderate,Vacation,Kids Education,Good
+53,Retired,92356,74198,43442,30756,True,1853192,49727,0,335827,True,FD,Low,Vacation,Start Business,Poor
+57,Student,176190,129964,57826,72138,False,0,0,46226,488734,False,None,Moderate,Buy Car,Buy House,Good
+36,Student,61956,39064,15345,23719,False,0,0,22892,121527,True,FD,Moderate,Emergency Fund,Buy House,Good
+31,Business,189117,168242,44376,123866,True,1534076,15735,5140,29383,False,None,Low,Vacation,Wealth Creation,Poor
+32,Self-employed,166414,74715,26539,48176,True,848628,48989,42710,388538,False,None,Moderate,Upgrade Lifestyle,Kids Education,Good
+52,Student,110629,81910,45482,36428,False,0,0,28719,168426,True,Gold,Low,Pay Debt,Start Business,Average
+37,Self-employed,62112,36700,16028,20672,True,1062695,21214,4198,286163,False,None,Low,Emergency Fund,Kids Education,Poor
+59,Retired,82258,44344,25975,18369,False,0,0,37914,204349,False,None,Low,Vacation,Start Business,Good
+43,Salaried,10821,8667,2474,6193,True,1014522,26479,0,316622,False,None,Moderate,Buy Car,Wealth Creation,Poor
+20,Self-employed,69326,52854,26257,26597,True,1298698,39925,0,172050,False,None,Moderate,Pay Debt,Buy House,Poor
+59,Business,76923,51752,25980,25772,True,1148774,3090,22081,443451,False,None,Moderate,Emergency Fund,Kids Education,Good
+27,Self-employed,127677,89402,52341,37061,True,1178417,22070,16205,319104,True,FD,High,Pay Debt,Kids Education,Average
+55,Business,91251,42484,16736,25748,True,708290,47921,846,64385,False,None,Low,Upgrade Lifestyle,Start Business,Poor
+48,Business,34129,18514,9535,8979,False,0,0,15615,343284,False,None,High,Pay Debt,Wealth Creation,Good
+50,Self-employed,129825,92420,50922,41498,False,0,0,37405,353022,True,Stocks,Moderate,Emergency Fund,Retirement,Good
+36,Business,199625,114916,27638,87278,False,0,0,84709,95939,False,None,High,Vacation,Kids Education,Average
+38,Business,71894,60173,13909,46264,False,0,0,11721,422911,True,Crypto,High,Upgrade Lifestyle,Retirement,Average
+44,Student,95507,46252,26180,20072,True,373069,35820,13435,463156,True,Stocks,High,Buy Car,Start Business,Average
+24,Student,99060,45325,21339,23986,True,381503,36952,16783,496587,True,Real Estate,Low,Vacation,Buy House,Average
+57,Business,27210,16458,9643,6815,True,824707,8507,2245,427700,True,Crypto,High,Upgrade Lifestyle,Start Business,Poor
+36,Student,111983,55254,22346,32908,True,1097600,23198,33531,260924,True,FD,Moderate,Emergency Fund,Wealth Creation,Good
+30,Self-employed,61655,31265,14138,17127,True,1540480,20643,9747,198954,False,None,Low,Buy Car,Kids Education,Average
+51,Salaried,93990,38285,20003,18282,True,473318,14335,41370,170047,True,Crypto,Low,Buy Car,Buy House,Good
+30,Salaried,101023,56778,28223,28555,False,0,0,44245,443165,False,None,Low,Vacation,Kids Education,Good
+41,Self-employed,172449,155139,45370,109769,True,1935849,24649,0,133773,True,Crypto,High,Vacation,Wealth Creation,Poor
+55,Self-employed,117413,65425,15442,49983,True,1336242,47823,4165,429203,False,None,Moderate,Vacation,Retirement,Poor
+40,Business,114170,62931,22770,40161,False,0,0,51239,457799,True,Crypto,Moderate,Emergency Fund,Start Business,Good
+52,Salaried,29449,14179,3259,10920,True,1460095,35600,0,489552,False,None,High,Vacation,Retirement,Poor
+27,Student,135714,92562,50541,42021,True,616920,19360,23792,471896,False,None,High,Vacation,Retirement,Average
+36,Retired,78052,34250,11350,22900,False,0,0,43802,324411,True,Real Estate,Moderate,Emergency Fund,Buy House,Good
+58,Retired,65639,44566,18654,25912,False,0,0,21073,429106,False,None,Low,Upgrade Lifestyle,Wealth Creation,Good
+50,Student,169171,138337,45996,92341,True,171182,47755,0,297193,False,None,Low,Vacation,Start Business,Poor
+52,Retired,164897,109325,34724,74601,True,1836620,43593,11979,70113,True,Real Estate,Low,Upgrade Lifestyle,Kids Education,Poor
+39,Student,119735,105078,29432,75646,True,1773126,8630,6027,23669,False,None,Moderate,Emergency Fund,Start Business,Poor
+45,Self-employed,52258,32347,7218,25129,False,0,0,19911,453473,False,None,Low,Emergency Fund,Retirement,Good
+53,Self-employed,112111,63744,28683,35061,True,1339191,37054,11313,160774,False,None,High,Emergency Fund,Kids Education,Average
+32,Retired,154455,122470,72163,50307,True,113490,45338,0,256941,False,None,Moderate,Vacation,Start Business,Poor
+22,Salaried,195506,166501,61477,105024,True,215799,45712,0,221089,False,None,Low,Emergency Fund,Buy House,Poor
+39,Self-employed,110330,64400,19425,44975,False,0,0,45930,14015,True,Gold,Moderate,Upgrade Lifestyle,Kids Education,Average
+47,Retired,45842,40170,13024,27146,False,0,0,5672,165808,False,None,Moderate,Emergency Fund,Start Business,Average
+47,Self-employed,86260,40253,16753,23500,True,283772,14208,31799,491678,False,None,Low,Pay Debt,Start Business,Good
+39,Business,97708,81854,43476,38378,False,0,0,15854,244778,False,None,Low,Emergency Fund,Kids Education,Average
+55,Business,97408,86641,43826,42815,False,0,0,10767,18148,False,None,Moderate,Pay Debt,Retirement,Average
+21,Self-employed,37489,23606,10337,13269,True,138168,15131,0,412681,True,Real Estate,High,Buy Car,Buy House,Poor
+58,Business,160892,98667,25806,72861,True,831018,7021,55204,55734,False,None,High,Buy Car,Buy House,Average
+38,Salaried,48843,26593,12972,13621,False,0,0,22250,492556,True,Real Estate,High,Vacation,Kids Education,Good
+36,Student,115265,101369,40322,61047,False,0,0,13896,155008,True,FD,Low,Vacation,Wealth Creation,Average
+32,Business,156999,66072,18248,47824,True,54747,29867,61060,385595,False,None,Low,Buy Car,Retirement,Good
+54,Retired,149325,68197,24414,43783,False,0,0,81128,166126,False,None,Moderate,Upgrade Lifestyle,Start Business,Average
+20,Self-employed,125645,78182,22805,55377,True,707240,29858,17605,241688,True,Crypto,High,Pay Debt,Retirement,Average
+43,Salaried,137930,103458,25581,77877,False,0,0,34472,273966,False,None,Low,Buy Car,Start Business,Average
+29,Self-employed,73882,32432,7631,24801,False,0,0,41450,101608,True,Mutual Funds,High,Upgrade Lifestyle,Wealth Creation,Good
+43,Business,173849,76974,43687,33287,False,0,0,96875,405270,True,Mutual Funds,High,Buy Car,Kids Education,Good
+49,Student,180577,85690,23668,62022,True,1037513,48829,46058,50859,False,None,Low,Pay Debt,Retirement,Average
+44,Business,199066,101731,47448,54283,False,0,0,97335,353271,False,None,Moderate,Vacation,Start Business,Good
+40,Business,47019,22535,9119,13416,False,0,0,24484,66326,False,None,Moderate,Pay Debt,Start Business,Average
+21,Business,88598,62254,17528,44726,True,309738,32650,0,89915,False,None,High,Buy Car,Start Business,Poor
+33,Salaried,122768,68524,17279,51245,True,1319357,32121,22123,118518,False,None,Low,Emergency Fund,Start Business,Average
+47,Business,85879,69768,19891,49877,False,0,0,16111,303337,True,Real Estate,High,Pay Debt,Retirement,Average
+52,Student,17072,14718,7301,7417,True,1803702,23629,0,223883,True,Mutual Funds,Low,Emergency Fund,Buy House,Poor
+20,Student,65532,54751,17744,37007,False,0,0,10781,391660,False,None,High,Pay Debt,Start Business,Average
+56,Student,178659,140372,62533,77839,False,0,0,38287,259740,False,None,Low,Upgrade Lifestyle,Buy House,Average
+55,Student,101882,62435,34726,27709,False,0,0,39447,303084,False,None,Moderate,Emergency Fund,Kids Education,Good
+24,Student,180981,84226,22423,61803,True,827678,5289,91466,485479,True,Mutual Funds,High,Vacation,Buy House,Good
+55,Business,107821,71287,16674,54613,True,184438,28095,8439,188564,False,None,Moderate,Vacation,Wealth Creation,Poor
+35,Salaried,46988,34830,19898,14932,False,0,0,12158,418030,False,None,Moderate,Upgrade Lifestyle,Start Business,Good
+44,Self-employed,185709,137426,61629,75797,True,1921881,12674,35609,185157,True,Real Estate,Low,Emergency Fund,Buy House,Average
+31,Retired,62486,55868,28253,27615,False,0,0,6618,431536,False,None,Moderate,Vacation,Retirement,Average
+28,Student,188205,154944,76737,78207,False,0,0,33261,165185,False,None,Moderate,Emergency Fund,Start Business,Average
+25,Self-employed,149907,87863,32403,55460,False,0,0,62044,165015,True,FD,Low,Vacation,Kids Education,Average
+23,Retired,142775,77665,33781,43884,False,0,0,65110,321712,False,None,Low,Vacation,Retirement,Good
+50,Self-employed,41902,28105,15860,12245,False,0,0,13797,359638,False,None,Low,Pay Debt,Buy House,Good
+55,Retired,187344,82524,19639,62885,True,1251195,37744,67076,211882,True,Crypto,Moderate,Buy Car,Wealth Creation,Average
+56,Salaried,55580,34895,19482,15413,False,0,0,20685,482489,False,None,Low,Upgrade Lifestyle,Buy House,Good
+31,Student,71936,62429,14790,47639,False,0,0,9507,83476,False,None,High,Vacation,Retirement,Average
+56,Student,56056,48223,24950,23273,False,0,0,7833,452169,False,None,High,Vacation,Retirement,Average
+56,Self-employed,67564,45112,22868,22244,False,0,0,22452,409862,True,None,High,Pay Debt,Kids Education,Good
+37,Salaried,63888,30024,15768,14256,False,0,0,33864,262451,False,None,High,Emergency Fund,Wealth Creation,Good
+40,Business,10923,8580,3929,4651,True,1704663,39214,0,334747,False,None,Low,Pay Debt,Buy House,Poor
+54,Student,53068,41148,14473,26675,False,0,0,11920,87363,False,None,Low,Emergency Fund,Retirement,Average
+37,Business,26545,15449,5613,9836,False,0,0,11096,478828,True,Crypto,High,Vacation,Start Business,Good
+43,Retired,95074,44141,23092,21049,True,337298,24019,26914,206569,True,Real Estate,Low,Emergency Fund,Start Business,Good
+41,Retired,146507,60623,35428,25195,True,1587241,40251,45633,29295,False,None,Low,Vacation,Start Business,Average
+34,Salaried,114478,66976,19646,47330,True,1663071,33369,14133,376770,True,None,High,Emergency Fund,Start Business,Average
+47,Self-employed,143895,84043,19553,64490,False,0,0,59852,356031,True,Real Estate,Low,Buy Car,Buy House,Good
+47,Self-employed,88891,54990,30663,24327,True,415559,6736,27165,391768,True,None,High,Buy Car,Kids Education,Good
+56,Business,88513,46618,23906,22712,False,0,0,41895,448930,False,None,High,Upgrade Lifestyle,Buy House,Good
+44,Salaried,126172,85163,18480,66683,False,0,0,41009,169867,True,Stocks,Moderate,Buy Car,Retirement,Average
+45,Student,198331,121225,27375,93850,False,0,0,77106,200109,True,None,Moderate,Vacation,Wealth Creation,Average
+39,Self-employed,157198,95990,47750,48240,False,0,0,61208,41298,False,None,High,Upgrade Lifestyle,Retirement,Average
+60,Retired,140569,109351,25967,83384,True,609033,20043,11175,440422,True,FD,Moderate,Vacation,Buy House,Poor
+49,Self-employed,186636,80758,17122,63636,False,0,0,105878,155921,False,None,High,Upgrade Lifestyle,Wealth Creation,Average
+60,Salaried,27703,12549,4022,8527,False,0,0,15154,428504,True,Gold,Low,Buy Car,Retirement,Good
+51,Retired,125376,63586,27818,35768,False,0,0,61790,479557,False,None,Low,Pay Debt,Start Business,Good
+45,Self-employed,35092,19349,9651,9698,True,541523,45469,0,151644,True,FD,Moderate,Emergency Fund,Wealth Creation,Poor
+39,Business,41661,35052,7612,27440,True,166482,34395,0,286559,False,None,High,Pay Debt,Start Business,Poor
+22,Salaried,106137,86959,48325,38634,True,300122,34489,0,354070,True,Mutual Funds,Moderate,Upgrade Lifestyle,Start Business,Poor
+40,Student,19709,16013,3681,12332,False,0,0,3696,455453,False,None,High,Buy Car,Start Business,Average
+37,Student,168032,114518,25076,89442,True,595114,7195,46319,63086,True,Crypto,High,Buy Car,Retirement,Average
+36,Student,69997,54860,17725,37135,False,0,0,15137,423988,False,None,Moderate,Pay Debt,Start Business,Good
+40,Retired,56976,49205,22943,26262,True,1951420,43930,0,101527,True,None,High,Upgrade Lifestyle,Start Business,Poor
+42,Salaried,179822,93101,29850,63251,True,536414,44689,42032,322987,True,Crypto,Low,Pay Debt,Retirement,Good
+26,Self-employed,127408,100494,27386,73108,False,0,0,26914,316114,False,None,Moderate,Emergency Fund,Start Business,Good
+20,Student,149902,66173,21965,44208,True,529246,11434,72295,416458,False,None,High,Buy Car,Start Business,Good
+33,Retired,29986,16134,4586,11548,True,472413,13160,692,104026,False,None,Low,Vacation,Start Business,Poor
+55,Student,128441,92852,29956,62896,False,0,0,35589,323269,False,None,Low,Emergency Fund,Kids Education,Good
+45,Student,150126,79195,18256,60939,False,0,0,70931,313463,False,None,High,Emergency Fund,Kids Education,Good
+57,Self-employed,177353,83347,31112,52235,False,0,0,94006,281523,True,Mutual Funds,High,Buy Car,Kids Education,Good
+43,Student,75192,34775,9666,25109,False,0,0,40417,202389,False,None,High,Pay Debt,Wealth Creation,Good
+30,Business,11807,7212,2486,4726,True,1820449,10566,0,351043,False,None,High,Upgrade Lifestyle,Kids Education,Poor
+21,Business,141920,88014,18831,69183,False,0,0,53906,64534,True,FD,Moderate,Vacation,Kids Education,Average
+36,Retired,98859,85861,29397,56464,False,0,0,12998,101655,True,Crypto,Low,Emergency Fund,Kids Education,Average
+25,Self-employed,109664,73604,27735,45869,False,0,0,36060,461441,False,None,Moderate,Vacation,Kids Education,Good
+31,Salaried,60643,29728,16811,12917,False,0,0,30915,293265,True,FD,High,Emergency Fund,Wealth Creation,Good
+31,Salaried,14593,10382,2699,7683,False,0,0,4211,476737,True,None,High,Vacation,Kids Education,Good
+46,Business,108142,51472,19447,32025,False,0,0,56670,374150,False,None,High,Buy Car,Wealth Creation,Good
+34,Business,123900,90168,39685,50483,True,516972,37456,0,364532,True,Mutual Funds,Low,Pay Debt,Buy House,Poor
+31,Business,197681,100764,20899,79865,True,1818290,46678,50239,22581,False,None,High,Upgrade Lifestyle,Buy House,Average
+35,Self-employed,122889,54609,30906,23703,False,0,0,68280,452864,True,Mutual Funds,Moderate,Emergency Fund,Retirement,Good
+33,Business,147306,92456,50557,41899,True,971905,19395,35455,262498,False,None,Moderate,Upgrade Lifestyle,Retirement,Average
+22,Salaried,35692,17241,4295,12946,False,0,0,18451,193903,True,Crypto,Low,Upgrade Lifestyle,Kids Education,Good
+60,Salaried,138744,111957,40030,71927,False,0,0,26787,365738,False,None,High,Vacation,Kids Education,Average
+42,Self-employed,62354,51854,22849,29005,True,147904,25059,0,382191,True,Real Estate,High,Buy Car,Wealth Creation,Poor
+28,Student,85748,66409,28081,38328,False,0,0,19339,111351,False,None,Moderate,Pay Debt,Kids Education,Average
+30,Business,152120,125935,71885,54050,True,352542,41503,0,429712,False,None,Moderate,Buy Car,Start Business,Poor
+40,Salaried,152434,92520,30097,62423,True,1690260,35533,24381,150391,False,None,High,Buy Car,Wealth Creation,Average
+42,Retired,180342,129981,72537,57444,True,266032,11713,38648,379898,True,Mutual Funds,Moderate,Vacation,Start Business,Average
+22,Self-employed,119531,84675,36864,47811,False,0,0,34856,195809,False,None,High,Vacation,Buy House,Average
+53,Salaried,159030,100140,35387,64753,True,1546710,35752,23138,489114,False,None,Low,Vacation,Retirement,Average
+20,Retired,163874,80388,32747,47641,False,0,0,83486,107006,True,FD,High,Emergency Fund,Start Business,Average
+24,Salaried,22229,17954,9638,8316,False,0,0,4275,245029,False,None,Low,Emergency Fund,Start Business,Average
+41,Retired,94573,53757,11535,42222,False,0,0,40816,31511,True,Stocks,Low,Buy Car,Kids Education,Average
+42,Retired,113175,45362,14556,30806,True,1191753,24647,43166,305093,False,None,Low,Emergency Fund,Start Business,Good
+55,Business,140099,93303,50038,43265,False,0,0,46796,341765,True,Real Estate,High,Buy Car,Kids Education,Good
+38,Self-employed,189569,119705,33590,86115,False,0,0,69864,236651,True,Stocks,High,Emergency Fund,Start Business,Average
+60,Business,180398,100426,39070,61356,True,1199476,47659,32313,392871,True,Gold,High,Upgrade Lifestyle,Start Business,Average
+43,Student,139580,113799,37327,76472,True,1165065,24509,1272,100603,True,Real Estate,High,Buy Car,Wealth Creation,Poor
+40,Business,78653,49327,12071,37256,False,0,0,29326,438332,False,None,High,Buy Car,Retirement,Good
+52,Retired,121761,87247,28225,59022,True,1830862,31890,2624,454559,False,None,High,Buy Car,Retirement,Poor
+52,Student,10151,5027,1414,3613,False,0,0,5124,466455,False,None,High,Buy Car,Retirement,Good
+46,Self-employed,196335,169635,95102,74533,True,875426,12261,14439,221121,True,Gold,High,Buy Car,Wealth Creation,Poor
+44,Student,91744,37348,11924,25424,True,1338103,25129,29267,163184,False,None,Low,Buy Car,Kids Education,Good
+20,Retired,168259,117303,29192,88111,True,599247,37015,13941,443470,False,None,Moderate,Pay Debt,Retirement,Poor
+43,Salaried,189924,80764,21014,59750,False,0,0,109160,405018,True,Mutual Funds,Moderate,Pay Debt,Buy House,Good
+38,Retired,23803,12659,7349,5310,False,0,0,11144,259882,True,Real Estate,Moderate,Buy Car,Kids Education,Good
+60,Student,45119,24805,9508,15297,True,1736155,9403,10911,182416,False,None,High,Upgrade Lifestyle,Wealth Creation,Good
+26,Salaried,106861,61959,12667,49292,True,402811,42278,2624,116136,True,Crypto,Moderate,Buy Car,Buy House,Poor
+30,Student,129431,103632,44932,58700,True,1475908,47511,0,143743,False,None,High,Upgrade Lifestyle,Retirement,Poor
+54,Student,169920,147536,40761,106775,False,0,0,22384,216311,False,None,Moderate,Emergency Fund,Retirement,Average
+22,Salaried,92317,71284,41566,29718,True,1154182,15729,5304,408523,False,None,High,Pay Debt,Buy House,Poor
+52,Business,134960,92557,53003,39554,True,871997,35210,7193,122694,False,None,High,Vacation,Buy House,Poor
+57,Self-employed,111646,97028,42200,54828,False,0,0,14618,298024,True,Real Estate,High,Buy Car,Kids Education,Average
+26,Business,137651,75579,29443,46136,False,0,0,62072,120236,False,None,Low,Emergency Fund,Buy House,Average
+44,Self-employed,84039,54764,18690,36074,True,1229101,2148,27127,182004,False,None,Low,Emergency Fund,Buy House,Good
+51,Student,23749,16430,8904,7526,True,1531154,30560,0,333638,True,Gold,High,Vacation,Kids Education,Poor
+25,Self-employed,152392,120442,49774,70668,True,1398815,33827,0,376489,True,Gold,Low,Pay Debt,Retirement,Poor
+35,Business,144435,59566,28969,30597,False,0,0,84869,292919,True,Mutual Funds,High,Emergency Fund,Retirement,Good
+51,Self-employed,74453,46560,14844,31716,False,0,0,27893,224378,False,None,High,Upgrade Lifestyle,Wealth Creation,Good
+47,Self-employed,25680,12365,2761,9604,False,0,0,13315,460136,True,Real Estate,Low,Upgrade Lifestyle,Buy House,Good
+30,Student,119466,69787,24735,45052,True,666905,32622,17057,16266,True,FD,Moderate,Pay Debt,Wealth Creation,Average
+41,Salaried,121714,70436,36041,34395,False,0,0,51278,303760,True,Crypto,Moderate,Emergency Fund,Retirement,Good
+59,Student,16645,7569,1885,5684,True,1547961,15103,0,93675,False,None,High,Pay Debt,Buy House,Poor
+54,Salaried,171187,121537,67629,53908,False,0,0,49650,75753,True,Real Estate,Moderate,Upgrade Lifestyle,Kids Education,Average
+39,Student,146269,107112,23706,83406,True,1641689,26011,13146,381313,True,FD,Low,Buy Car,Kids Education,Poor
+36,Business,35983,21886,12174,9712,False,0,0,14097,300844,True,Gold,Moderate,Pay Debt,Buy House,Good
+36,Business,147423,80311,20506,59805,True,1408705,32591,34521,116851,True,None,High,Emergency Fund,Retirement,Average
+25,Student,167321,87844,43775,44069,False,0,0,79477,216176,True,None,Low,Upgrade Lifestyle,Start Business,Average
+22,Salaried,161514,70786,42468,28318,False,0,0,90728,343395,True,Stocks,Low,Vacation,Kids Education,Good
+37,Self-employed,41369,27794,9732,18062,False,0,0,13575,208350,True,Mutual Funds,High,Emergency Fund,Buy House,Good
+46,Retired,124785,51115,13567,37548,False,0,0,73670,1332,False,None,Low,Emergency Fund,Wealth Creation,Average
+55,Retired,63276,44883,9479,35404,True,1376722,49127,0,487875,False,None,Moderate,Emergency Fund,Buy House,Poor
+43,Business,198286,79362,33436,45926,False,0,0,118924,214564,True,Mutual Funds,Low,Upgrade Lifestyle,Retirement,Average
+60,Business,88462,63811,21352,42459,False,0,0,24651,426980,True,FD,Low,Emergency Fund,Kids Education,Good
+43,Retired,138342,71364,28749,42615,True,484945,38143,28835,337233,True,Mutual Funds,High,Vacation,Kids Education,Good
+28,Salaried,15331,12175,6443,5732,True,265947,16448,0,423038,False,None,High,Buy Car,Kids Education,Poor
+49,Student,71434,37435,13631,23804,False,0,0,33999,327900,False,None,Moderate,Buy Car,Buy House,Good
+47,Retired,173667,89901,29723,60178,False,0,0,83766,125125,False,None,Moderate,Buy Car,Start Business,Average
+54,Student,54884,39457,20408,19049,False,0,0,15427,258926,True,Stocks,High,Pay Debt,Retirement,Good
+45,Self-employed,30490,19727,7868,11859,True,1541479,36297,0,366770,True,FD,Low,Buy Car,Wealth Creation,Poor
+27,Salaried,86961,60900,32968,27932,True,1717759,48965,0,34188,True,Crypto,High,Vacation,Wealth Creation,Poor
+20,Retired,136856,69445,33529,35916,True,1348557,34487,32924,92492,True,Stocks,Moderate,Emergency Fund,Start Business,Average
+29,Business,33764,27594,7212,20382,False,0,0,6170,337788,True,Real Estate,High,Upgrade Lifestyle,Buy House,Average
+54,Salaried,73127,61081,12543,48538,False,0,0,12046,493595,True,FD,Moderate,Vacation,Start Business,Average
+39,Retired,147396,65024,20892,44132,False,0,0,82372,7657,True,Real Estate,Low,Emergency Fund,Retirement,Average
+38,Self-employed,48217,31030,6405,24625,False,0,0,17187,234113,False,None,Moderate,Vacation,Buy House,Good
+42,Student,27067,11587,3503,8084,True,1479042,6552,8928,243035,False,None,Low,Emergency Fund,Wealth Creation,Good
+29,Salaried,20231,14037,3195,10842,False,0,0,6194,252209,False,None,High,Upgrade Lifestyle,Wealth Creation,Good
+59,Salaried,21099,13013,5417,7596,False,0,0,8086,427299,True,Gold,Moderate,Emergency Fund,Retirement,Good
+20,Student,92960,77044,20143,56901,False,0,0,15916,198864,True,Gold,Low,Emergency Fund,Buy House,Average
+32,Retired,46028,34590,17183,17407,False,0,0,11438,496628,True,Real Estate,High,Emergency Fund,Wealth Creation,Good
+52,Business,156184,119463,56997,62466,False,0,0,36721,70820,False,None,Low,Pay Debt,Start Business,Average
+35,Self-employed,166171,118178,34997,83181,False,0,0,47993,66217,False,None,High,Pay Debt,Wealth Creation,Average
+51,Retired,123873,97780,41810,55970,True,1351813,27157,0,189227,True,Stocks,Moderate,Emergency Fund,Start Business,Poor
+25,Salaried,157484,76744,25755,50989,False,0,0,80740,39752,False,None,Moderate,Upgrade Lifestyle,Kids Education,Average
+28,Student,110567,81008,46579,34429,True,1575419,23536,6023,206813,True,Crypto,High,Buy Car,Kids Education,Poor
+34,Business,156966,126261,42463,83798,True,1393723,5082,25623,145754,True,FD,High,Buy Car,Kids Education,Average
+27,Salaried,126013,68025,38182,29843,True,904394,17681,40307,191727,False,None,Low,Upgrade Lifestyle,Retirement,Average
+45,Self-employed,120273,84220,46327,37893,True,1440123,44733,0,398084,True,FD,Moderate,Buy Car,Start Business,Poor
+36,Salaried,158469,141091,37368,103723,True,292034,44123,0,390138,True,None,High,Upgrade Lifestyle,Kids Education,Poor
+30,Student,64935,56221,26810,29411,True,101551,25273,0,371460,True,Real Estate,Moderate,Buy Car,Buy House,Poor
+32,Student,11835,6502,1693,4809,True,1002650,28886,0,479549,True,Stocks,High,Emergency Fund,Buy House,Poor
+48,Business,105575,70091,21444,48647,True,95979,10167,25317,13672,False,None,Moderate,Pay Debt,Buy House,Average
+30,Retired,131840,95155,22061,73094,False,0,0,36685,481400,False,None,High,Pay Debt,Retirement,Good
+50,Self-employed,164019,102176,35699,66477,False,0,0,61843,347436,False,None,High,Buy Car,Buy House,Good
+38,Student,86492,52145,14061,38084,True,1848846,14445,19902,66374,True,Gold,Moderate,Vacation,Start Business,Average
+53,Salaried,179955,118902,69634,49268,True,1787416,28602,32451,12363,True,Gold,Low,Upgrade Lifestyle,Retirement,Average
+42,Salaried,62754,42681,22939,19742,True,71266,45650,0,8033,False,None,High,Upgrade Lifestyle,Buy House,Poor
+29,Retired,179034,76590,25702,50888,False,0,0,102444,298161,True,FD,Low,Pay Debt,Kids Education,Good
+40,Self-employed,36343,19620,7191,12429,False,0,0,16723,452269,False,None,Moderate,Emergency Fund,Kids Education,Good
+32,Self-employed,177578,98475,42310,56165,False,0,0,79103,373545,True,Real Estate,Low,Buy Car,Retirement,Good
+31,Business,128015,89636,49091,40545,False,0,0,38379,428173,False,None,High,Emergency Fund,Start Business,Good
+35,Self-employed,154155,124273,31612,92661,True,1518410,44644,0,135289,True,None,Moderate,Upgrade Lifestyle,Buy House,Poor
+53,Self-employed,81905,59570,35225,24345,True,1341579,4929,17406,18217,False,None,Low,Pay Debt,Kids Education,Average
+27,Self-employed,137399,66298,30210,36088,False,0,0,71101,473790,False,None,Moderate,Buy Car,Retirement,Good
+32,Student,103656,50745,10552,40193,True,615415,20166,32745,282799,False,None,Moderate,Vacation,Kids Education,Good
+36,Retired,102324,68435,20589,47846,False,0,0,33889,184610,False,None,High,Vacation,Buy House,Average
+43,Student,31031,23196,6506,16690,True,1145578,36384,0,186802,True,None,Moderate,Upgrade Lifestyle,Wealth Creation,Poor
+51,Student,117014,61537,24879,36658,True,772415,5918,49559,248160,False,None,Moderate,Upgrade Lifestyle,Wealth Creation,Good
+42,Salaried,138578,120028,37510,82518,True,1310983,14406,4144,146928,False,None,Moderate,Buy Car,Kids Education,Poor
+41,Student,198721,129528,29689,99839,False,0,0,69193,153868,True,Mutual Funds,High,Pay Debt,Buy House,Average
+60,Retired,28468,19717,6316,13401,True,881826,26727,0,345436,True,None,High,Upgrade Lifestyle,Kids Education,Poor
+49,Student,191372,128361,45446,82915,False,0,0,63011,197620,False,None,High,Buy Car,Wealth Creation,Average
+27,Student,172272,125922,51518,74404,True,1591146,26054,20296,353045,False,None,Low,Emergency Fund,Retirement,Average
+49,Salaried,131656,53718,23982,29736,False,0,0,77938,176913,False,None,High,Emergency Fund,Kids Education,Good
+52,Business,178996,120651,62291,58360,False,0,0,58345,474017,False,None,Low,Pay Debt,Buy House,Good
+31,Student,163863,105140,51187,53953,True,433780,25137,33586,19264,False,None,Moderate,Pay Debt,Start Business,Average
+24,Self-employed,96674,40475,24113,16362,True,107472,25648,30551,188016,False,None,High,Pay Debt,Start Business,Good
+33,Self-employed,108288,67668,21222,46446,False,0,0,40620,491418,True,Real Estate,Low,Emergency Fund,Retirement,Good
+49,Salaried,109489,79270,30198,49072,False,0,0,30219,95630,False,None,Low,Pay Debt,Wealth Creation,Average
+27,Salaried,96896,69441,24232,45209,True,291762,34907,0,186441,True,Stocks,Low,Emergency Fund,Retirement,Poor
+30,Salaried,102378,86705,38389,48316,True,549808,31737,0,228250,False,None,High,Emergency Fund,Start Business,Poor
+32,Self-employed,10442,6116,2797,3319,True,376710,19515,0,122425,True,Gold,Moderate,Emergency Fund,Wealth Creation,Poor
+46,Self-employed,78865,34543,19728,14815,False,0,0,44322,431223,True,Real Estate,Moderate,Upgrade Lifestyle,Kids Education,Good
+56,Salaried,42928,35319,20010,15309,False,0,0,7609,340644,True,Mutual Funds,High,Pay Debt,Start Business,Average
+37,Student,38831,25469,7251,18218,False,0,0,13362,41865,False,None,Moderate,Upgrade Lifestyle,Retirement,Average
+39,Retired,20801,10021,2357,7664,False,0,0,10780,83061,True,Crypto,High,Pay Debt,Buy House,Good
+51,Business,178387,119606,58238,61368,True,1277905,12522,46259,192464,True,Crypto,Moderate,Buy Car,Buy House,Average
+27,Business,78768,53386,28142,25244,True,514303,4700,20682,341269,False,None,High,Pay Debt,Start Business,Good
+20,Retired,29082,12532,3340,9192,False,0,0,16550,414694,True,Real Estate,Moderate,Vacation,Buy House,Good
+51,Business,40466,33130,9644,23486,False,0,0,7336,87640,True,Crypto,Low,Vacation,Kids Education,Average
+23,Retired,103570,42487,11656,30831,False,0,0,61083,22193,False,None,Moderate,Pay Debt,Buy House,Average
+30,Salaried,187976,136462,35588,100874,False,0,0,51514,421711,False,None,Low,Emergency Fund,Start Business,Good
+22,Salaried,102569,74618,21672,52946,True,1678098,8843,19108,268112,True,Gold,High,Upgrade Lifestyle,Wealth Creation,Average
+30,Business,157399,88428,44295,44133,False,0,0,68971,489878,True,Gold,Low,Upgrade Lifestyle,Kids Education,Good
+60,Retired,94337,78865,19660,59205,True,1316373,26242,0,329016,False,None,High,Pay Debt,Kids Education,Poor
+21,Business,102159,65143,32518,32625,True,81889,18238,18778,144595,True,None,Moderate,Emergency Fund,Buy House,Average
+47,Student,132378,77417,39911,37506,True,1253376,27494,27467,369257,False,None,High,Emergency Fund,Start Business,Good
+31,Salaried,127651,114278,64270,50008,False,0,0,13373,239281,True,Mutual Funds,Low,Pay Debt,Retirement,Average
+54,Self-employed,119797,96414,48219,48195,True,1424357,7072,16311,483140,False,None,Low,Buy Car,Retirement,Average
+22,Business,115918,94867,40960,53907,True,1553726,30163,0,74984,False,None,Low,Upgrade Lifestyle,Kids Education,Poor
+34,Retired,19078,14653,8531,6122,False,0,0,4425,73292,False,None,Low,Upgrade Lifestyle,Retirement,Good
+45,Self-employed,100826,90568,33310,57258,False,0,0,10258,116195,False,None,Low,Buy Car,Retirement,Average
+55,Business,195331,147407,81808,65599,True,1234984,9120,38804,497546,False,None,Moderate,Emergency Fund,Retirement,Average
+38,Self-employed,166307,142324,73130,69194,True,124417,43204,0,118050,True,None,Low,Emergency Fund,Wealth Creation,Poor
+35,Salaried,184721,157166,59855,97311,True,1631797,13694,13861,416414,False,None,Low,Pay Debt,Retirement,Poor
+49,Salaried,37700,18715,10614,8101,False,0,0,18985,401591,False,None,Low,Vacation,Buy House,Good
+47,Business,43210,31246,16579,14667,True,199336,11873,91,470017,False,None,High,Pay Debt,Start Business,Poor
+39,Self-employed,13538,6053,1266,4787,True,1837837,33931,0,314037,True,FD,High,Buy Car,Wealth Creation,Poor
+39,Student,131020,94473,53098,41375,True,1858578,27832,8715,495464,True,Stocks,High,Buy Car,Kids Education,Poor
+52,Business,96833,38959,20979,17980,False,0,0,57874,343291,False,None,Moderate,Pay Debt,Wealth Creation,Good
+25,Self-employed,103363,45084,19095,25989,True,1103060,12800,45479,59486,True,Crypto,High,Pay Debt,Retirement,Average
+51,Retired,24566,16358,7016,9342,True,1742559,18199,0,464646,False,None,High,Pay Debt,Wealth Creation,Poor
+43,Business,74898,44282,22064,22218,True,1147331,32577,0,58829,False,None,High,Emergency Fund,Wealth Creation,Poor
+59,Salaried,77312,53144,16986,36158,False,0,0,24168,419851,True,None,High,Vacation,Wealth Creation,Good
+28,Self-employed,63377,47765,14353,33412,False,0,0,15612,493178,True,None,High,Buy Car,Retirement,Good
+36,Retired,160089,67323,27569,39754,False,0,0,92766,424797,False,None,Moderate,Vacation,Start Business,Good
+53,Business,144363,112449,51671,60778,True,1847982,3778,28136,287089,True,Gold,Low,Vacation,Start Business,Average
+38,Self-employed,149247,64554,31604,32950,True,673105,25071,59622,236981,False,None,High,Buy Car,Buy House,Good
+51,Salaried,188753,160620,62640,97980,False,0,0,28133,330665,False,None,Low,Buy Car,Wealth Creation,Average
+22,Salaried,161207,98126,32871,65255,False,0,0,63081,302345,True,Mutual Funds,High,Buy Car,Retirement,Good
+37,Student,24929,17067,8746,8321,False,0,0,7862,351866,False,None,High,Emergency Fund,Wealth Creation,Good
+53,Student,82538,71915,41234,30681,True,1884923,19839,0,494341,True,Stocks,Moderate,Pay Debt,Start Business,Poor
+38,Self-employed,13459,5457,2307,3150,True,1765195,42612,0,438504,False,None,Moderate,Emergency Fund,Retirement,Poor
+40,Business,162656,77936,41166,36770,False,0,0,84720,382432,True,Gold,Low,Vacation,Kids Education,Good
+36,Retired,30392,24471,8313,16158,True,1907206,37823,0,297562,False,None,High,Upgrade Lifestyle,Kids Education,Poor
+20,Salaried,28698,21997,10981,11016,False,0,0,6701,478628,False,None,Moderate,Emergency Fund,Wealth Creation,Good
+33,Salaried,30056,26693,9454,17239,False,0,0,3363,19121,False,None,High,Vacation,Buy House,Average
+21,Self-employed,116552,86663,32085,54578,False,0,0,29889,140509,True,Real Estate,Low,Emergency Fund,Wealth Creation,Average
+48,Self-employed,102331,61758,36648,25110,False,0,0,40573,276297,True,Crypto,Moderate,Buy Car,Buy House,Good
+34,Student,193114,99392,29079,70313,False,0,0,93722,366022,True,Gold,Moderate,Pay Debt,Buy House,Good
+26,Student,60763,48084,15241,32843,False,0,0,12679,68325,False,None,Moderate,Buy Car,Retirement,Average
+20,Retired,194648,139275,55039,84236,False,0,0,55373,211029,False,None,Moderate,Buy Car,Buy House,Average
+41,Student,88123,76361,39010,37351,True,1222246,31382,0,251969,False,None,Low,Pay Debt,Kids Education,Poor
+24,Retired,47013,34968,9610,25358,True,895010,6385,5660,114418,True,Mutual Funds,Low,Emergency Fund,Wealth Creation,Average
+27,Business,26721,22137,10198,11939,False,0,0,4584,139634,False,None,Low,Emergency Fund,Wealth Creation,Average
+44,Business,108159,84707,32445,52262,True,646933,8890,14562,292580,False,None,Low,Pay Debt,Start Business,Average
+25,Student,116560,61774,17597,44177,True,1258449,8247,46539,130318,True,None,High,Pay Debt,Start Business,Average
+43,Student,33235,19692,8219,11473,True,1263827,6649,6894,7039,False,None,Low,Buy Car,Buy House,Average
+57,Retired,194107,136629,56103,80526,True,896018,42601,14877,378511,True,Real Estate,Low,Upgrade Lifestyle,Retirement,Poor
+32,Self-employed,60892,35531,7618,27913,False,0,0,25361,457417,True,Real Estate,Moderate,Emergency Fund,Kids Education,Good
+57,Business,31006,18086,3727,14359,True,1884653,27359,0,468201,True,Gold,High,Vacation,Wealth Creation,Poor
+53,Retired,113272,62343,31539,30804,True,273555,4211,46718,105105,True,Gold,High,Emergency Fund,Kids Education,Average
+47,Student,161898,134526,64395,70131,False,0,0,27372,126017,False,None,High,Upgrade Lifestyle,Wealth Creation,Average
+53,Self-employed,44123,23387,10057,13330,False,0,0,20736,394293,True,Crypto,High,Upgrade Lifestyle,Buy House,Good
+31,Salaried,55079,48510,24253,24257,False,0,0,6569,79711,False,None,High,Upgrade Lifestyle,Wealth Creation,Average
+51,Student,15883,11004,4108,6896,True,886524,14631,0,46002,True,Gold,High,Emergency Fund,Buy House,Poor
+45,Business,14804,7444,1824,5620,False,0,0,7360,151366,True,FD,Low,Vacation,Wealth Creation,Good
+58,Student,75977,65315,13877,51438,False,0,0,10662,378441,True,Real Estate,Moderate,Pay Debt,Buy House,Average
+42,Business,138869,122454,28307,94147,False,0,0,16415,339223,True,Real Estate,Moderate,Emergency Fund,Retirement,Average
+28,Student,41056,35399,10951,24448,True,1691581,49638,0,435167,False,None,Low,Buy Car,Wealth Creation,Poor
+48,Retired,151338,105090,52238,52852,False,0,0,46248,239312,False,None,High,Emergency Fund,Buy House,Average
+50,Business,85701,35042,14939,20103,True,938567,43743,6916,485602,False,None,Low,Buy Car,Buy House,Poor
+25,Self-employed,189199,124487,26643,97844,True,1702188,44921,19791,125147,True,Real Estate,Moderate,Vacation,Buy House,Average
+45,Retired,13924,11989,7036,4953,False,0,0,1935,351110,False,None,High,Vacation,Kids Education,Average
+25,Self-employed,188881,142345,72183,70162,True,960971,14164,32372,100296,True,None,High,Pay Debt,Kids Education,Average
+55,Self-employed,63071,33776,18589,15187,False,0,0,29295,144558,True,FD,Low,Emergency Fund,Wealth Creation,Good
+31,Self-employed,21940,16067,4488,11579,False,0,0,5873,268174,False,None,Moderate,Emergency Fund,Start Business,Good
+33,Salaried,126351,54590,31978,22612,False,0,0,71761,92334,False,None,Moderate,Pay Debt,Start Business,Average
+43,Retired,194786,131553,69889,61664,True,1005527,46285,16948,444736,True,Real Estate,Low,Vacation,Start Business,Poor
+24,Student,100202,84243,30327,53916,False,0,0,15959,475218,False,None,High,Emergency Fund,Retirement,Average
+30,Self-employed,95933,55930,12458,43472,False,0,0,40003,483502,False,None,Low,Emergency Fund,Kids Education,Good
+28,Self-employed,132629,75839,15838,60001,True,665025,2894,53896,114772,False,None,High,Emergency Fund,Buy House,Average
+34,Business,172566,130843,40717,90126,True,221928,13009,28714,198164,False,None,High,Upgrade Lifestyle,Wealth Creation,Average
+22,Business,13246,10140,4351,5789,False,0,0,3106,288972,False,None,Low,Pay Debt,Wealth Creation,Good
+35,Student,44900,22295,9007,13288,True,1835726,15242,7363,10761,False,None,Moderate,Upgrade Lifestyle,Wealth Creation,Average
+40,Business,58779,25149,11027,14122,False,0,0,33630,389950,False,None,Moderate,Vacation,Buy House,Good
+20,Self-employed,37209,27865,7326,20539,False,0,0,9344,387752,True,Mutual Funds,High,Upgrade Lifestyle,Kids Education,Good
+59,Self-employed,98669,49302,23433,25869,False,0,0,49367,87155,False,None,Low,Upgrade Lifestyle,Buy House,Average
+28,Student,63398,29809,14416,15393,False,0,0,33589,31479,False,None,Moderate,Emergency Fund,Wealth Creation,Average
+28,Retired,33210,18239,10405,7834,True,1331594,29551,0,170215,False,None,High,Buy Car,Start Business,Poor
+59,Student,60854,26949,7906,19043,True,1745822,32299,1606,220093,False,None,Low,Upgrade Lifestyle,Start Business,Poor
+40,Student,133179,92723,26188,66535,False,0,0,40456,301319,False,None,Low,Emergency Fund,Wealth Creation,Good
+35,Salaried,181700,105932,51251,54681,False,0,0,75768,232682,True,Stocks,High,Pay Debt,Buy House,Average
+57,Retired,151553,120718,72336,48382,True,1302763,12185,18650,401630,True,Real Estate,Low,Upgrade Lifestyle,Kids Education,Average
+24,Business,74186,49392,18022,31370,True,1404702,17856,6938,197034,False,None,Moderate,Buy Car,Kids Education,Poor
+58,Student,133484,118853,30744,88109,True,159081,46599,0,488819,True,Crypto,Low,Vacation,Kids Education,Poor
+40,Salaried,10316,8083,4481,3602,True,1802435,36796,0,181579,False,None,Low,Pay Debt,Retirement,Poor
+59,Self-employed,85825,59342,20907,38435,False,0,0,26483,327752,True,Real Estate,High,Vacation,Retirement,Good
+51,Student,114904,99577,39072,60505,False,0,0,15327,166272,True,Stocks,High,Vacation,Wealth Creation,Average
+37,Salaried,143956,92334,54112,38222,True,666305,4194,47428,167369,False,None,Low,Upgrade Lifestyle,Buy House,Average
+41,Student,22640,15360,6063,9297,False,0,0,7280,134127,True,Crypto,High,Emergency Fund,Retirement,Good
+39,Business,181815,128440,46796,81644,True,594615,11277,42098,421253,True,None,Moderate,Emergency Fund,Start Business,Good
+46,Self-employed,143755,82401,32911,49490,False,0,0,61354,265232,False,None,Low,Emergency Fund,Buy House,Good
+21,Business,121897,83852,29175,54677,False,0,0,38045,168737,False,None,Low,Vacation,Retirement,Average
+54,Self-employed,172583,124637,40585,84052,True,183436,2246,45700,411299,False,None,Low,Buy Car,Kids Education,Good
+36,Salaried,195056,156872,76729,80143,True,1563594,41988,0,67849,True,Mutual Funds,Low,Upgrade Lifestyle,Retirement,Poor
+22,Student,129714,55399,20866,34533,True,324344,11170,63145,429533,True,Gold,High,Buy Car,Retirement,Good
+37,Business,132442,71222,32426,38796,True,1968707,35835,25385,468230,False,None,High,Upgrade Lifestyle,Buy House,Average
+31,Business,39697,32530,13904,18626,False,0,0,7167,415877,True,None,Moderate,Emergency Fund,Retirement,Average
+39,Retired,194323,164307,58221,106086,False,0,0,30016,65408,False,None,Moderate,Emergency Fund,Kids Education,Average
+58,Student,113816,73578,39389,34189,True,441233,4908,35330,48450,True,Crypto,Moderate,Upgrade Lifestyle,Wealth Creation,Average
+50,Student,44847,32641,16707,15934,False,0,0,12206,398961,True,Gold,High,Upgrade Lifestyle,Retirement,Good
+33,Salaried,24773,17379,6822,10557,True,896068,7157,237,206636,False,None,High,Buy Car,Buy House,Poor
+49,Business,151060,88003,22734,65269,False,0,0,63057,463162,False,None,Low,Buy Car,Start Business,Good
+57,Student,117113,78098,20118,57980,False,0,0,39015,115767,False,None,Moderate,Upgrade Lifestyle,Kids Education,Average
+57,Business,145020,121218,43759,77459,False,0,0,23802,280016,False,None,Low,Emergency Fund,Retirement,Average
+57,Salaried,68201,30665,11696,18969,False,0,0,37536,269895,True,Stocks,Moderate,Upgrade Lifestyle,Wealth Creation,Good
+36,Student,97455,82658,22270,60388,False,0,0,14797,498523,True,Mutual Funds,Low,Pay Debt,Start Business,Average
+25,Salaried,15249,6853,3983,2870,False,0,0,8396,104111,False,None,Moderate,Buy Car,Wealth Creation,Good
+48,Student,23211,19390,10271,9119,True,103916,37121,0,283090,True,Gold,Low,Emergency Fund,Start Business,Poor
+30,Retired,96963,52344,30560,21784,True,1782868,32269,12350,403277,True,Mutual Funds,Low,Pay Debt,Kids Education,Average
+52,Student,114342,91501,36410,55091,True,1546009,43984,0,363794,True,Stocks,Low,Vacation,Kids Education,Poor
+24,Salaried,172812,138901,38874,100027,False,0,0,33911,250149,False,None,High,Emergency Fund,Retirement,Average
+30,Salaried,143807,70397,17759,52638,True,1326801,9119,64291,28736,True,None,Low,Vacation,Wealth Creation,Average
+53,Self-employed,172614,149903,64082,85821,True,1601920,26602,0,379887,True,None,Low,Upgrade Lifestyle,Buy House,Poor
+26,Self-employed,165168,71864,16195,55669,True,217995,14538,78766,160519,False,None,Low,Vacation,Wealth Creation,Average
+25,Student,83638,58626,34138,24488,False,0,0,25012,358987,True,Stocks,Low,Upgrade Lifestyle,Start Business,Good
+48,Business,127604,60861,27383,33478,False,0,0,66743,194833,False,None,Moderate,Buy Car,Kids Education,Good
+53,Student,112133,46432,10131,36301,True,357085,19310,46391,119453,True,None,Low,Pay Debt,Wealth Creation,Average
+35,Self-employed,186702,166319,84668,81651,True,339845,49914,0,161604,True,Mutual Funds,Moderate,Upgrade Lifestyle,Retirement,Poor
+41,Salaried,183518,115804,48962,66842,True,1956332,23997,43717,10554,False,None,Low,Emergency Fund,Wealth Creation,Average
+21,Salaried,107224,65306,27047,38259,False,0,0,41918,141688,True,Real Estate,Moderate,Buy Car,Wealth Creation,Average
+34,Self-employed,68375,31943,13332,18611,False,0,0,36432,467672,False,None,Low,Buy Car,Start Business,Good
+27,Student,138873,114152,39881,74271,False,0,0,24721,57613,True,FD,Moderate,Pay Debt,Kids Education,Average
+38,Business,78652,49047,26284,22763,True,1783511,5394,24211,493143,True,None,Low,Vacation,Retirement,Good
+50,Business,24927,13952,5748,8204,True,376075,13532,0,250566,True,Stocks,Moderate,Buy Car,Wealth Creation,Poor
+53,Business,196555,122170,45647,76523,True,1880214,33328,41057,67393,True,Real Estate,Moderate,Emergency Fund,Wealth Creation,Average
+28,Retired,196042,114843,62022,52821,True,924136,7196,74003,297883,False,None,Moderate,Pay Debt,Retirement,Average
+28,Student,139006,61037,22901,38136,False,0,0,77969,367818,False,None,High,Buy Car,Kids Education,Good
+55,Retired,163769,113509,66863,46646,False,0,0,50260,424687,False,None,High,Pay Debt,Kids Education,Good
+49,Business,189470,125478,71428,54050,True,356728,48526,15466,16298,True,Mutual Funds,Moderate,Emergency Fund,Kids Education,Poor
+49,Business,82822,72866,39601,33265,True,1957473,17934,0,31614,False,None,Low,Buy Car,Buy House,Poor
+23,Student,149593,130610,75222,55388,True,746597,20491,0,485778,False,None,High,Buy Car,Wealth Creation,Poor
+31,Salaried,182079,90645,39922,50723,True,1436111,5330,86104,247972,False,None,High,Buy Car,Buy House,Average
+21,Retired,33132,25258,13499,11759,True,56573,27367,0,9094,True,Stocks,High,Pay Debt,Retirement,Poor
+48,Retired,65249,37672,12320,25352,False,0,0,27577,319530,False,None,High,Upgrade Lifestyle,Buy House,Good
+33,Student,28712,24592,8486,16106,True,1625558,29633,0,363682,False,None,High,Vacation,Buy House,Poor
+41,Business,71348,57196,32735,24461,False,0,0,14152,182999,True,Gold,High,Vacation,Retirement,Average
+39,Retired,32634,14711,7505,7206,False,0,0,17923,467505,False,None,Low,Vacation,Wealth Creation,Good
+51,Self-employed,148364,62380,14987,47393,True,1515291,14747,71237,304740,True,FD,Low,Emergency Fund,Buy House,Good
+33,Retired,74214,51705,16264,35441,False,0,0,22509,473768,True,Gold,High,Vacation,Kids Education,Good
+37,Student,77188,52231,27963,24268,False,0,0,24957,491864,False,None,High,Vacation,Retirement,Good
+50,Student,180202,86912,38404,48508,True,1733806,6322,86968,286877,True,Crypto,Moderate,Vacation,Wealth Creation,Good
+51,Business,98262,60049,26948,33101,True,1660324,49095,0,356078,True,Crypto,Low,Upgrade Lifestyle,Buy House,Poor
+50,Business,172134,135084,57314,77770,True,1907395,19563,17487,387934,True,None,High,Emergency Fund,Retirement,Average
+37,Salaried,120849,58071,14633,43438,False,0,0,62778,31974,True,Mutual Funds,Moderate,Emergency Fund,Start Business,Average
+39,Retired,38102,30631,9315,21316,False,0,0,7471,370405,False,None,Low,Vacation,Retirement,Average
+22,Business,115982,48411,25302,23109,False,0,0,67571,460093,True,FD,Low,Buy Car,Start Business,Good
+43,Self-employed,97384,76939,44547,32392,False,0,0,20445,23493,True,Real Estate,Low,Emergency Fund,Retirement,Average
+27,Salaried,152553,62666,25912,36754,True,652642,37230,52657,18438,True,Gold,High,Upgrade Lifestyle,Retirement,Average
+23,Retired,147518,80810,36310,44500,True,1008769,30600,36108,128337,False,None,Moderate,Upgrade Lifestyle,Retirement,Average
+45,Retired,34715,14048,3101,10947,False,0,0,20667,107686,True,FD,Moderate,Upgrade Lifestyle,Wealth Creation,Good
+54,Business,20519,8636,1736,6900,True,1005760,42247,0,256538,True,FD,Moderate,Vacation,Buy House,Poor
+42,Retired,132147,101052,30806,70246,True,1138766,20483,10612,259718,True,Mutual Funds,Low,Buy Car,Retirement,Poor
+40,Student,149473,102722,52386,50336,True,1920197,7788,38963,434124,False,None,Moderate,Upgrade Lifestyle,Retirement,Good
+56,Salaried,179850,161447,53873,107574,False,0,0,18403,237085,False,None,Moderate,Buy Car,Start Business,Average
+43,Salaried,46590,23252,13890,9362,False,0,0,23338,33140,True,Gold,High,Vacation,Wealth Creation,Average
+44,Salaried,145897,120953,38001,82952,True,1320054,3793,21151,435769,True,Crypto,High,Emergency Fund,Kids Education,Average
+46,Student,84395,71311,25968,45343,True,1603057,36117,0,347710,True,FD,High,Upgrade Lifestyle,Buy House,Poor
+59,Retired,196881,163056,84924,78132,False,0,0,33825,186883,False,None,Moderate,Upgrade Lifestyle,Kids Education,Average
+44,Retired,36108,18528,5914,12614,True,1515963,33311,0,308900,False,None,Low,Vacation,Buy House,Poor
+31,Self-employed,187733,166106,98330,67776,False,0,0,21627,493217,True,Crypto,Moderate,Upgrade Lifestyle,Kids Education,Average
+43,Salaried,157893,123157,31999,91158,False,0,0,34736,495283,True,Mutual Funds,Moderate,Emergency Fund,Buy House,Good
+24,Business,13737,7672,2350,5322,False,0,0,6065,200797,True,Real Estate,High,Pay Debt,Kids Education,Good
+50,Business,55617,27693,8118,19575,False,0,0,27924,187481,True,Stocks,High,Upgrade Lifestyle,Wealth Creation,Good
+38,Student,115630,90833,21177,69656,False,0,0,24797,347694,False,None,Moderate,Pay Debt,Retirement,Good
+41,Student,98344,42580,19310,23270,True,263777,46452,9312,436640,True,Gold,Moderate,Pay Debt,Kids Education,Poor
+31,Business,172150,101544,21316,80228,False,0,0,70606,54955,False,None,Moderate,Emergency Fund,Retirement,Average
+54,Salaried,67341,34826,7615,27211,False,0,0,32515,452654,True,Stocks,Low,Vacation,Start Business,Good
+52,Business,194136,155789,44494,111295,True,274142,4393,33954,98981,False,None,Moderate,Pay Debt,Start Business,Average
+44,Student,133578,75285,32554,42731,False,0,0,58293,168568,False,None,Moderate,Upgrade Lifestyle,Retirement,Average
+21,Student,49147,35427,12824,22603,False,0,0,13720,92864,False,None,Moderate,Upgrade Lifestyle,Wealth Creation,Average
+39,Retired,165598,87821,27417,60404,False,0,0,77777,34126,False,None,High,Pay Debt,Retirement,Average
+51,Student,12548,6304,2849,3455,False,0,0,6244,161346,False,None,High,Emergency Fund,Kids Education,Good
+21,Student,82685,63181,27780,35401,False,0,0,19504,322173,True,FD,Moderate,Vacation,Start Business,Good
+22,Retired,184209,125471,56652,68819,True,749959,39376,19362,331725,True,Stocks,Moderate,Pay Debt,Kids Education,Average
+43,Retired,139853,66629,38250,28379,False,0,0,73224,353791,False,None,High,Upgrade Lifestyle,Kids Education,Good
+28,Self-employed,40743,22307,6838,15469,False,0,0,18436,364001,True,Gold,Low,Buy Car,Kids Education,Good
+20,Business,148605,72605,33635,38970,False,0,0,76000,43082,True,Stocks,Moderate,Buy Car,Wealth Creation,Average
+23,Retired,186276,159703,68313,91390,True,895140,24474,2099,98182,False,None,High,Pay Debt,Wealth Creation,Poor
+40,Salaried,45681,39182,13051,26131,False,0,0,6499,65831,True,Real Estate,Low,Emergency Fund,Wealth Creation,Average
+24,Retired,128208,106808,24056,82752,False,0,0,21400,333775,True,Crypto,Moderate,Pay Debt,Buy House,Average
+50,Salaried,115531,67150,25399,41751,False,0,0,48381,81202,False,None,Low,Emergency Fund,Wealth Creation,Average
+57,Self-employed,155697,99353,45384,53969,True,788421,13050,43294,82366,True,Crypto,High,Buy Car,Buy House,Average
+49,Business,186541,141931,84103,57828,True,733830,35983,8627,244136,True,Stocks,Low,Emergency Fund,Kids Education,Poor
+59,Retired,187996,131715,61611,70104,True,1691434,47438,8843,217592,True,Mutual Funds,Low,Pay Debt,Start Business,Poor
+20,Retired,184717,75533,34135,41398,True,1960645,14601,94583,61903,False,None,Moderate,Vacation,Wealth Creation,Average
+27,Business,109317,96082,52026,44056,False,0,0,13235,496490,True,Real Estate,High,Buy Car,Start Business,Average
+28,Salaried,131534,61887,35626,26261,False,0,0,69647,346160,True,Stocks,Low,Upgrade Lifestyle,Start Business,Good
+46,Self-employed,35853,16318,8679,7639,True,1254181,35944,0,377682,False,None,High,Emergency Fund,Start Business,Poor
+34,Student,46821,26674,14340,12334,False,0,0,20147,310273,True,Crypto,Low,Upgrade Lifestyle,Retirement,Good
+55,Self-employed,113793,88316,39980,48336,False,0,0,25477,357308,True,None,High,Upgrade Lifestyle,Kids Education,Good
+54,Salaried,117188,91985,38994,52991,True,67786,15339,9864,151739,True,Stocks,High,Buy Car,Retirement,Poor
+58,Self-employed,138664,64274,27478,36796,True,250402,41476,32914,429099,True,Real Estate,Moderate,Emergency Fund,Wealth Creation,Good
+44,Business,107319,50931,21446,29485,False,0,0,56388,10468,True,None,High,Upgrade Lifestyle,Wealth Creation,Average
+21,Student,36285,26616,10529,16087,False,0,0,9669,126166,True,None,Low,Emergency Fund,Start Business,Good
+37,Student,117163,93940,55309,38631,True,632669,7932,15291,267169,True,Crypto,Low,Upgrade Lifestyle,Start Business,Average
+33,Salaried,140634,105029,26307,78722,False,0,0,35605,290005,True,Crypto,High,Vacation,Buy House,Average
+29,Student,133026,115015,32345,82670,True,1373165,48069,0,168543,False,None,High,Pay Debt,Kids Education,Poor
+35,Student,166876,123501,69355,54146,False,0,0,43375,38294,True,Gold,High,Emergency Fund,Wealth Creation,Average
+59,Self-employed,178439,107980,59093,48887,True,1750618,44613,25846,371530,True,FD,Low,Upgrade Lifestyle,Kids Education,Average
+60,Student,81254,54717,23520,31197,False,0,0,26537,403658,False,None,High,Emergency Fund,Kids Education,Good
+40,Retired,58423,28262,6104,22158,False,0,0,30161,152737,True,Gold,Low,Buy Car,Wealth Creation,Good
+46,Student,73177,54137,32440,21697,False,0,0,19040,467716,False,None,Low,Vacation,Kids Education,Good
+41,Business,28573,16034,7241,8793,True,1042980,11727,812,95942,True,FD,High,Emergency Fund,Kids Education,Poor
+32,Retired,94225,61923,30751,31172,False,0,0,32302,230694,True,Stocks,Low,Buy Car,Buy House,Good
+33,Student,183464,135554,42747,92807,True,562177,24440,23470,220176,True,Gold,High,Vacation,Buy House,Average
+50,Student,138953,119654,24609,95045,False,0,0,19299,426076,True,Gold,Moderate,Vacation,Start Business,Average
+46,Student,195339,121352,51043,70309,True,1366600,9367,64620,352067,True,Mutual Funds,Moderate,Buy Car,Kids Education,Average
+23,Student,42056,17190,6803,10387,False,0,0,24866,286474,True,Real Estate,Low,Vacation,Retirement,Good
+54,Retired,77033,33513,7361,26152,False,0,0,43520,292350,True,Crypto,High,Vacation,Kids Education,Good
+23,Salaried,157143,141113,76595,64518,False,0,0,16030,267261,True,Gold,Moderate,Vacation,Buy House,Average
+59,Salaried,29805,17199,6979,10220,False,0,0,12606,191951,False,None,High,Emergency Fund,Start Business,Good
+52,Salaried,184977,156391,45008,111383,True,548829,17222,11364,86848,False,None,High,Upgrade Lifestyle,Kids Education,Poor
+47,Student,56297,31915,10719,21196,True,1797320,3177,21205,140583,True,None,Low,Vacation,Retirement,Good
+21,Business,70118,33519,9889,23630,True,588035,21597,15002,86839,True,Crypto,Low,Emergency Fund,Kids Education,Average
+53,Student,138865,69031,39015,30016,False,0,0,69834,328271,True,Gold,High,Buy Car,Start Business,Good
+38,Self-employed,131735,95856,20055,75801,False,0,0,35879,472232,True,Stocks,Moderate,Pay Debt,Buy House,Good
+24,Retired,121347,104281,43875,60406,False,0,0,17066,59852,True,Gold,High,Vacation,Kids Education,Average
+25,Salaried,135692,83661,48586,35075,True,141540,34155,17876,199410,True,Stocks,Low,Vacation,Wealth Creation,Average
+57,Salaried,85347,34405,7770,26635,True,1098071,21851,29091,188908,False,None,Moderate,Vacation,Buy House,Good
+46,Student,149376,107300,31391,75909,False,0,0,42076,141386,True,Mutual Funds,Moderate,Upgrade Lifestyle,Wealth Creation,Average
+22,Student,191783,98207,47641,50566,True,1743208,38989,54587,204299,False,None,Moderate,Upgrade Lifestyle,Wealth Creation,Average
+43,Retired,26119,21943,5010,16933,False,0,0,4176,158186,False,None,Low,Emergency Fund,Retirement,Average
+38,Retired,85947,38817,13061,25756,True,1885275,41679,5451,173439,False,None,Moderate,Upgrade Lifestyle,Retirement,Poor
+44,Retired,143789,65711,19520,46191,False,0,0,78078,222249,False,None,Moderate,Pay Debt,Buy House,Good
+21,Retired,153644,126144,49374,76770,False,0,0,27500,269971,False,None,High,Upgrade Lifestyle,Buy House,Average
+44,Business,68055,47735,22421,25314,False,0,0,20320,268695,False,None,High,Buy Car,Retirement,Good
+58,Student,68672,59265,30580,28685,True,709871,37422,0,475654,True,Crypto,Moderate,Upgrade Lifestyle,Kids Education,Poor
+43,Business,166807,98024,42305,55719,True,1522679,32541,36242,88363,False,None,High,Emergency Fund,Wealth Creation,Average
+21,Business,132545,55335,24872,30463,True,1032982,46775,30435,76128,False,None,Low,Vacation,Start Business,Average
+46,Self-employed,85886,35931,19931,16000,True,1112943,35697,14258,67767,True,Crypto,High,Upgrade Lifestyle,Wealth Creation,Average
+45,Salaried,124477,53045,23259,29786,True,531309,45323,26109,79498,True,Gold,Low,Emergency Fund,Buy House,Average
+36,Retired,58082,51317,18256,33061,False,0,0,6765,463082,True,Stocks,High,Upgrade Lifestyle,Retirement,Average
+28,Salaried,55023,47261,23561,23700,False,0,0,7762,249110,False,None,High,Buy Car,Buy House,Average
+40,Self-employed,40150,29075,6891,22184,False,0,0,11075,349564,True,Stocks,High,Emergency Fund,Wealth Creation,Good
+27,Salaried,55380,32925,7180,25745,True,1880110,9062,13393,37368,True,Mutual Funds,Low,Buy Car,Kids Education,Average
+32,Student,79418,56027,24347,31680,False,0,0,23391,24461,True,None,High,Emergency Fund,Buy House,Average
+58,Student,34878,30000,12260,17740,True,1512283,32152,0,102765,False,None,Low,Buy Car,Start Business,Poor
+28,Salaried,188229,123643,64132,59511,False,0,0,64586,287557,True,Stocks,Moderate,Vacation,Retirement,Average
+60,Retired,36129,29245,6441,22804,False,0,0,6884,176381,False,None,Low,Vacation,Kids Education,Average
+20,Retired,196488,133023,46780,86243,False,0,0,63465,35000,False,None,Moderate,Pay Debt,Wealth Creation,Average
+25,Business,99231,80132,20694,59438,True,1571237,18633,466,429479,True,Stocks,Low,Vacation,Wealth Creation,Poor
+29,Retired,86524,61396,31022,30374,False,0,0,25128,89687,True,Crypto,Moderate,Pay Debt,Retirement,Average
+57,Self-employed,119397,82972,29641,53331,False,0,0,36425,231269,True,Gold,Moderate,Vacation,Retirement,Average
+36,Student,17885,13824,4726,9098,True,1002746,3341,720,462539,False,None,High,Upgrade Lifestyle,Wealth Creation,Poor
+53,Salaried,189310,167407,39796,127611,True,1208946,31540,0,207693,False,None,Moderate,Vacation,Retirement,Poor
+52,Salaried,154734,68132,28864,39268,True,522872,8782,77820,74069,False,None,High,Vacation,Start Business,Average
+50,Self-employed,87013,75443,41011,34432,False,0,0,11570,41486,True,None,Moderate,Vacation,Start Business,Average
+20,Salaried,172149,87120,28778,58342,False,0,0,85029,484876,False,None,High,Buy Car,Start Business,Good
+33,Business,195503,169096,41181,127915,True,628703,14018,12389,152,True,None,Moderate,Pay Debt,Kids Education,Poor
+45,Retired,71446,43091,14211,28880,False,0,0,28355,86239,True,None,High,Pay Debt,Wealth Creation,Average
+35,Retired,103762,88946,39763,49183,False,0,0,14816,39731,True,Stocks,High,Pay Debt,Wealth Creation,Average
+37,Salaried,148299,101233,23511,77722,False,0,0,47066,218158,True,Mutual Funds,High,Pay Debt,Retirement,Average
+39,Self-employed,24770,10908,2588,8320,False,0,0,13862,213703,False,None,Moderate,Buy Car,Wealth Creation,Good
+60,Self-employed,132194,103789,37464,66325,True,1902391,20649,7756,344020,False,None,Low,Upgrade Lifestyle,Buy House,Poor
+33,Student,46542,41272,10829,30443,False,0,0,5270,28047,False,None,Moderate,Emergency Fund,Start Business,Average
+34,Business,134570,58120,13106,45014,True,620997,29888,46562,422951,False,None,High,Vacation,Buy House,Good
+45,Self-employed,192755,96670,34595,62075,True,764877,42365,53720,62830,False,None,Moderate,Upgrade Lifestyle,Start Business,Average
+28,Student,167523,108694,43374,65320,True,1581043,18779,40050,1860,True,None,Moderate,Vacation,Retirement,Average
+57,Business,98158,64261,26064,38197,False,0,0,33897,72359,False,None,High,Upgrade Lifestyle,Start Business,Average
+27,Retired,24685,11782,2748,9034,True,1029315,34946,0,210811,True,Real Estate,Moderate,Upgrade Lifestyle,Kids Education,Poor
+36,Student,49065,24499,6378,18121,True,490626,17634,6932,440234,False,None,Moderate,Vacation,Buy House,Average
+54,Business,105922,86294,46164,40130,False,0,0,19628,90118,False,None,Low,Upgrade Lifestyle,Start Business,Average
+50,Business,173422,119233,62722,56511,False,0,0,54189,320658,True,Crypto,Moderate,Pay Debt,Kids Education,Average
+26,Retired,121719,95085,36099,58986,False,0,0,26634,11992,False,None,Moderate,Upgrade Lifestyle,Retirement,Average
+57,Retired,189610,86587,33536,53051,False,0,0,103023,287008,True,Mutual Funds,Moderate,Upgrade Lifestyle,Retirement,Good
+55,Self-employed,23098,18994,4017,14977,False,0,0,4104,275034,True,Crypto,Moderate,Vacation,Retirement,Average
+36,Student,124274,97873,34566,63307,False,0,0,26401,473632,True,FD,Low,Emergency Fund,Buy House,Good
+44,Self-employed,60137,31298,10275,21023,False,0,0,28839,135543,False,None,Low,Buy Car,Retirement,Good
+24,Self-employed,35842,16838,9303,7535,False,0,0,19004,227562,True,Crypto,Moderate,Vacation,Buy House,Good
+44,Salaried,84508,39142,22004,17138,False,0,0,45366,478020,False,None,High,Emergency Fund,Buy House,Good
+47,Student,169632,136604,76002,60602,False,0,0,33028,416480,False,None,Moderate,Pay Debt,Kids Education,Average
+50,Salaried,45382,18848,6162,12686,True,1386399,25602,932,441917,True,Stocks,High,Vacation,Start Business,Poor
+36,Retired,146363,130207,50604,79603,False,0,0,16156,11276,True,None,Low,Emergency Fund,Start Business,Average
+53,Retired,129808,104669,51644,53025,False,0,0,25139,180061,False,None,Moderate,Buy Car,Start Business,Average
+48,Salaried,40722,21046,4556,16490,True,134186,23124,0,148939,True,Real Estate,High,Pay Debt,Start Business,Poor
+27,Student,157902,137542,78312,59230,False,0,0,20360,82986,False,None,High,Buy Car,Wealth Creation,Average
+39,Self-employed,168567,119129,36354,82775,False,0,0,49438,415706,False,None,Moderate,Upgrade Lifestyle,Retirement,Good
+33,Business,121753,91313,18941,72372,True,549286,7496,22944,390537,False,None,High,Pay Debt,Buy House,Average
+29,Salaried,107439,72052,43114,28938,False,0,0,35387,229504,False,None,Low,Buy Car,Wealth Creation,Good
+43,Business,74868,38122,10779,27343,False,0,0,36746,225395,False,None,High,Pay Debt,Kids Education,Good
+47,Salaried,19359,8850,3821,5029,False,0,0,10509,210635,True,Mutual Funds,Moderate,Emergency Fund,Wealth Creation,Good
+31,Retired,168994,90333,26756,63577,True,1187270,4905,73756,168055,False,None,Low,Buy Car,Start Business,Average
+60,Student,22890,17057,3884,13173,True,1762085,24412,0,204362,True,Crypto,Moderate,Vacation,Buy House,Poor
+33,Self-employed,156290,64041,15383,48658,False,0,0,92249,463456,False,None,High,Buy Car,Retirement,Good
+23,Self-employed,170450,83779,32675,51104,False,0,0,86671,247464,True,FD,High,Pay Debt,Start Business,Average
+29,Self-employed,24791,12519,2936,9583,False,0,0,12272,375692,False,None,High,Vacation,Buy House,Good
+54,Student,19805,9850,3019,6831,False,0,0,9955,315845,False,None,Moderate,Pay Debt,Buy House,Good
+41,Retired,93219,54834,15338,39496,False,0,0,38385,120116,True,Stocks,High,Buy Car,Buy House,Average
+48,Retired,130225,55332,16582,38750,True,351613,33973,40920,76166,False,None,Low,Upgrade Lifestyle,Wealth Creation,Average
+59,Business,25533,14898,5419,9479,False,0,0,10635,107954,True,Real Estate,Moderate,Upgrade Lifestyle,Kids Education,Good
+50,Retired,124014,80997,45641,35356,True,1335884,11942,31075,268388,True,None,Low,Vacation,Kids Education,Good
+48,Self-employed,182966,133815,76950,56865,True,1057179,6775,42376,70143,True,Real Estate,Low,Pay Debt,Wealth Creation,Average
+59,Business,34175,30546,14758,15788,True,60459,16209,0,386333,False,None,Low,Emergency Fund,Buy House,Poor
+45,Student,196662,153192,33403,119789,True,733201,20582,22888,365878,False,None,Low,Emergency Fund,Retirement,Average
+52,Salaried,88726,48412,22305,26107,True,215313,29876,10438,231300,False,None,High,Buy Car,Retirement,Average
+54,Student,42680,17349,9201,8148,False,0,0,25331,258471,False,None,Moderate,Vacation,Kids Education,Good
+36,Student,61758,49776,22196,27580,True,1380596,36536,0,322873,False,None,High,Vacation,Kids Education,Poor
+38,Self-employed,13958,10669,5427,5242,True,794740,20482,0,184792,True,Gold,Low,Pay Debt,Wealth Creation,Poor
+44,Salaried,133177,117628,57430,60198,False,0,0,15549,227368,False,None,Moderate,Buy Car,Buy House,Average
+60,Business,93900,44122,14691,29431,True,918188,15698,34080,416954,False,None,Moderate,Emergency Fund,Wealth Creation,Good
+50,Student,167877,148854,40721,108133,True,1470144,10794,8229,94331,False,None,High,Vacation,Kids Education,Poor
+51,Business,174432,103704,42441,61263,True,1619709,4315,66413,486687,False,None,Low,Upgrade Lifestyle,Buy House,Good
+36,Student,33998,23698,9472,14226,False,0,0,10300,249178,False,None,Moderate,Buy Car,Kids Education,Good
+45,Salaried,41181,30059,13701,16358,True,1200397,33125,0,346452,True,None,Low,Buy Car,Buy House,Poor
+32,Salaried,108744,56000,12274,43726,False,0,0,52744,180241,True,Gold,High,Upgrade Lifestyle,Wealth Creation,Good
+42,Salaried,89246,44153,18462,25691,False,0,0,45093,113338,True,Stocks,Low,Emergency Fund,Kids Education,Average
+33,Student,182631,81091,33897,47194,False,0,0,101540,320722,True,Crypto,Low,Vacation,Buy House,Good
+41,Self-employed,114448,80096,46050,34046,False,0,0,34352,97115,True,Crypto,Moderate,Emergency Fund,Buy House,Average
+42,Retired,197757,164892,39928,124964,True,1416367,12802,20063,283663,False,None,Low,Vacation,Buy House,Average
+25,Salaried,12249,9705,4093,5612,True,238989,13336,0,233292,False,None,Low,Pay Debt,Retirement,Poor
+27,Student,55515,33134,11827,21307,False,0,0,22381,260581,True,FD,Low,Emergency Fund,Buy House,Good
+33,Salaried,181581,93816,44461,49355,False,0,0,87765,308356,True,Crypto,High,Emergency Fund,Start Business,Good
+22,Self-employed,73485,46056,27620,18436,False,0,0,27429,73316,False,None,Low,Vacation,Retirement,Average
+55,Self-employed,48519,41236,23326,17910,True,1113003,16527,0,389330,False,None,High,Upgrade Lifestyle,Wealth Creation,Poor
+36,Business,141289,62420,24296,38124,False,0,0,78869,391587,False,None,Moderate,Buy Car,Retirement,Good
+58,Retired,48091,40786,9176,31610,True,299606,47508,0,46698,False,None,High,Buy Car,Start Business,Poor
+33,Business,16365,8244,2518,5726,False,0,0,8121,307606,True,Gold,Low,Upgrade Lifestyle,Kids Education,Good
+38,Salaried,71690,48964,24637,24327,False,0,0,22726,42307,True,Stocks,Moderate,Buy Car,Buy House,Average
+42,Business,185826,87977,33437,54540,True,1038220,43245,54604,81510,False,None,Moderate,Emergency Fund,Start Business,Average
+30,Salaried,145603,89680,52421,37259,False,0,0,55923,87695,False,None,High,Pay Debt,Wealth Creation,Average
+52,Business,32105,13739,7861,5878,False,0,0,18366,415962,False,None,High,Upgrade Lifestyle,Buy House,Good
+25,Self-employed,121336,65032,19035,45997,False,0,0,56304,208691,True,Gold,High,Emergency Fund,Wealth Creation,Good
+46,Self-employed,24793,10282,4680,5602,False,0,0,14511,195667,True,Gold,Moderate,Upgrade Lifestyle,Wealth Creation,Good
+21,Retired,164108,94964,38728,56236,True,819827,39350,29794,441446,True,None,Moderate,Buy Car,Kids Education,Average
+21,Business,157047,108355,62483,45872,False,0,0,48692,242674,False,None,High,Vacation,Retirement,Average
+51,Retired,37560,29530,10826,18704,True,762683,3546,4484,426516,False,None,High,Vacation,Start Business,Average
+60,Retired,135138,100409,34427,65982,True,1689940,42120,0,63075,False,None,Moderate,Vacation,Wealth Creation,Poor
+26,Retired,192030,166932,47716,119216,False,0,0,25098,351974,False,None,Low,Upgrade Lifestyle,Kids Education,Average
+28,Student,158664,127091,73368,53723,False,0,0,31573,217265,False,None,Low,Upgrade Lifestyle,Start Business,Average
+28,Self-employed,141594,73722,37004,36718,True,457225,19525,48347,78665,True,None,High,Buy Car,Buy House,Average
+21,Business,19088,15849,9313,6536,False,0,0,3239,23433,False,None,Low,Upgrade Lifestyle,Buy House,Average
+55,Retired,38026,24569,12035,12534,True,582002,15444,0,499245,True,None,High,Vacation,Start Business,Poor
+44,Retired,127797,68774,26423,42351,False,0,0,59023,181153,True,Mutual Funds,Low,Buy Car,Start Business,Average
+48,Salaried,144931,70442,16517,53925,True,331922,30334,44155,184637,True,Mutual Funds,High,Buy Car,Wealth Creation,Average
+56,Business,150524,61040,25201,35839,True,1950944,21195,68289,283772,False,None,High,Vacation,Start Business,Good
+33,Self-employed,180593,134960,31002,103958,False,0,0,45633,348615,False,None,Moderate,Upgrade Lifestyle,Retirement,Average
+25,Student,169333,131534,56670,74864,True,1103635,7924,29875,241752,False,None,High,Vacation,Wealth Creation,Average
+28,Self-employed,124353,60095,23389,36706,False,0,0,64258,339871,False,None,High,Upgrade Lifestyle,Start Business,Good
+29,Salaried,57330,36700,21118,15582,True,1253223,16913,3717,264910,True,Gold,Low,Upgrade Lifestyle,Buy House,Poor
+60,Business,116663,55981,13151,42830,True,289359,6977,53705,160519,True,Gold,High,Emergency Fund,Start Business,Average
+44,Student,39832,23872,7120,16752,True,446687,4294,11666,416359,True,Stocks,Moderate,Vacation,Start Business,Good
+21,Salaried,148823,115760,40660,75100,False,0,0,33063,410683,False,None,High,Vacation,Kids Education,Good
+43,Retired,137152,65016,17183,47833,False,0,0,72136,209613,True,Crypto,Moderate,Emergency Fund,Retirement,Good
+26,Salaried,60302,36483,9142,27341,False,0,0,23819,447642,False,None,Moderate,Emergency Fund,Kids Education,Good
+28,Business,103423,54890,28104,26786,False,0,0,48533,140594,False,None,High,Pay Debt,Kids Education,Average
+58,Student,57945,47816,16128,31688,False,0,0,10129,339245,True,Gold,Low,Vacation,Retirement,Average
+24,Student,93830,69531,31879,37652,False,0,0,24299,19843,True,Gold,Low,Upgrade Lifestyle,Start Business,Average
+23,Business,161263,122651,30273,92378,True,1281601,31368,7244,46191,True,FD,High,Pay Debt,Start Business,Poor
+32,Retired,175661,113256,25425,87831,True,154905,43040,19365,396565,False,None,Low,Upgrade Lifestyle,Wealth Creation,Average
+54,Student,88404,50280,22202,28078,False,0,0,38124,61677,False,None,Low,Vacation,Wealth Creation,Average
+36,Retired,150363,63311,15642,47669,True,1989558,11620,75432,243695,True,Gold,Low,Vacation,Buy House,Good
+49,Retired,54022,26330,14964,11366,False,0,0,27692,284144,False,None,High,Pay Debt,Start Business,Good
+57,Retired,143365,61817,23662,38155,False,0,0,81548,429341,False,None,High,Vacation,Start Business,Good
+37,Salaried,20334,11056,5947,5109,True,1318277,36695,0,468774,False,None,High,Buy Car,Wealth Creation,Poor
+36,Business,131476,70085,41339,28746,True,433980,17147,44244,158603,True,None,Low,Pay Debt,Wealth Creation,Average
+40,Salaried,48900,43892,12890,31002,True,443584,11189,0,58103,False,None,Low,Emergency Fund,Wealth Creation,Poor
+59,Retired,196370,122470,54098,68372,False,0,0,73900,485047,False,None,Moderate,Emergency Fund,Wealth Creation,Good
+48,Self-employed,78932,49657,25683,23974,False,0,0,29275,410964,True,Stocks,High,Vacation,Buy House,Good
+35,Salaried,10811,6782,2352,4430,True,1021560,19225,0,235465,False,None,Moderate,Pay Debt,Kids Education,Poor
+39,Business,103148,58203,19165,39038,True,1652521,47727,0,498789,False,None,High,Buy Car,Wealth Creation,Poor
+39,Salaried,132233,105217,57577,47640,False,0,0,27016,167538,False,None,Moderate,Vacation,Buy House,Average
+29,Business,22124,16240,4311,11929,False,0,0,5884,440178,True,Real Estate,High,Pay Debt,Start Business,Good
+41,Retired,16950,13891,7847,6044,False,0,0,3059,197673,False,None,High,Buy Car,Kids Education,Average
+52,Retired,28572,18742,7735,11007,False,0,0,9830,436049,False,None,Moderate,Pay Debt,Start Business,Good
+51,Student,77541,51981,29619,22362,False,0,0,25560,275474,True,FD,High,Vacation,Wealth Creation,Good
+22,Student,161256,66378,37009,29369,False,0,0,94878,353452,True,Stocks,Low,Upgrade Lifestyle,Retirement,Good
+53,Business,154546,70832,26035,44797,False,0,0,83714,427300,True,FD,High,Upgrade Lifestyle,Start Business,Good
+54,Business,188631,106094,49677,56417,True,1033334,45977,36560,451964,True,Real Estate,Low,Buy Car,Kids Education,Average
+40,Self-employed,113875,94383,35803,58580,False,0,0,19492,142892,False,None,High,Vacation,Retirement,Average
+57,Salaried,34514,13844,3248,10596,False,0,0,20670,349138,False,None,Low,Pay Debt,Start Business,Good
+52,Self-employed,115274,59051,28890,30161,False,0,0,56223,34550,False,None,High,Buy Car,Buy House,Average
+40,Retired,88656,76283,37794,38489,True,1819010,32082,0,189306,True,Crypto,Moderate,Vacation,Wealth Creation,Poor
+25,Salaried,184632,157357,82912,74445,True,1442247,44206,0,203140,True,Gold,Moderate,Vacation,Wealth Creation,Poor
+21,Self-employed,137291,116292,44961,71331,False,0,0,20999,47391,False,None,Low,Pay Debt,Kids Education,Average
+42,Student,177365,146781,53333,93448,False,0,0,30584,201175,False,None,Low,Vacation,Wealth Creation,Average
+41,Retired,156304,105341,22132,83209,True,1030268,45972,4991,211468,True,FD,Moderate,Emergency Fund,Start Business,Poor
+41,Retired,13729,10561,2434,8127,False,0,0,3168,254834,True,None,High,Upgrade Lifestyle,Retirement,Good
+55,Retired,74790,51488,28385,23103,False,0,0,23302,309147,True,Mutual Funds,Moderate,Upgrade Lifestyle,Start Business,Good
+46,Business,34300,25704,12182,13522,True,52107,43999,0,369701,True,Crypto,High,Upgrade Lifestyle,Retirement,Poor
+43,Business,97138,63505,28466,35039,False,0,0,33633,266332,False,None,Low,Buy Car,Kids Education,Good
+59,Self-employed,177804,141842,79854,61988,False,0,0,35962,415687,False,None,Moderate,Upgrade Lifestyle,Start Business,Average
+40,Retired,165918,120495,34552,85943,True,1579249,34600,10823,226884,True,Mutual Funds,Low,Vacation,Retirement,Poor
+45,Salaried,100703,49917,13077,36840,False,0,0,50786,79677,False,None,Moderate,Vacation,Start Business,Average
+41,Business,179640,136288,42565,93723,True,1296522,29213,14139,287569,False,None,High,Vacation,Buy House,Poor
+33,Salaried,82715,64588,16271,48317,False,0,0,18127,66046,False,None,High,Emergency Fund,Kids Education,Average
+48,Retired,85769,50116,12174,37942,False,0,0,35653,54220,True,None,Low,Pay Debt,Buy House,Average
+27,Business,28546,11893,5082,6811,False,0,0,16653,279484,True,Stocks,Low,Buy Car,Start Business,Good
+30,Retired,34643,15462,7289,8173,False,0,0,19181,80061,False,None,Low,Pay Debt,Kids Education,Good
+50,Business,175517,74427,15602,58825,True,127545,2137,98953,465182,True,None,Low,Vacation,Wealth Creation,Good
+30,Business,188874,127565,73106,54459,False,0,0,61309,409016,True,Mutual Funds,High,Buy Car,Buy House,Good
+42,Salaried,140350,111831,43926,67905,True,214407,39953,0,441495,False,None,Moderate,Vacation,Retirement,Poor
+33,Self-employed,189142,151496,49047,102449,False,0,0,37646,461074,False,None,Low,Buy Car,Wealth Creation,Average
+29,Student,13696,9235,5185,4050,True,1899559,8593,0,153587,True,Crypto,Moderate,Buy Car,Wealth Creation,Poor
+40,Business,17774,7918,4614,3304,False,0,0,9856,353058,False,None,Moderate,Buy Car,Buy House,Good
+41,Retired,67630,43978,13838,30140,False,0,0,23652,358207,False,None,Low,Upgrade Lifestyle,Start Business,Good
+52,Student,15058,7684,4282,3402,False,0,0,7374,102743,False,None,High,Vacation,Retirement,Good
+24,Retired,181306,140978,56979,83999,True,90463,25034,15294,244869,False,None,Low,Buy Car,Start Business,Poor
+21,Student,37975,21450,9349,12101,True,1600221,23565,0,459472,True,Gold,High,Buy Car,Kids Education,Poor
