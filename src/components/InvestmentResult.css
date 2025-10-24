@@ -1,0 +1,393 @@
+/* Enhanced Investment Results - Modern Colorful Grid Layouts */
+
+/* Recommendations Tab - Enhanced Colorful Grid */
+.recommendations-container {
+  margin-bottom: 3rem;
+}
+
+.recommendations-container h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #1f2937;
+  margin-bottom: 2rem;
+  text-align: center;
+  background: linear-gradient(135deg, #1f2937, #4b5563);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+}
+
+.recommendations-container h2::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #3b82f6, #10b981, #f59e0b);
+  border-radius: 2px;
+}
+
+.recommendations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.recommendation-card {
+  background: linear-gradient(135deg, #ffffff, #f8fafc);
+  border: 2px solid transparent;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.recommendation-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #3b82f6, #10b981);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.recommendation-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+.recommendation-card:hover::before {
+  opacity: 1;
+}
+
+.recommendation-card.investment {
+  background: linear-gradient(135deg, #eff6ff, #dbeafe);
+  border-left: 5px solid #3b82f6;
+}
+
+.recommendation-card.investment::before {
+  background: linear-gradient(90deg, #3b82f6, #1d4ed8);
+}
+
+.recommendation-card.savings {
+  background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+  border-left: 5px solid #10b981;
+}
+
+.recommendation-card.savings::before {
+  background: linear-gradient(90deg, #10b981, #059669);
+}
+
+.recommendation-card.debt {
+  background: linear-gradient(135deg, #fef3c7, #fde68a);
+  border-left: 5px solid #f59e0b;
+}
+
+.recommendation-card.debt::before {
+  background: linear-gradient(90deg, #f59e0b, #d97706);
+}
+
+.recommendation-card.risk {
+  background: linear-gradient(135deg, #fef2f2, #fecaca);
+  border-left: 5px solid #ef4444;
+}
+
+.recommendation-card.risk::before {
+  background: linear-gradient(90deg, #ef4444, #dc2626);
+}
+
+.recommendation-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.recommendation-header h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.recommendation-header h3::before {
+  content: '';
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #3b82f6, #10b981);
+  flex-shrink: 0;
+}
+
+.recommendation-card.investment .recommendation-header h3::before {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+}
+
+.recommendation-card.savings .recommendation-header h3::before {
+  background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.recommendation-card.debt .recommendation-header h3::before {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.recommendation-card.risk .recommendation-header h3::before {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+
+.recommendation-type {
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.recommendation-card.investment .recommendation-type {
+  background: rgba(59, 130, 246, 0.1);
+  color: #1d4ed8;
+}
+
+.recommendation-card.savings .recommendation-type {
+  background: rgba(16, 185, 129, 0.1);
+  color: #059669;
+}
+
+.recommendation-card.debt .recommendation-type {
+  background: rgba(245, 158, 11, 0.1);
+  color: #d97706;
+}
+
+.recommendation-card.risk .recommendation-type {
+  background: rgba(239, 68, 68, 0.1);
+  color: #dc2626;
+}
+
+.recommendation-content {
+  color: #4b5563;
+  line-height: 1.6;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.allocation-info {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  padding: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.allocation-info span {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+/* Suggested Portfolio Tab - Enhanced Colorful Grid */
+.portfolio-container {
+  margin-bottom: 3rem;
+}
+
+.portfolio-container h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #1f2937;
+  margin-bottom: 2rem;
+  text-align: center;
+  background: linear-gradient(135deg, #1f2937, #4b5563);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+}
+
+.portfolio-container h2::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #8b5cf6, #ec4899, #f59e0b);
+  border-radius: 2px;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.allocation-card {
+  background: linear-gradient(135deg, #ffffff, #f8fafc);
+  border: 2px solid transparent;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.allocation-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #8b5cf6, #ec4899);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.allocation-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  border-color: rgba(139, 92, 246, 0.3);
+}
+
+.allocation-card:hover::before {
+  opacity: 1;
+}
+
+.allocation-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.allocation-card h3::before {
+  content: '';
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #8b5cf6, #ec4899);
+  flex-shrink: 0;
+}
+
+.allocation-bar {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+  height: 12px;
+  margin-bottom: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.allocation-fill {
+  height: 100%;
+  border-radius: 25px;
+  transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  background: linear-gradient(90deg, #8b5cf6, #ec4899, #f59e0b);
+}
+
+.allocation-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+.allocation-percentage {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.allocation-percentage span {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #1f2937;
+}
+
+.allocation-rationale {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  padding: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #4b5563;
+}
+
+/* Enhanced Mobile Responsiveness */
+@media (max-width: 768px) {
+  .recommendations-grid,
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .recommendation-card,
+  .allocation-card {
+    padding: 1.5rem;
+    border-radius: 16px;
+  }
+
+  .recommendations-container h2,
+  .portfolio-container h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Enhanced Animations */
+.recommendation-card,
+.allocation-card {
+  animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  animation-fill-mode: both;
+}
+
+.recommendation-card:nth-child(1) { animation-delay: 0.1s; }
+.recommendation-card:nth-child(2) { animation-delay: 0.2s; }
+.recommendation-card:nth-child(3) { animation-delay: 0.3s; }
+.recommendation-card:nth-child(4) { animation-delay: 0.4s; }
+
+.allocation-card:nth-child(1) { animation-delay: 0.1s; }
+.allocation-card:nth-child(2) { animation-delay: 0.2s; }
+.allocation-card:nth-child(3) { animation-delay: 0.3s; }
+.allocation-card:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -45,6 +45,15 @@ export default function App() {
               <Route path="/goal-based-planning/results" element={<GoalBasedPlanningResults />} />
             </Routes>
           </SignedIn>
+          <SignedOut>
+            <div style={{textAlign: 'center', padding: '4rem 2rem', color: '#6b7280'}}>
+              <h2 style={{color: '#1f2937', marginBottom: '1rem'}}>Please Sign In</h2>
+              <p>You need to be signed in to access the Investment Guidance and other financial tools.</p>
+            </div>
+          </SignedOut>
+          <Routes>
+            <Route path="/test-investment" element={<InvestmentQuestions />} />
+          </Routes>
         </main>
         <Footer />
       </div>

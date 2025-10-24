@@ -324,6 +324,34 @@ const InvestmentQuestions = () => {
     return Math.round((answeredQuestions / questions.length) * 100);
   };
 
+  const getCategoryColor = (category) => {
+    const colorMap = {
+      'Current Investment Status': 'category-blue',
+      'Investment Types': 'category-green',
+      'Risk Profile': 'category-purple',
+      'Investment Knowledge': 'category-orange',
+      'Time Horizon': 'category-indigo',
+      'Management Preference': 'category-red',
+      'Experience with Losses': 'category-yellow',
+      'Return Expectations': 'category-gray'
+    };
+    return colorMap[category] || 'category-blue';
+  };
+
+  const getCategoryIcon = (category) => {
+    const iconMap = {
+      'Current Investment Status': '💰',
+      'Investment Types': '📊',
+      'Risk Profile': '⚡',
+      'Investment Knowledge': '📚',
+      'Time Horizon': '⏱️',
+      'Management Preference': '🎛️',
+      'Experience with Losses': '📉',
+      'Return Expectations': '📈'
+    };
+    return iconMap[category] || '📋';
+  };
+
   const getQuestionHelpText = (question) => {
     const helpTexts = {
       'currentlyInvesting': 'This helps us understand your current investment status and experience level.',
@@ -461,7 +489,8 @@ const InvestmentQuestions = () => {
         <div className="question-content">
           <div className="step-header">
             <span className={`category-badge ${getCategoryColor(steps[currentStep].title)}`}>
-              {steps[currentStep].title}
+              <span className="badge-icon">{getCategoryIcon(steps[currentStep].title)}</span>
+              <span className="badge-text">{steps[currentStep].title}</span>
             </span>
             <h2>Please provide the details below</h2>
           </div>

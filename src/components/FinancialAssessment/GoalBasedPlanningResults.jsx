@@ -4,6 +4,7 @@ import { Pie, Line } from 'react-chartjs-2';
 import { Chart, registerables } from 'chart.js';
 import { SignedIn } from '@clerk/clerk-react'
 import MLIntegration from './MLIntegration';
+import './GoalBasedPlanningResults.css';
 
 // Register Chart.js components
 Chart.register(...registerables);
@@ -116,6 +117,82 @@ const GoalBasedPlanningResults = () => {
       setIsAnalyzing(false);
     }
   }, [formData]);
+
+  const chartOptions = {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: {
+        position: 'top',
+      },
+      title: {
+        display: true,
+        font: {
+          size: 16,
+          weight: 'bold'
+        }
+      }
+    }
+  };
+
+  const amountChartOptionsPie = {
+    ...chartOptions,
+    animation: {
+      duration: 400,
+      easing: 'easeOutQuart',
+      delay: 0
+    },
+    hover: {
+      animationDuration: 0,
+      mode: 'nearest',
+      intersect: true,
+      onHover: function(event, elements) {
+        if (elements.length) {
+          this.render();
+        }
+      }
+    },
+    plugins: {
+      ...chartOptions.plugins,
+      title: {
+        ...chartOptions.plugins.title,
+        text: 'Monthly Allocation',
+      },
+      tooltip: {
+        animation: {
+          duration: 150,
+          easing: 'easeOutCubic'
+        },
+        usePointStyle: true,
+        callbacks: {
+          label: function(context) {
+            let label = context.label || '';
+            if (label) {
+              label += ': ';
+            }
+            if (context.parsed !== null) {
+              label += new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 }).format(context.parsed);
+            }
+            return label;
+          }
+        }
+      }
+    }
+  };
+
+  const amountChartOptionsBar = {
+    ...chartOptions,
+    plugins: {
+      ...chartOptions.plugins.title,
+      title: {
+        ...chartOptions.plugins.title,
+        text: 'Monthly Allocation (₹)',
+      },
+      legend: {
+        display: false
+      }
+    }
+  };
 
   const analyzeGoalData = (data) => {
     // Extract goals from the form data
@@ -454,81 +531,6 @@ const GoalBasedPlanningResults = () => {
     return alloc;
   };
 
-  const chartOptions = {
-    responsive: true,
-    maintainAspectRatio: false,
-    plugins: {
-      legend: {
-        position: 'top',
-      },
-      title: {
-        display: true,
-        font: {
-          size: 16,
-          weight: 'bold'
-        }
-      }
-    }
-  };
-
-  const amountChartOptionsPie = {
-    ...chartOptions,
-    animation: {
-      duration: 400,
-      easing: 'easeOutQuart',
-      delay: 0
-    },
-    hover: {
-      animationDuration: 0,
-      mode: 'nearest',
-      intersect: true,
-      onHover: function(event, elements) {
-        if (elements.length) {
-          this.render();
-        }
-      }
-    },
-    plugins: {
-      ...chartOptions.plugins,
-      title: {
-        ...chartOptions.plugins.title,
-        text: 'Monthly Allocation',
-      },
-      tooltip: {
-        animation: {
-          duration: 150, // A slightly longer but still fast duration for smoothness
-          easing: 'easeOutCubic' // A smooth easing function
-        },
-        usePointStyle: true,
-        callbacks: {
-          label: function(context) {
-            let label = context.label || '';
-            if (label) {
-              label += ': ';
-            }
-            if (context.parsed !== null) {
-              label += new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 }).format(context.parsed);
-            }
-            return label;
-          }
-        }
-      }
-    }
-  };
-
-  const amountChartOptionsBar = {
-    ...chartOptions,
-    plugins: {
-      ...chartOptions.plugins.title,
-      title: {
-        ...chartOptions.plugins.title,
-        text: 'Monthly Allocation (₹)',
-      },
-      legend: {
-        display: false
-      }
-    }
-  };
 
   if (isAnalyzing) {
     return (
@@ -610,7 +612,9 @@ const GoalBasedPlanningResults = () => {
                   <h4>{rec.category?.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase()) || 'General'}</h4>
                   <span className={`rec-type ${rec.type}`}>{rec.type.replace('_', ' ')}</span>
                 </div>
-                <p>{rec.message}</p>
+                <div className="recommendation-content">
+                  {rec.message}
+                </div>
                 <div className="rec-action">
                   <strong>Action:</strong> {rec.action}
                 </div>
@@ -625,18 +629,22 @@ const GoalBasedPlanningResults = () => {
           <div className="allocation-summary">
             {allocationAmounts && Object.entries(allocationAmounts).map(([category, amount]) => (
               <div key={category} className="allocation-item">
-                <span className="allocation-label">
-                  {category}:
-                </span>
-                <span className="allocation-value">{formatINR(amount)}</span>
+                <div className="allocation-label">
+                  {category.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}
+                </div>
+                <div className="allocation-value">
+                  {formatINR(amount)}
+                </div>
               </div>
             ))}
             {!allocationAmounts && Object.entries(analysis.investmentAllocation).map(([category, percentage]) => (
               <div key={category} className="allocation-item">
-                <span className="allocation-label">
-                  {category.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}:
-                </span>
-                <span className="allocation-value">{percentage}%</span>
+                <div className="allocation-label">
+                  {category.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}
+                </div>
+                <div className="allocation-value">
+                  {percentage}%
+                </div>
               </div>
             ))}
           </div>

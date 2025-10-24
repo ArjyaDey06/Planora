@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import './InvestmentResult.css';
 
 const InvestmentResult = () => {
   const location = useLocation();
@@ -178,11 +179,16 @@ const InvestmentResult = () => {
             {activeTab === 'recommendations' && mlAnalysis && mlAnalysis.recommendations && Array.isArray(mlAnalysis.recommendations) && (
               <div className="recommendations-container">
                 <h2>Personalized Investment Recommendations</h2>
-                <div className="recommendations-list">
+                <div className="recommendations-grid">
                   {mlAnalysis.recommendations.map((rec, index) => (
-                    <div key={index} className="recommendation-card">
-                      <h3>{rec.title || 'Recommendation'}</h3>
-                      <p>{rec.description || 'Details not available'}</p>
+                    <div key={index} className={`recommendation-card ${rec.category?.toLowerCase() || 'investment'}`}>
+                      <div className="recommendation-header">
+                        <h3>{rec.title || 'Investment Recommendation'}</h3>
+                        <span className="recommendation-type">{rec.category || 'General'}</span>
+                      </div>
+                      <div className="recommendation-content">
+                        {rec.description || 'Detailed recommendation will be provided based on your profile.'}
+                      </div>
                       {rec.allocation && (
                         <div className="allocation-info">
                           <span>Suggested Allocation: {rec.allocation}%</span>
@@ -197,18 +203,23 @@ const InvestmentResult = () => {
             {activeTab === 'portfolio' && mlAnalysis && mlAnalysis.portfolio_allocation && Array.isArray(mlAnalysis.portfolio_allocation) && (
               <div className="portfolio-container">
                 <h2>Recommended Portfolio Allocation</h2>
-                <div className="portfolio-allocation">
+                <div className="portfolio-grid">
                   {mlAnalysis.portfolio_allocation.map((item, index) => (
                     <div key={index} className="allocation-card">
                       <h3>{item.instrument || 'Investment Instrument'}</h3>
                       <div className="allocation-bar">
-                        <div 
+                        <div
                           className="allocation-fill"
                           style={{ width: `${item.percentage || 0}%` }}
                         ></div>
-                        <span>{item.percentage || 0}%</span>
                       </div>
-                      <p>{item.rationale || 'Rationale not available'}</p>
+                      <div className="allocation-percentage">
+                        <span>{item.percentage || 0}%</span>
+                        <span style={{ fontSize: '0.9rem', color: '#6b7280' }}>of portfolio</span>
+                      </div>
+                      <div className="allocation-rationale">
+                        {item.rationale || 'Strategic allocation based on your risk profile and investment goals.'}
+                      </div>
                     </div>
                   ))}
                 </div>

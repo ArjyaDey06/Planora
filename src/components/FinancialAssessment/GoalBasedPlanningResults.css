@@ -1,0 +1,428 @@
+/* Enhanced Goal-Based Planning Results - Modern Colorful Grid Layouts */
+
+/* Recommendations Section - Enhanced Colorful Grid */
+.recommendations-section {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f8fafc 0%, #e9ecef 100%);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+}
+
+.recommendations-section h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #1f2937;
+  margin-bottom: 2rem;
+  text-align: center;
+  background: linear-gradient(135deg, #1f2937, #4b5563);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+}
+
+.recommendations-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #3b82f6, #10b981, #f59e0b);
+  border-radius: 2px;
+}
+
+.recommendations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.recommendation-card {
+  background: linear-gradient(135deg, #ffffff, #f8fafc);
+  border: 2px solid transparent;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.recommendation-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #3b82f6, #10b981);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.recommendation-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+.recommendation-card:hover::before {
+  opacity: 1;
+}
+
+.recommendation-card.savings {
+  background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+  border-left: 5px solid #10b981;
+}
+
+.recommendation-card.savings::before {
+  background: linear-gradient(90deg, #10b981, #059669);
+}
+
+.recommendation-card.investment {
+  background: linear-gradient(135deg, #eff6ff, #dbeafe);
+  border-left: 5px solid #3b82f6;
+}
+
+.recommendation-card.investment::before {
+  background: linear-gradient(90deg, #3b82f6, #1d4ed8);
+}
+
+.recommendation-card.debt {
+  background: linear-gradient(135deg, #fef3c7, #fde68a);
+  border-left: 5px solid #f59e0b;
+}
+
+.recommendation-card.debt::before {
+  background: linear-gradient(90deg, #f59e0b, #d97706);
+}
+
+.recommendation-card.emergency {
+  background: linear-gradient(135deg, #fef2f2, #fecaca);
+  border-left: 5px solid #ef4444;
+}
+
+.recommendation-card.emergency::before {
+  background: linear-gradient(90deg, #ef4444, #dc2626);
+}
+
+.rec-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.rec-header h4 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.rec-header h4::before {
+  content: '';
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #3b82f6, #10b981);
+  flex-shrink: 0;
+}
+
+.recommendation-card.savings .rec-header h4::before {
+  background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.recommendation-card.investment .rec-header h4::before {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+}
+
+.recommendation-card.debt .rec-header h4::before {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.recommendation-card.emergency .rec-header h4::before {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+
+.rec-type {
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.recommendation-card.savings .rec-type {
+  background: rgba(16, 185, 129, 0.1);
+  color: #059669;
+}
+
+.recommendation-card.investment .rec-type {
+  background: rgba(59, 130, 246, 0.1);
+  color: #1d4ed8;
+}
+
+.recommendation-card.debt .rec-type {
+  background: rgba(245, 158, 11, 0.1);
+  color: #d97706;
+}
+
+.recommendation-card.emergency .rec-type {
+  background: rgba(239, 68, 68, 0.1);
+  color: #dc2626;
+}
+
+.recommendation-card p {
+  color: #4b5563;
+  line-height: 1.6;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.rec-action {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  padding: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.rec-action strong {
+  color: #1f2937;
+  font-weight: 700;
+}
+
+/* Investment Allocation Section - Enhanced Colorful Grid */
+.investment-section {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f8fafc 0%, #e9ecef 100%);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+}
+
+.investment-section h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #1f2937;
+  margin-bottom: 2rem;
+  text-align: center;
+  background: linear-gradient(135deg, #1f2937, #4b5563);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+}
+
+.investment-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #8b5cf6, #ec4899, #f59e0b);
+  border-radius: 2px;
+}
+
+.allocation-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.allocation-item {
+  background: linear-gradient(135deg, #ffffff, #f8fafc);
+  border: 2px solid transparent;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.allocation-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #8b5cf6, #ec4899);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.allocation-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
+  border-color: rgba(139, 92, 246, 0.3);
+}
+
+.allocation-item:hover::before {
+  opacity: 1;
+}
+
+.allocation-label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.allocation-value {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #1f2937;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.allocation-value::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #8b5cf6, #ec4899);
+  flex-shrink: 0;
+}
+
+/* Enhanced Action Buttons */
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 160px;
+  justify-content: center;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  color: white;
+  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.3);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #1d4ed8, #1e40af);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(59, 130, 246, 0.4);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.9);
+  color: #4b5563;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+.btn-secondary:hover {
+  background: rgba(248, 249, 250, 0.9);
+  border-color: rgba(59, 130, 246, 0.5);
+  color: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Enhanced Mobile Responsiveness */
+@media (max-width: 768px) {
+  .recommendations-section,
+  .investment-section {
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .recommendations-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .allocation-summary {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .recommendation-card,
+  .allocation-item {
+    padding: 1.5rem;
+  }
+
+  .recommendations-section h2,
+  .investment-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+  }
+}
+
+/* Enhanced Animations */
+.recommendation-card,
+.allocation-item {
+  animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  animation-fill-mode: both;
+}
+
+.recommendation-card:nth-child(1) { animation-delay: 0.1s; }
+.recommendation-card:nth-child(2) { animation-delay: 0.2s; }
+.recommendation-card:nth-child(3) { animation-delay: 0.3s; }
+.recommendation-card:nth-child(4) { animation-delay: 0.4s; }
+
+.allocation-item:nth-child(1) { animation-delay: 0.1s; }
+.allocation-item:nth-child(2) { animation-delay: 0.2s; }
+.allocation-item:nth-child(3) { animation-delay: 0.3s; }
+.allocation-item:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
