@@ -205,20 +205,25 @@ async def health_check():
 async def analyze_debt(request: DebtAnalysisRequest):
     """Comprehensive debt analysis using ML models"""
     try:
+        logger.info(f"Starting debt analysis for user: age={request.age}, income={request.monthly_income}")
+
         if not models or not scaler:
+            logger.error("Models or scaler not loaded")
             raise HTTPException(status_code=503, detail="Models not loaded. Please train models first.")
-            
+
+        logger.info("Models and scaler are loaded, proceeding with analysis")
+
         # Prepare input features to match training data (21 features)
         # Calculate derived features
         debt_to_income_ratio = request.debt_amount / request.monthly_income if request.monthly_income > 0 else 0
         emi_to_income_ratio = request.monthly_emi / request.monthly_income if request.monthly_income > 0 else 0
         savings_to_income_ratio = request.savings / request.monthly_income if request.monthly_income > 0 else 0
         expense_to_income_ratio = request.expenses / request.monthly_income if request.monthly_income > 0 else 0
-        
+
         # Estimate fixed and variable expenses (60% fixed, 40% variable as default)
         fixed_expenses = request.expenses * 0.6
         variable_expenses = request.expenses * 0.4
-        
+
         features = np.array([[
             request.age,                    # age
             request.monthly_income,         # monthly_income
@@ -242,23 +247,29 @@ async def analyze_debt(request: DebtAnalysisRequest):
             1,                             # long_term_goals_encoded (default 1)
             0                              # additional encoded feature
         ]])
-        
+
+        logger.info(f"Features prepared: shape={features.shape}")
+
         # Scale features
         features_scaled = scaler.transform(features)
-        
+        logger.info("Features scaled successfully")
+
         # Get predictions from different models
         risk_score = models['risk_model'].predict_proba(features_scaled)[0][1]  # Probability of high risk
         debt_capacity = models['debt_capacity_model'].predict(features_scaled)[0]
         financial_health_pred = models['financial_health_model'].predict(features_scaled)[0]
-        
+
+        logger.info(f"Model predictions: risk={risk_score}, debt_capacity={debt_capacity}, health={financial_health_pred}")
+
         # Clustering model uses only first 8 features (as per training)
         cluster_features = features_scaled[:, :8]
         cluster = models['clustering_model'].predict(cluster_features)[0]
-        
+        logger.info(f"Clustering prediction: cluster={cluster}")
+
         # Calculate derived metrics
         debt_to_income_ratio = request.debt_amount / request.monthly_income if request.monthly_income > 0 else 0
         emi_to_income_ratio = request.monthly_emi / request.monthly_income if request.monthly_income > 0 else 0
-        
+
         # Determine risk category
         if risk_score > 0.7:
             risk_category = "High Risk"
@@ -266,27 +277,34 @@ async def analyze_debt(request: DebtAnalysisRequest):
             risk_category = "Medium Risk"
         else:
             risk_category = "Low Risk"
-            
+
         # Map financial health prediction
         health_mapping = {0: "Good", 1: "Average", 2: "Poor"}
         financial_health = health_mapping.get(financial_health_pred, "Average")
-        
+
         # Calculate recommended EMI (30% of income or current EMI, whichever is lower)
         recommended_emi = min(request.monthly_income * 0.30, debt_capacity * 0.05)
-        
+
+        logger.info(f"Analysis complete: risk_category={risk_category}, financial_health={financial_health}")
+
         # Generate recommendations based on analysis
         recommendations = generate_recommendations(
-            risk_score, debt_to_income_ratio, emi_to_income_ratio, 
+            risk_score, debt_to_income_ratio, emi_to_income_ratio,
             request.monthly_income, request.debt_amount, request.savings
         )
-        
+
+        logger.info(f"Generated {len(recommendations)} recommendations")
+
         # Cluster analysis
         cluster_analysis = analyze_cluster(cluster, features_scaled[0])
-        
+        logger.info(f"Cluster analysis complete: profile={cluster_analysis['profile_name']}")
+
         # Calculate confidence score
         confidence_score = calculate_confidence(risk_score, debt_to_income_ratio, emi_to_income_ratio)
-        
-        return DebtAnalysisResponse(
+        logger.info(f"Confidence score calculated: {confidence_score}")
+
+        logger.info("Creating response object...")
+        response = DebtAnalysisResponse(
             risk_score=float(risk_score),
             risk_category=risk_category,
             debt_capacity=float(debt_capacity),
@@ -296,9 +314,14 @@ async def analyze_debt(request: DebtAnalysisRequest):
             cluster_analysis=cluster_analysis,
             confidence_score=float(confidence_score)
         )
-        
+
+        logger.info("Response object created successfully, returning...")
+        return response
+
     except Exception as e:
         logger.error(f"Error in debt analysis: {e}")
+        import traceback
+        logger.error(f"Traceback: {traceback.format_exc()}")
         raise HTTPException(status_code=500, detail=str(e))
 
 @app.post("/train-models")
